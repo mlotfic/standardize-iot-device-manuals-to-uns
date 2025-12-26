@@ -1,0 +1,82 @@
+﻿code,abbreviation,description
+0,,No Units
+1,%,Percentage
+2,°C,Degrees Celsius
+3,°F,Degrees Fahrenheit
+4,Deg,Degrees Angular
+5,Hz,Hertz
+6,A,amperes
+7,kA,Kilo Amperes
+8,V,Volts
+9,kV,Kilo Volts
+10,MV,Mega Volts
+11,W,Watts
+12,kW,Kilowatts
+13,MW,Megawatts
+14,VAR,Volt-Ampere Reactive
+15,kVAR,Kilo Volt-Ampere Reactive
+16,MVAR,Mega Volt-Ampere Reactive
+17,VA,Volt-Amperes
+18,kVA,Kilo Volt-Amperes
+19,MVA,Mega Volt-Amperes
+20,WH,Watt-Hour
+21,kWH,Kilowatt-Hour
+22,MWH,Megawatt-Hour
+23,VARH,Reactive Volt-Ampere Hour
+24,kVARH,Reactive Kilo Volt-Ampere Hour
+25,MVARH,Reactive Mega Volt-Ampere Hour
+26,VAH,Volt-Ampere Hours
+27,kVAH,Kilo Volt-Ampere Hours
+28,MVAH,Mega Volt-Ampere Hours
+29,Seconds,Seconds
+30,Minutes,Minutes
+31,Hours,Hours
+32,Bytes (RAM),Bytes
+33,kBytes (RAM),Kilobytes
+34,$,Dollars
+35,gal,gallons
+36,gal/hr,gallons/hour
+37,gal/min,gallons/minute
+38,cfm,cubic feet/min
+39,PSI,PSI
+40,BTU,BTU
+41,L,liters
+42,ton-hours,ton-hours
+43,l/hr,liters/hour
+44,l/min,liters/min
+45,€,Euros
+46,ms,Milliseconds
+47,m³,cubic-meters
+48,m³/sec,cubic-meters/sec
+49,m³/min,cubic-meters/min
+50,m³/hr,cubic-meters/hour
+51,Pa,pascals
+52,Bars,bar
+53,RPM,Revolutions/min
+55,BTU/hr,BTU/hour
+56,PSIG,Pounds/square inch gauge
+57,SCFM,Standard cubic feet/min
+58,MCF,Thousand cubic feet
+59,Therm,Therm
+60,SCFH,Standard cubic feet/hour
+61,PSIA,pounds/square inch absolute
+62,lbs,pounds
+63,kg,Kilogram
+64,klbs,Kilopounds
+65,lb/hr,pound/hour
+66,ton/hr,ton/hour
+67,kg/hr,Kilogram/hour
+68,in. Hg,inch of Mercury
+69,kPa,kiloPascals
+70,%RH,percentage of relative humidity
+71,MPH,miles per hour
+72,m/sec,meters/sec
+73,mV/cal/(cm²/min),milliVolts/calorie/(square centimeters/min)
+74,in,inches
+75,mm,millimeter
+76,GWH,GigaWatt-Hour
+77,GVARH,Reactive Giga Volt-Ampere Hour
+78,GVAH,Giga Volt-Ampere Hours
+79,AH,Ampere-Hours
+80,kAH,Kiloamp-Hours
+81,Therm/hr,Therm/hour

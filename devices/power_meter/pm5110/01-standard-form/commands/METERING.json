@@ -1,0 +1,1093 @@
+[
+	{
+		"subsystem": {
+			"type": "METERING",
+			"registers_range": {
+				"min": 2000,
+				"max": 2999
+			},
+			"command": [
+				{
+					"name": "Basic Meter Setup",
+					"number": 2000,
+					"tag": "C_BASIC_METER_SETUP",
+					"description": "Configures the basic metering parameters of the meter.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Number of Phases",
+							"type": "uint8",
+							"description": "Specifies the number of phases in the metering system."
+						},
+						{
+							"index": 3,
+							"name": "Number of Wires",
+							"type": "uint8",
+							"description": "Specifies the number of wires in the metering system."
+						},
+						{
+							"index": 4,
+							"name": "Power System Configuration",
+							"type": "uint8",
+							"description": "Specifies the power system configuration."
+						},
+						{
+							"index": 5,
+							"name": "Nominal Frequency",
+							"type": "uint16",
+							"description": "Specifies the nominal frequency of the power system in Hz."
+						},
+						{
+							"index": 6,
+							"name": "Nominal Voltage Part 1",
+							"type": "uint16",
+							"description": "Specifies the nominal voltage of the power system in Volts."
+						},
+						{
+							"index": 7,
+							"name": "Nominal Voltage Part 2",
+							"type": "uint16",
+							"description": "Specifies the nominal voltage of the power system in Volts."
+						},
+						{
+							"index": 8,
+							"name": "Nominal Current Part 1",
+							"type": "uint16",
+							"description": "Specifies the nominal current of the power system in Amperes."
+						},
+						{
+							"index": 9,
+							"name": "Nominal Current Part 2",
+							"type": "uint16",
+							"description": "Specifies the nominal current of the power system in Amperes."
+						},
+						{
+							"index": 10,
+							"name": "Nominal Power Factor Part 1",
+							"type": "uint16",
+							"description": "Specifies the nominal power factor of the power system in decimal form."
+						},
+						{
+							"index": 11,
+							"name": "Nominal Power Factor Part 2",
+							"type": "uint8",
+							"description": "Specifies the nominal power factor of the power system in decimal form."
+						},
+						{
+							"index": 12,
+							"name": "Nominal Phase Rotation",
+							"type": "uint16",
+							"description": "Specifies the nominal phase rotation of the power system in decimal form."
+						},
+						{
+							"index": 13,
+							"name": "Number VTs",
+							"type": "uint8",
+							"description": "Specifies the number of VTs in the power system."
+						},
+						{
+							"index": 14,
+							"name": "VT Primary Part 1",
+							"type": "uint16",
+							"description": "Specifies the VT primary of the power system in decimal form."
+						},
+						{
+							"index": 15,
+							"name": "VT Primary Part 2",
+							"type": "uint16",
+							"description": "Specifies the VT primary of the power system in decimal form."
+						},
+						{
+							"index": 16,
+							"name": "VT Secondary",
+							"type": "uint16",
+							"description": "Specifies the VT secondary of the power system in decimal form."
+						},
+						{
+							"index": 17,
+							"name": "Number CTs",
+							"type": "uint8",
+							"description": "Specifies the number of CTs in the power system."
+						},
+						{
+							"index": 18,
+							"name": "CT Primary, Phase",
+							"type": "uint16",
+							"description": "Specifies the CT primary of the power system in decimal form."
+						},
+						{
+							"index": 19,
+							"name": "CT Secondary, Phase",
+							"type": "uint16",
+							"description": "Specifies the CT secondary of the power system in decimal form."
+						},
+						{
+							"index": 20,
+							"name": "CT Primary, Neutral",
+							"type": "uint16",
+							"description": "Specifies the CT primary of the power system in decimal form."
+						},
+						{
+							"index": 21,
+							"name": "CT Secondary, Neutral",
+							"type": "uint16",
+							"description": "Specifies the CT secondary of the power system in decimal form."
+						},
+						{
+							"index": 22,
+							"name": "CT Location for 1 CT Metering",
+							"type": "uint16",
+							"description": "Specifies the CT location for 1 CT metering in decimal form."
+						},
+						{
+							"index": 23,
+							"name": "VT Location for 1 VT Metering",
+							"type": "uint16",
+							"description": "Specifies the VT location for 1 VT metering in decimal form."
+						},
+						{
+							"index": 24,
+							"name": "VT Connection Type",
+							"type": "uint16",
+							"description": "Specifies the VT connection type in decimal form."
+						}
+					]
+				},
+				{
+					"name": "Demand System Setup",
+					"number": 2002,
+					"tag": "C_DMD_SETUP",
+					"description": "Configures the basic metering parameters of the meter.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Demand System ID",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution.",
+							"allowed_values": {
+								"1": "Power",
+								"2": "Current",
+								"3": "Input Metering"
+							}
+						},
+						{
+							"index": 3,
+							"name": "Demand Method",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 4,
+							"name": "Demand Interval Duration",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 5,
+							"name": "Demand Subinterval Duration",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Demand Reset",
+					"number": 2002,
+					"tag": "C_DEMAND_RESET",
+					"description": "Resets the demand registers.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					}
+				},
+				{
+					"name": "Energy Pulse Output Setup",
+					"number": 2003,
+					"tag": "C_ENERGY_PULSE_OUTPUT_SETUP",
+					"description": "Configures the energy pulse output parameters of the meter.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Energy Channel",
+							"description": "The energy channel to which the pulse output is connected."
+						},
+						{
+							"index": 3,
+							"name": "Digital Output ID",
+							"description": "The digital output to which the pulse output is connected."
+						},
+						{
+							"index": 4,
+							"name": "Pulse Weight Part 1",
+							"description": "The pulse weight for the first part of the pulse output."
+						},
+						{
+							"index": 5,
+							"name": "Pulse Weight Part 2",
+							"description": "The pulse weight for the second part of the pulse output."
+						},
+						{
+							"index": 6,
+							"name": "Energy Channel Part 1",
+							"description": "The energy channel to which the pulse output is connected."
+						},
+						{
+							"index": 7,
+							"name": "Digital Output ID part 1",
+							"description": "The digital output to which the pulse output is connected.",
+							"allowed_values": {
+								"1": "Digital Output S01",
+								"2": "Digital Output S02",
+								"99": "Energy LED"
+							}
+						},
+						{
+							"index": 8,
+							"name": "Pulse Weight Part 3",
+							"description": "The pulse weight for the third part of the pulse output."
+						},
+						{
+							"index": 9,
+							"name": "Pulse Weight Part 4",
+							"description": "The pulse weight for the fourth part of the pulse output."
+						},
+						{
+							"index": 10,
+							"name": "Energy Channel Part 2",
+							"description": "The energy channel to which the pulse output is connected."
+						},
+						{
+							"index": 9,
+							"name": "Digital Output ID Part 2",
+							"description": "The digital output to which the pulse output is connected.",
+							"allowed_values": {
+								"1": "Digital Output S01",
+								"2": "Digital Output S02",
+								"99": "Energy LED"
+							}
+						},
+						{
+							"index": 10,
+							"name": "Pulse Weight",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Reset Cycle Count",
+					"number": 2007,
+					"tag": "C_RESET_CYCLE_COUNT",
+					"description": "Resets the cycle count.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": false,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Multi-tariff Metering Control",
+					"number": 2008,
+					"tag": "C_MULTITARIFF_CONTROL",
+					"description": "Controls the multi-tariff metering.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Active Rate",
+							"allowed_values": {
+								"1": "Rate 1",
+								"2": "Rate 2",
+								"3": "Rate 3",
+								"4": "Rate 4",
+								"5": "Rate 5",
+								"6": "Rate 6",
+								"7": "Rate 7",
+								"8": "Rate 8"
+							},
+							"description": "The active rate to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Reset All Min/Max",
+					"number": 2009,
+					"tag": "C_RESET_ALL_MIN_MAX",
+					"description": "Resets all min/max values.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Reset Active Load Timer",
+					"number": 2010,
+					"tag": "C_RESET_ACTIVE_LOAD_TIMER",
+					"description": "Resets the active load timer.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					],
+					"allowed_values": [
+						"Energy",
+						"Demand",
+						"Demand peaks",
+						"Min/Max",
+						"Alarm counters",
+						"Alarm logs",
+						"Alarm event queue",
+						"IO Counters",
+						"IO Timers",
+						"Active Load Timer",
+						"Comm diagnostics",
+						"power fail counter",
+						"cycle counter",
+						"Data logs (Scout only)",
+						"and Waveform capture Files (Scout only)."
+					]
+				},
+				{
+					"name": "Energy / Alarm LED Enable",
+					"number": 2039,
+					"tag": "C_ENERGY_LED_ENABLE",
+					"description": "Enables the energy / alarm LED.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Energy / Alarm LED Enable",
+							"allowed_values": {
+								"0": "Disable",
+								"1": "Alarm",
+								"2": "Energy"
+							},
+							"description": "The energy / alarm LED to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "TDD Setup",
+					"number": 2040,
+					"tag": "C_TDD_SETUP",
+					"description": "Sets the TDD parameters.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Peak Current Demand Over Last Year part 1",
+							"description": "The TDD setup to which the pulse output is connected."
+						},
+						{
+							"index": 3,
+							"name": "Peak Current Demand Over Last Year part 2",
+							"description": "The TDD setup to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Active Load Timer Setup",
+					"number": 2044,
+					"tag": "C_ACTIVE_LOAD_TIMER_SETUP",
+					"description": "Sets the active load timer parameters.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": false,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Active Load Timer Setpoint part 1",
+							"description": "The active load timer setpoint to which the pulse output is connected."
+						},
+						{
+							"index": 3,
+							"name": "Active Load Timer Setpoint part 2",
+							"description": "The active load timer setpoint to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Set Multi-Tariff Mode",
+					"number": 2053,
+					"tag": "C_MULTI_TARIFF_MODE",
+					"description": "Sets the multi-tariff mode.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Mode",
+							"description": "The multi-tariff mode to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Set Multi-Tariff Rate Command",
+					"number": 2054,
+					"tag": "C_MULTI_TARIFF_RATE",
+					"user_note": "Only allow if mode is Command",
+					"description": "Sets the multi-tariff rate.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": false,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Active Rate",
+							"allowed_values": {
+								"0": "Rate 0",
+								"1": "Rate 1",
+								"2": "Rate 2",
+								"3": "Rate 3",
+								"4": "Rate 4",
+								"5": "Rate 5",
+								"6": "Rate 6",
+								"7": "Rate 7",
+								"8": "Rate 8"
+							},
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Set Multi-Tariff Time of Day",
+					"number": 2055,
+					"tag": "C_MULTI_TARIFF_TOD",
+					"description": "Sets the multi-tariff time of day.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Rate 1 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 3,
+							"name": "Rate 1 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 4,
+							"name": "Rate 1 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 5,
+							"name": "Rate 2 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 6,
+							"name": "Rate 2 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 7,
+							"name": "Rate 2 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 8,
+							"name": "Rate 3 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 9,
+							"name": "Rate 3 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 10,
+							"name": "Rate 3 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 11,
+							"name": "Rate 4 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 12,
+							"name": "Rate 4 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 13,
+							"name": "Rate 4 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 14,
+							"name": "Rate 5 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 15,
+							"name": "Rate 5 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 16,
+							"name": "Rate 5 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 17,
+							"name": "Rate 6 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 18,
+							"name": "Rate 6 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 19,
+							"name": "Rate 6 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 20,
+							"name": "Rate 7 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 21,
+							"name": "Rate 7 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 22,
+							"name": "Rate 7 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 23,
+							"name": "Rate 8 Day Type",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 24,
+							"name": "Rate 8 Start Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 25,
+							"name": "Rate 8 End Time",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 26,
+							"name": "Rate 1 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 27,
+							"name": "Rate 1 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 28,
+							"name": "Rate 1 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 29,
+							"name": "Rate 1 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 30,
+							"name": "Rate 2 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 31,
+							"name": "Rate 2 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 32,
+							"name": "Rate 2 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 33,
+							"name": "Rate 2 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 34,
+							"name": "Rate 3 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 35,
+							"name": "Rate 3 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 36,
+							"name": "Rate 3 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 37,
+							"name": "Rate 3 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 38,
+							"name": "Rate 4 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 39,
+							"name": "Rate 4 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 40,
+							"name": "Rate 4 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 41,
+							"name": "Rate 4 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 42,
+							"name": "Rate 5 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 43,
+							"name": "Rate 5 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 44,
+							"name": "Rate 5 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 45,
+							"name": "Rate 5 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 46,
+							"name": "Rate 6 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 47,
+							"name": "Rate 6 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 48,
+							"name": "Rate 6 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 49,
+							"name": "Rate 6 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 50,
+							"name": "Rate 7 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 51,
+							"name": "Rate 7 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 52,
+							"name": "Rate 7 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 53,
+							"name": "Rate 7 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 54,
+							"name": "Rate 8 Start Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 55,
+							"name": "Rate 8 Start Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 56,
+							"name": "Rate 8 End Month",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						},
+						{
+							"index": 57,
+							"name": "Rate 8 End Day",
+							"description": "The multi-tariff rate to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Set Time for Demand Synch",
+					"number": 2063,
+					"tag": "C_DMD_SYNCH_TIME",
+					"user_note": "Time is 0000 to 2359",
+					"description": "Sets the time for demand synch.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Synch Time",
+							"description": "The synch time to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Reset All Demands",
+					"number": 2011,
+					"tag": "C_RESET_ALL_DMDS",                    
+					"user_note": "The Demand Reset Password is verified  if Revenue Security is active.",
+					"description": "Resets all demands.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Demand Reset Password",
+							"description": "The demand reset password to which the pulse output is connected.",
+							"parsing": [
+								{
+									"offset": 2,
+									"width": 4,
+									"type": "number",
+									"meaning": "Demand Reset Password"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Reset All Peak Demands",
+					"number": 2015,
+					"tag": "C_RESET_ALL_PEAK_DMDS",
+					"user_note": "The Demand Reset Password is verified  if Revenue Security is active.",
+					"description": "Resets all peak demands.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Demand Reset Password",
+							"description": "The demand reset password to which the pulse output is connected.",
+							"parsing": [
+								{
+									"offset": 2,
+									"width": 4,
+									"type": "number",
+									"meaning": "Demand Reset Password"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Reset Current Peak Demands",
+					"number": 2016,
+					"tag": "C_RESET_CUR_PEAK_DMDS",
+					"user_note": "The Demand Reset Password is verified  if Revenue Security is active.",
+					"description": "Resets current peak demands.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Reset Power Peak Demands",
+					"number": 2017,
+					"tag": "C_RESET_POWER_PEAK_DMDS",
+					"user_note": "The Demand Reset Password is verified  if Revenue Security is active.",
+					"description": "Resets power peak demands.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Start New Demand Interval",
+					"number": 2019,
+					"tag": "C_START_NEW_DMD_INTERVAL",
+					"description": "Starts a new demand interval.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Bitmap of Demand Systems",
+							"description": "The bitmap of demand systems to which the pulse output is connected."
+						}
+					]
+				},
+				{
+					"name": "Reset All Energies",
+					"number": 2020,
+					"tag": "C_RESET_ALL_ENERGIES",
+					"description": "Resets all energies.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Reset All Accumulated Energies",
+					"number": 2021,
+					"tag": "C_RESET_ALL_ACC_ENG",
+					"description": "Resets all accumulated energies.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Reset All Time-of-Use Multi-Tariff Energies",
+					"number": 2022,
+					"tag": "C_RESET_ALL_TOU_MT_ENG",
+					"description": "Resets all time-of-use multi-tariff energies.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Reset All Energy Pulse Output Channels",
+					"number": 2024,
+					"tag": "C_RESET_ALL_ENG_PULSE_OUTPUT",
+					"description": "Resets all energy pulse output channels.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Meter Initialization",
+					"number": 2037,
+					"tag": "C_METER_INITIALIZATION",
+					"description": "Resets energy, accumulated energy, time-of-use multi-tariff energy, energy pulse output channels, and demands.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				}
+			]
+		}
+	}
+]

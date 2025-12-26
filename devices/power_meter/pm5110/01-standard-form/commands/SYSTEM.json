@@ -1,0 +1,335 @@
+[
+	{
+		"subsystem": {
+			"type": "SYSTEM",
+			"description": "System Subsystem",
+			"registers_range": {
+				"min": 1000,
+				"max": 1999
+			},
+			"command": [
+				{
+					"name": "Warm Start Reset",
+					"number": 1000,
+					"data_type": "int16",
+					"tag": "C_WARM_START_RESET",
+					"description": "Performs a warm reset of the meter without command status feedback.",
+					"user_notes": "This command does not provide a command status or result.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Reset Power Fail Counter",
+					"number": 1002,
+					"tag": "C_RESET_POWER_FAIL_COUNT",
+					"description": "Resets the power fail counter to zero.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"type": "uint16",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				},
+				{
+					"name": "Set Date/Time",
+					"number": 1003,
+					"tag": "C_SET_DT",
+					"description": "Sets meter real-time clock.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": false,
+						"allowed_for_unprotected_command_interface": true
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"type": "uint16",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Year",
+							"type": "uint16",
+							"range": [
+								2000,
+								2127
+							],
+							"description": "Year to set in the meter's real-time clock."
+						},
+						{
+							"index": 3,
+							"name": "Month",
+							"type": "uint8",
+							"range": [
+								1,
+								12
+							],
+							"description": "Month to set in the meter's real-time clock."
+						},
+						{
+							"index": 4,
+							"name": "Day",
+							"type": "uint8",
+							"range": [
+								1,
+								31
+							],
+							"description": "Day of month to set in the meter's real-time clock."
+						},
+						{
+							"index": 5,
+							"name": "Hour",
+							"type": "uint8",
+							"range": [
+								0,
+								23
+							],
+							"description": "Hour to set in the meter's real-time clock."
+						},
+						{
+							"index": 6,
+							"name": "Minute",
+							"type": "uint8",
+							"range": [
+								0,
+								59
+							],
+							"description": "Minute to set in the meter's real-time clock."
+						},
+						{
+							"index": 7,
+							"name": "Second",
+							"type": "uint8",
+							"range": [
+								0,
+								59
+							],
+							"description": "Second to set in the meter's real-time clock."
+						},
+						{
+							"index": 8,
+							"name": "Millisecond",
+							"type": "uint16",
+							"range": [
+								0,
+								999
+							],
+							"description": "Millisecond to set in the meter's real-time clock."
+						}
+					]
+				},
+				{
+					"name": "Meter Name Setup",
+					"number": 1008,
+					"tag": "C_METER_NAME_SETUP",
+					"description": "Sets the meter name.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": false,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"type": "uint16",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Meter Name",
+							"type": "string",
+							"length": 20,
+							"description": "The desired name for the meter, up to 20 characters."
+						}
+					]
+				},
+				{
+					"name": "Set IP Parameters Address",
+					"number": 1501,
+					"tag": "C_SET_IP_PARAM",
+					"description": "Sets the IP address, subnet mask, and gateway for the meter's Ethernet interface.",
+					"user_notes": "This is applicable for meters having Ethernet as only communication Interface",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": false,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"type": "uint16",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "IP Address Part 1",
+							"type": "uint16",
+							"description": "First two octets of the IP address.",
+							"parsing": [
+								{
+									"offset": 0,
+									"width": 7,
+									"type": "number",
+									"ip_byte_order": 1,
+									"description": "First two octets of the IP address. xxx.-.-.-"
+								},
+								{
+									"offset": 8,
+									"width": 15,
+									"type": "number",
+									"ip_byte_order": 2,
+									"description": "Last two octets of the IP address. -.xxx.-.-"
+								}
+							]
+						},
+						{
+							"index": 3,
+							"name": "IP Address Part 2",
+							"type": "uint16",
+							"description": "Last two octets of the IP address.",
+							"parsing": [
+								{
+									"offset": 0,
+									"width": 7,
+									"type": "number",
+									"ip_byte_order": 3,
+									"description": "Last two octets of the IP address. -.-.xxx.-"
+								},
+								{
+									"offset": 8,
+									"width": 15,
+									"type": "number",
+									"ip_byte_order": 4,
+									"description": "Last octet of the IP address. -.-.-.xxx"
+								}
+							]
+						},
+						{
+							"index": 4,
+							"name": "Subnet Mask Part 1",
+							"type": "uint16",
+							"description": "First two octets of the subnet mask.",
+							"parsing": [
+								{
+									"offset": 0,
+									"width": 7,
+									"type": "number",
+									"ip_byte_order": 1,
+									"description": "first octet from left of the subnet mask. xxx.-.-.-"
+								},
+								{
+									"offset": 8,
+									"width": 15,
+									"type": "number",
+									"ip_byte_order": 2,
+									"description": "second octet from left of the subnet mask. -.xxx.-.-"
+								}
+							]
+						},
+						{
+							"index": 5,
+							"name": "Subnet Mask Part 2",
+							"type": "uint16",
+							"description": "third octet from left of the subnet mask. -.xxx.-.-",
+							"parsing": [
+								{
+									"offset": 0,
+									"width": 7,
+									"type": "number",
+									"ip_byte_order": 3,
+									"description": "third octet from left of the subnet mask. -.xxx.-.-"
+								},
+								{
+									"offset": 8,
+									"width": 15,
+									"type": "number",
+									"ip_byte_order": 4,
+									"description": "last octet from left of the subnet mask. -.-.-.xxx"
+								}
+							]
+						},
+						{
+							"index": 6,
+							"name": "Gateway Part 1",
+							"type": "uint16",
+							"description": "first octet from left of the gateway address. xxx.-.-.-",
+							"parsing": [
+								{
+									"offset": 0,
+									"width": 7,
+									"type": "number",
+									"ip_byte_order": 1,
+									"description": "first octet from left of the gateway address. xxx.-.-.-"
+								},
+								{
+									"offset": 8,
+									"width": 15,
+									"type": "number",
+									"ip_byte_order": 2,
+									"description": "second octet from left of the gateway address. -.xxx.-.-"
+								}
+							]
+						},
+						{
+							"index": 7,
+							"name": "Gateway Part 2",
+							"type": "uint16",
+							"description": "third octet from left of the gateway address. -.xxx.-.-",
+							"parsing": [
+								{
+									"offset": 0,
+									"width": 7,
+									"type": "number",
+									"ip_byte_order": 3,
+									"description": "third octet from left of the gateway address. -.xxx.-.-"
+								},
+								{
+									"offset": 8,
+									"width": 15,
+									"type": "number",
+									"ip_byte_order": 4,
+									"description": "last octet from left of the gateway address. -.-.-.xxx"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Set Default IP Param",
+					"number": 1502,
+					"tag": "C_SET_IP_DEFAULT",
+					"description": "Resets the IP parameters to factory default values.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": false,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"type": "uint16",
+							"trigger": "non_zero",
+							"description": "A non-zero value triggers the command execution."
+						}
+					]
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,61 @@
+[
+	{
+		"subsystem": {
+			"type": "REGISTER_ACCESS",
+			"description": "Register Access Subsystem",
+			"registers_range": {
+				"min": 0,
+				"max": 999
+			},
+			"command": [
+				{
+					"name": "Reset Subsystem(s) to Default",
+					"number": 1,
+					"tag": "C_RESET_SUBSYS_TO_DEFAULT",
+					"description": "Resets one or more meter subsystems to factory default configuration.",
+					"security_constraints": {
+						"prohibited_when_revenue_security_active": true,
+						"allowed_for_unprotected_command_interface": false
+					},
+					"parameters": [
+						{
+							"index": 1,
+							"name": "Command Semaphore",
+							"trigger": "any_non_zero_edge",
+							"description": "A non-zero value triggers the command execution."
+						},
+						{
+							"index": 2,
+							"name": "Subsystem Selector",
+							"allowed_values": {
+								"1": "Single subsystem",
+								"-1": "All subsystems"
+							},
+							"description": "Selects whether to reset a single subsystem or all subsystems."
+						},
+						{
+							"index": 3,
+							"name": "Subsystem ID",
+							"allowed_values": {
+								"0": "Register Access",
+								"1": "System",
+								"2": "Metering",
+								"3": "Commands",
+								"4": "HMI",
+								"5": "Communications",
+								"6": "IO",
+								"7": "Alarms",
+								"8": "Files",
+								"9": "Diagnostics",
+								"10": "Security",
+								"-1": "All subsystems"
+							},
+							"description": "Specifies the subsystem to reset when Subsystem Selector = 1.",
+							"conditional_usage": "Ignored when Subsystem Selector = -1"
+						}
+					]
+				}
+			]
+		}
+	}
+]

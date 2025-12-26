@@ -1,0 +1,315 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+System Setup & Status,,,,1,---,,---,---,---,---,
+System Setup & Status,Product & Features,,,30,---,,---,---,---,---,
+System Setup & Status,Product & Features,,Meter Name,30,---,20,UTF8,RWC,---,"PM5xxx = ""Power Meter""",
+System Setup & Status,Product & Features,,Meter Model,50,---,20,UTF8,RWC,---,"
+PM5110 = ""PM5110""
+PM5111 = ""PM5111""
+PM5310 = ""PM5310""
+PM5330 = ""PM5330""
+PM5331 = ""PM5331""
+PM5320 = ""PM5320""
+PM5340 = ""PM5340""
+PM5341 = ""PM5341""
+PM5100 = ""PM5100""",
+System Setup & Status,Product & Features,,Manufacturer,70,---,20,UTF8,RWC,---,"""Schneider Electric""",
+System Setup & Status,Product & Features,,Product ID Number,90,---,1,INT16U,RWC,,"PM5110 = 15270
+PM5111 = 15271
+PM5310 = 15272
+PM5330 = 15273
+PM5331 = 15274
+PM5320 = 15275
+PM5340 = 15276
+PM5341 = 15277
+PM5100 = 15278",
+System Setup & Status,Product & Features,,Hardware Detected,91,---,4,BITMAP,R,0x0000 – 0xFFFF,"PM5110 = 0x001B
+PM5111 = 0x001B
+PM5310 = 0x001B
+PM5330 = 0x001B
+PM5331 = 0x001B
+PM5320 = 0x001D
+PM5340 = 0x001D
+PM5341 = 0x001D
+","Bitmap indicating base hardware options detected
+Bit 01 = HMI
+Bit 02 = Modbus Serial Communications Port
+Bit 03 = Modbus Ethernet Communications Port
+Bit 04 = Digital Inputs
+Bit 05 = Digital Outputs
+Bit 06-16 Not Used
+"
+System Setup & Status,Product & Features,,Supported Features,95,---,4,BITMAP,R,0x0000 – 0xFFFF,"PM5110 = 0x161D
+PM5111 = 0x161D
+PM5310 = 0x169D
+PM5330 = 0x169D
+PM5331 = 0x169D
+PM5320 = 0x169D
+PM5340 = 0x169D
+PM5341 = 0x169D","Bitmap indicating features supported
+Bit 01 = 1 Cycle Metering
+Bit 02 = 5/6 Cycle Metering
+Bit 03 = 50/60 Cycle Metering
+Bit 04 = Min/Max
+Bit 05 = Accumulated Energy
+Bit 06 = Conditional Energy
+Bit 07 = Time-of-Use Energy
+Bit 08 = Multi-tarrif Energy
+Bit 09 = Input Metering
+Bit 10 = Demand
+Bit 11 = Alarms
+Bit 12 = Waveform Capture
+Bit 13 = Datalogging
+Bit 14 = Not Used
+Bit 15 = Not Used
+Bit 16 = Not Used
+"
+System Setup & Status,Manufacturing Data,Meter,Manufacturing Unit Id,129,,1,INT16U,R,---,0,Manufacturing Unit ID 
+System Setup & Status,Manufacturing Data,Meter,Serial Number,130,---,2,INT32U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Date of Manufacture,132,---,4,DATETIME,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Hardware Revision,136,---,5,UTF8,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 01,141,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 02,142,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 03,143,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 04,144,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 05,145,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 06,146,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 07,147,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 08,148,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 09,149,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 10,150,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 11,151,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 12,152,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 13,153,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 14,154,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 15,155,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 16,156,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 17,157,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 18,158,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 19,159,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Production History 20,160,---,1,INT16U,R,---,0,
+System Setup & Status,Manufacturing Data,Meter,Checksum,161,---,1,INT16U,R,---,0,
+System Setup & Status,Firmware Versions,Meter,,1637,---,,---,---,---,---,
+System Setup & Status,Firmware Versions,Operating System,,1637,---,,---,---,---,---,
+System Setup & Status,Firmware Versions,Operating System,Present Firmware Version (DLF Format) X.Y.T,1637,---,1,INT16U,R,"0 – 32,767",0,The firmware version takes the following form: XXYYT
+System Setup & Status,Firmware Versions,Operating System,X – Major,1638,---,1,INT16U,R,00 – 99,0,
+System Setup & Status,Firmware Versions,Operating System,Y – Minor,1639,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Operating System,Z – Quality,1640,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Operating System,T – Internal evolutions,1641,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Operating System,Previous Firmware Version (DLF Format) X.Y.T,1642,---,1,INT16U,R,"0 – 32,767",0,The firmware version takes the following form: XXYYT
+System Setup & Status,Firmware Versions,Operating System,X – Major,1643,---,1,INT16U,R,00 – 99,0,
+System Setup & Status,Firmware Versions,Operating System,Y – Minor,1644,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Operating System,Z – Quality,1645,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Operating System,T – Internal evolutions,1646,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Operating System,Date/Time of Last Firmware Download,1647,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Versions,Operating System,Checksum,1651,---,1,INT16U,R,---,0,
+System Setup & Status,Firmware Versions,Operating System,Bridge Code Version,1652,---,1,INT16U,R,---,0,
+System Setup & Status,Firmware Versions,Language,,1701,---,,---,---,---,---,
+System Setup & Status,Firmware Versions,Language,Present Firmware Version (DLF Format) X.Y.T,1701,---,1,INT16U,R,"0 – 32,767",0,The firmware version takes the following form: XXYYT
+System Setup & Status,Firmware Versions,Language,X – Major,1702,---,1,INT16U,R,00 – 99,0,
+System Setup & Status,Firmware Versions,Language,Y – Minor,1703,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Language,Z – Quality,1704,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Language,T – Internal evolutions,1705,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Language,Previous Firmware Version (DLF Format) X.Y.T,1706,---,1,INT16U,R,"0 – 32,767",0,
+System Setup & Status,Firmware Versions,Language,X – Major,1707,---,1,INT16U,R,00 – 99,0,
+System Setup & Status,Firmware Versions,Language,Y – Minor,1708,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Language,Z – Quality,1709,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Language,T – Internal evolutions,1710,---,1,INT16U,R,0000 – 9999,0,
+System Setup & Status,Firmware Versions,Language,Date/Time of Last Firmware Download,1711,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Versions,Language,Checksum,1715,---,1,INT16U,R,---,0,
+System Setup & Status,Firmware Versions,Language,Bridge Code Version,1716,---,1,INT16U,R,---,0,
+System Setup & Status,Firmware Download Log,,,1751,---,,---,---,---,---,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 01,1751,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 01,1755,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 01,1756,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 01,1757,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 02,1758,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 02,1762,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 02,1763,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 02,1764,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 03,1765,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 03,1769,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 03,1770,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 03,1771,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 04,1772,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 04,1776,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 04,1777,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 04,1778,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 05,1779,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 05,1783,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 05,1784,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 05,1785,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 06,1786,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 06,1790,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 06,1791,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 06,1792,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 07,1793,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 07,1797,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 07,1798,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 07,1799,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 08,1800,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 08,1804,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 08,1805,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 08,1806,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 09,1807,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 09,1811,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 09,1812,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 09,1813,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Date/Time of Firmware Download 10,1814,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Firmware Download Log,,Firmware Version 10,1818,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Communications Channel 10,1819,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Status of Download 10,1820,---,1,INT16U,R,,0,
+System Setup & Status,Firmware Download Log,,Download Counter,1821,---,1,INT16U,R,0 – 10,0,
+System Setup & Status,Meter Resets,,,1822,---,,---,---,---,---,
+System Setup & Status,Meter Resets,,Last Unit Restart DateTime,1824,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Meter Resets,,Number of Metering System Restarts,1828,---,1,INT16U,R,---,0,
+System Setup & Status,Meter Resets,,Number of Control Power Failures,1829,---,1,INT16U,R,---,0,
+System Setup & Status,Meter Resets,,Date/Time of Last Control Power Failure ,1830,---,4,DATETIME,R,---,N/A,
+System Setup & Status,Meter Resets,,Duration of Last Control Power Failure,1834,seconds,2,INT32U,R,---,0,
+System Setup & Status,Meter Resets,,Cause of Last Meter Reset,1836,---,1,INT16U,R,0 – 2,0,"0 = Unknown
+1 = Reset command
+2 = Power failure
+"
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Year,1837,year,1,INT16U,R,2000 – 2127,2000,
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Month,1838,month,1,INT16U,R,1 – 12,1,
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Day,1839,days,1,INT16U,R,1 – 31,1,
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Hour,1840,hours,1,INT16U,R,0 – 23,0,
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Minute,1841,minutes,1,INT16U,R,0 – 59,0,
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Second,1842,seconds,1,INT16U,R,0 – 59,0,
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Millisecond,1843,msec,1,INT16U,R,0 – 999,0,
+System Setup & Status,Timekeeping,Present Date & Time (7 register format),Day of Week,1844,---,1,INT16U,R,1 – 7,N/A,"1 = Sunday, 2 = Monday, etc."
+System Setup & Status,Timekeeping,Present Date & Time (4 register format),,1845,---,,---,---,---,---,
+System Setup & Status,Timekeeping,Present Date & Time (4 register format),Year,1845,---,1,INT16U,R,0 – 127,0,
+System Setup & Status,Timekeeping,Present Date & Time (4 register format),Month & Day,1846,---,1,INT16U,R,"1 – 12, 1 – 31",0,
+System Setup & Status,Timekeeping,Present Date & Time (4 register format),Hour & Minute,1847,---,1,INT16U,R,"0 – 23, 0 – 59",0,
+System Setup & Status,Timekeeping,Present Date & Time (4 register format),Milliseconds,1848,---,1,INT16U,R,"0 – 59,999",0,
+System Setup & Status,Security,,,1880,---,,---,---,---,---,
+System Setup & Status,Security,Passwords,,1880,---,,---,---,---,---,
+System Setup & Status,Security,Passwords,Setup Password,1880,---,4,UTF8,WC,---,"""0000""",
+System Setup & Status,Security,Passwords,Energy Reset Password,1884,---,4,UTF8,WC,---,"""0000""",
+System Setup & Status,Security,Passwords,Demand  Reset Password,1888,---,4,UTF8,WC,---,"""0000""",
+System Setup & Status,Security,Passwords,Min/Max Reset Password,1892,---,4,UTF8,WC,---,"""0000""",
+System Setup & Status,Security,Revenue Security,Revenue Security Status,1921,---,1,INT16U,R,0 – 4,0,"0 = inactive, 1 = active, For RMICAN 3 = inactive, 4 = active,"
+System Setup & Status,Miscellaneous Control  & Status,,Active Load Timer,2002,seconds,2,INT32U,R,---,0,Increments when average current exceeds the Active Load Timer Setpoint.
+System Setup & Status,Miscellaneous Control  & Status,,Meter Operation Timer,2004,seconds,2,INT32U,R,---,0,
+System Setup & Status,Miscellaneous Control  & Status,,Cycle Count,2006,---,2,INT32U,R,---,0,
+System Setup & Status,Metering Setup,,,2014,---,,---,---,---,---,
+System Setup & Status,Metering Setup,Power System,,2014,---,,---,---,---,---,
+System Setup & Status,Metering Setup,Power System,Number of Phases,2014,---,1,INT16U,RWC,1 or 3,3,Must match Power System Configuration Enumeration
+System Setup & Status,Metering Setup,Power System,Number of Wires,2015,---,1,INT16U,RWC,2 – 4,4,Must match Power System Configuration Enumeration
+System Setup & Status,Metering Setup,Power System,Power System Configuration,2016,---,1,INT16U,RWC,"0 – 13
+PM5350: 0 - 12",11,"0 = 1ph, 2w, LN
+1 = 1ph, 2w, LL
+2 = 1ph, 3w, LL with N
+3 = 3ph, 3w, Delta, Ungrounded
+4 = 3ph, 3w, Delta, Corner Grounded
+5 = 3ph, 3w, Wye, Ungrounded
+6 = 3ph, 3w, Wye Grounded
+7 = 3ph, 3w, Wye, Resistance Grounded
+8 = 3ph, 4w, Open Delta, Center-Tapped
+9 = 3ph, 4w, Delta, Center-Tapped
+10 = 3ph, 4w, Wye, Ungrounded
+11 = 3ph, 4w, Wye Grounded
+12 = 3ph, 4w, Wye, Resistance Grounded
+13 = Multi-Circuit 3 circuit LN
+14 = Multi-Circuit 2 Circuit LN
+15 = Multi-Circuit 1 Cicuit LN
+16 = Multi-Circuit 1 Circuit WYE (No neutral)
+17 = Multi-Circuit 2 Circuit LL
+18 = Multi-Circuit 1 Circuit LL
+19 = Multi-Circuit 1 Circuit LL (w/ Neutral)
+20 = Multi-Circuit WYE
+21 = Multi-Circuit 2 Circuit LL DELTA
+22 = Multi-Circuit 1 Circuit LL DELTA"
+System Setup & Status,Metering Setup,Power System,Nominal Frequency,2017,Hz,1,INT16U,RWC,"50, 60,  400
+PM5350: 50, 60",50,PM5350 does not support 400Hz
+System Setup & Status,Metering Setup,Power System,Nominal Voltage,2018,V,2,FLOAT32,RWC,"0 – (2xVT Primary or 2,000,000)",230,
+System Setup & Status,Metering Setup,Power System,Nominal Current,2020,A,2,FLOAT32,RWC,"0 – (4xCT Primary or 50,000)",5,
+System Setup & Status,Metering Setup,Power System,Nominal Power Factor,2022,---,2,4Q_FP_PF,RWC,+/- 0.0 – 2.0,0.8,
+System Setup & Status,Metering Setup,Power System,Normal Phase Rotation,2024,---,1,INT16U,RWC,0 – 1,0,
+System Setup & Status,Metering Setup,Instrument Transformers 1,,2025,---,,---,---,---,---,
+System Setup & Status,Metering Setup,Instrument Transformers 2,Number VTs,2025,---,1,INT16U,RWC,Depends on Power System,0,
+System Setup & Status,Metering Setup,Instrument Transformers 3,VT Primary,2026,V,2,FLOAT32,RWC,"VT Secondary  – 1,000,000",120,
+System Setup & Status,Metering Setup,Instrument Transformers 4,VT Secondary,2028,V,1,INT16U,RWC,"100, 110, 115, 120",120,
+System Setup & Status,Metering Setup,Instrument Transformers 5,Number CTs,2029,---,1,INT16U,RWC,Depends on Power System,0,
+System Setup & Status,Metering Setup,Instrument Transformers 6,CT Primary,2030,A,1,INT16U,RWC,"1 – 32,767",5,
+System Setup & Status,Metering Setup,Instrument Transformers 7,CT Secondary,2031,A,1,INT16U,RWC,"1 , 5",5,
+System Setup & Status,Metering Setup,Instrument Transformers 8,CT Primary N,2032,A,1,INT16U,RWC,"1 – 32,767",5,
+System Setup & Status,Metering Setup,Instrument Transformers 9,CT Secondary N,2033,A,1,INT16U,RWC,"1, 5",5,
+System Setup & Status,Metering Setup,Instrument Transformers 10,CT Location for 1  or 2 CT Metering,2034,---,1,INT16U,RWC,1 – 3,1,"If 1 CT, value is meter terminal connected
+If 2 CT, value is meter terminal not connected
+1 = Phase A, 2 = Phase B, 3 = Phase C
+"
+System Setup & Status,Metering Setup,Instrument Transformers 11,VT Location for 1  or 2 VT Metering,2035,---,1,INT16U,RWC,1 – 3,1,Must match CT Location
+System Setup & Status,Metering Setup,Instrument Transformers 12,VT Connection Type,2036,---,1,INT16U,RWC,0 –4,0,"0 = Direct Connect
+1 = Delta (2 VT)
+2 = Wye (3 VT)
+3 = L-N (1 VT)
+4 = L-L (1 VT)
+5 = L-L W/N (2 VT)
+"
+System Setup & Status,Metering Setup,Operating Modes,,2046,---,,---,---,---,---,
+System Setup & Status,Metering Setup,Operating Modes,Peak Current Demand Over Last Year,2048,A,2,FLOAT32,RWC,,0,"Entered by the user for use in calculation of Total Demand Distortion. 0 = Calculation performed using peak demand of 3-phase average current.
+"
+System Setup & Status,Metering Setup,Operating Modes,Active Load Timer Setpoint ,2050,A,2,FLOAT32,RWC,0 – (10 * CT Ratio),5,
+System Setup & Status,Energy Pulse Output Setup,,,2126,---,,---,---,---,---,
+System Setup & Status,Energy Pulse Output Setup,,Alarm / Energy LED Mode,2126,---,1,INT16U,RWC,0 – 2,1,"0 = Disable, 1 = Active Alarm (default), 2 = Energy"
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 01,,2130,---,,---,---,---,---,
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 02,Energy Channel,2130,---,1,INT16U,RWC,"0 – 18
+PM5350 / PM5500: 0 - 9",0,"0 = Not Used
+1 = Active Energy Delivered (Into Load)
+2 = Active Energy Received (Out of Load)
+3 = Active Energy Delivered + Received
+4 = Reactive Energy Delivered
+5 = Reactive Energy Received
+6 = Reactive Energy Delivered + Received
+7 = Apparent Energy Delivered
+8 = Apparent Energy Received
+9 = Apparent Energy Delivered + Received
+10 = Active Energy Delivered Phase A
+11 = Active Energy Delivered Phase B
+12 = Active Energy Delivered Phase C
+13 = Reactive Energy Delivered Phase A
+14 = Reactive Energy Delivered Phase B
+15 = Reactive Energy Delivered Phase C
+16 = Apparent Energy Delivered Phase A
+17 = Apparent Energy Delivered Phase B
+18 = Apparent Energy Delivered Phase C
+"
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 03,Digital Output Association,2131,---,1,INT16U,RWC,0 – 99,0,"0 = No association
+1 - 2 = Digital Output
+99 = LED
+A digital output shall be permitted to be associated with only 1 energy value.  If the Energy Channel is not 0, a valid digital output association must be made."
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 04,Pulse Weight,2132,"kWh, kVAh, kVAh",2,INT32U,RWC,1E-10 – 1E10,0,"If the Energy Channel is not 0, a non-zero pulse weight must be entered. In PM5500 and PM5350 R2 it is an INT32U. The range is 1-9999999, the default value is 1, and the units are pulses / k_h."
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 02,,2134,---,,---,---,---,---,See Energy Pulse Output Channel 01
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 03,Energy Channel,2134,---,1,INT16U,RWC,0 – 18,0,
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 04,Digital Output Association,2135,---,1,INT16U,RWC,0 – 99,0,
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 05,Pulse Weight,2136,"kWh, kVAh, kVAh",2,INT32U,RWC,1E-10 – 1E10,0,"If the Energy Channel is not 0, a non-zero pulse weight must be entered. In PM5500 and PM5350 R2 it is an INT32U. The range is 1-9999999, the default value is 1, and the units are pulses / k_h."
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 03,,2138,---,,---,---,---,---,See Energy Pulse Output Channel 01
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 04,Energy Channel,2138,---,1,INT16U,RWC,0 – 18,0,
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 05,Digital Output Association,2139,---,1,INT16U,RWC,0 – 99,0,
+System Setup & Status,Energy Pulse Output Setup,Energy Pulse Output Channel 06,Pulse Weight,2140,"kWh, kVAh, kVAh",2,INT32U,RWC,1E-10 – 1E10,0,"If the Energy Channel is not 0, a non-zero pulse weight must be entered. In PM5500 and PM5350 R2 it is an INT32U. The range is 1-9999999, the default value is 1, and the units are pulses / k_h."
+System Setup & Status,Digital Input Status Holding Registers,On/Off Status,Digital Input Status Validity - Base Unit,2400,---,1,BITMAP,R,0x0000 – 0x000F,0x0000,
+System Setup & Status,Digital Input Status Holding Registers,On/Off Status,Digital Input Status - Base Unit,2401,---,1,BITMAP,R,0x0000 – 0x000F,0x0000,
+System Setup & Status,Digital Output Status Holding Registers,On/Off Status,Digital Output Status Validity - Base Unit,2402,---,1,BITMAP,R,0x0000 – 0x000F,0x0000,
+System Setup & Status,Digital Output Status Holding Registers,On/Off Status,Digital Output Status - Base Unit,2403,---,1,BITMAP,R,0x0000 – 0x000F,0x0000,
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Standard Alarms,Standard - 1 second Group 1 Validity,2420,---,1,BITMAP,R,,0,See PTI document for definition
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Standard Alarms,Standard - 1 second Group 1,2421,---,1,BITMAP,R,,0,0 = Not Detected; 1 = Detected
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Standard Alarms,Standard - 1 second Group 2 Validity,2422,---,1,BITMAP,R,,0,
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Standard Alarms,Standard - 1 second Group 2,2423,---,1,BITMAP,R,,0,
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Unary Alarms,Unary Validity,2440,---,1,BITMAP,R,,0,
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Unary Alarms,Unary,2441,---,1,BITMAP,R,,0,
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Digital Alarms,Digital Group 1 Validity,2442,---,1,BITMAP,R,,0,
+System Setup & Status,Detected Alarm Status Bitmap Holding Registers,Digital Alarms,Digital Group 1,2443,---,1,BITMAP,R,,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Active Energy Delivered (Into Load),2700,kWh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Active Energy Received (Out of Load),2702,kWh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Active Energy Delivered + Received,2704,kWh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Active Energy Delivered- Received,2706,kWh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Reactive Energy Delivered,2708,kVARh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Reactive Energy Received,2710,kVARh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Reactive Energy Delivered + Received,2712,kVARh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Reactive Energy Delivered - Received,2714,kVARh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Apparent Energy Delivered,2716,kVAh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Apparent Energy Received,2718,kVAh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Apparent Energy Delivered + Received,2720,kVAh,2,FLOAT32,R,---,0,
+System Setup & Status,Energy - 32 bit floating point values,Accumulated Energy - 32 bit floating point values,Apparent Energy Delivered - Received,2722,kVAh,2,FLOAT32,R,---,0,
