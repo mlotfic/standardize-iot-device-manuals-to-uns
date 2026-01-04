@@ -1,0 +1,38 @@
+device_model,register_group,field_name,total_bits,bit_offset,bit_width,data_type,enum_value,enum_name,description,unit_code,manual_ref,standard
+PM5110,AlarmAttributes,type,32,28,4,enum,0,NONE,No alarm type defined,,p.45,Device specific
+PM5110,AlarmAttributes,type,32,28,4,enum,1,STANDARD1S,Standard 1-second alarm for continuous monitoring,,p.45,Device specific
+PM5110,AlarmAttributes,type,32,28,4,enum,2,CUSTOM1S,Custom 1-second alarm with user-defined parameters,,p.45,Device specific
+PM5110,AlarmAttributes,subtype,32,23,4,enum,0,NONE,No alarm subtype defined,,p.45,Device specific
+PM5110,AlarmAttributes,subtype,32,23,4,enum,1,OVER_SIGNED,Value exceeds upper threshold (signed comparison),,p.45,Device specific
+PM5110,AlarmAttributes,subtype,32,23,4,enum,13,SWELL,Voltage swell (overvoltage) condition,8,p.45,Device specific
+PM5110,AlarmAttributes,subtype,32,23,4,enum,14,SAG,Voltage sag (undervoltage) condition,8,p.45,Device specific
+PM5110,AlarmAttributes,parameter,32,17,4,enum,0,NONE,No parameter specified,,p.46,Device specific
+PM5110,AlarmAttributes,parameter,32,17,4,enum,1,VOLTAGE,Voltage measurement parameter,8,p.46,Device specific
+PM5110,AlarmAttributes,parameter,32,17,4,enum,2,CURRENT,Current measurement parameter,6,p.46,Device specific
+PM5110,AlarmAttributes,parameter,32,17,4,enum,3,ACTIVE_POWER,Active power (W) parameter,11,p.46,Device specific
+PM5110,AlarmAttributes,parameter,32,17,4,enum,6,FREQUENCY,Frequency (Hz) parameter,5,p.46,Device specific
+PM5110,AlarmAttributes,modifier,32,11,4,enum,0,NONE,No modifier applied,,p.46,Device specific
+PM5110,AlarmAttributes,modifier,32,11,4,enum,17,PHASE,Phase conductor measurement,,p.46,Device specific
+PM5110,AlarmAttributes,modifier,32,11,4,enum,20,LN,Line-to-neutral measurement,,p.46,Device specific
+PM5110,AlarmAttributes,modifier,32,11,4,enum,22,THD,Total harmonic distortion calculation,,p.46,Device specific
+PM5110,AlarmAttributes,phases,32,7,4,enum,0,NONE,No phase specified,,p.47,Device specific
+PM5110,AlarmAttributes,phases,32,7,4,enum,1,A,Phase A only,,p.47,Device specific
+PM5110,AlarmAttributes,phases,32,7,4,enum,7,ABC,All three phases (A-B-C),,p.47,Device specific
+PM5110,AlarmAttributes,priority,32,3,2,enum,0,NONE,No priority assigned,,p.47,Device specific
+PM5110,AlarmAttributes,priority,32,3,2,enum,1,HIGH,High priority - requires immediate attention,,p.47,Device specific
+PM5110,AlarmAttributes,priority,32,3,2,enum,2,MEDIUM,Medium priority - requires timely attention,,p.47,Device specific
+PM5110,AlarmAttributes,enable,32,0,1,flag,0,DISABLED,Alarm disabled (not active),,p.47,Device specific
+PM5110,AlarmAttributes,enable,32,0,1,flag,1,ENABLED,Alarm enabled (active),,p.47,Device specific
+PM5110,EventCode,category,16,12,4,enum,15,ALARM_EVENT,Alarm event category,,p.52,Device specific
+PM5110,EventCode,event_type,16,8,4,enum,2,PICKUP,Alarm condition detected (pickup),,p.52,Device specific
+PM5110,EventCode,event_type,16,8,4,enum,3,DROPOUT,Alarm condition cleared (dropout),,p.52,Device specific
+PM5110,EventCode,phases,16,4,4,enum,1,A,Phase A only,,p.52,Device specific
+PM5110,EventCode,phases,16,4,4,enum,7,ABC,All three phases (A-B-C),,p.52,Device specific
+PM5110,DateTime,year,64,0,6,number,0,,Year value (0-127),,p.30,IEC 870-5-4
+PM5110,DateTime,day,64,16,5,number,1,,Day of month (1-31),,p.30,IEC 870-5-4
+PM5110,DateTime,month,64,24,4,number,1,,Month (1-12),,p.30,IEC 870-5-4
+PM5110,DateTime,minutes,64,32,6,number,0,,Minutes (0-59),,p.30,IEC 870-5-4
+PM5110,DateTime,hour,64,40,5,number,0,,Hour (0-23),,p.30,IEC 870-5-4
+PM5110,DateTime,millisecond,64,48,16,number,0,,Milliseconds (0-59999),,p.30,IEC 870-5-4
+PM5110,DateTime,dst_flag,64,47,1,flag,0,STANDARD_TIME,Standard time,,p.30,IEC 870-5-4
+PM5110,DateTime,dst_flag,64,47,1,flag,1,DAYLIGHT_SAVING,Daylight saving time,,p.30,IEC 870-5-4

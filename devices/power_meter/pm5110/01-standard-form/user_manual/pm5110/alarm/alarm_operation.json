@@ -1,0 +1,123 @@
+{
+	"over_setpoint": {
+		"description": "Defines the logic and recorded parameters for over setpoint conditions in standard alarms.",
+		"logic": [
+			"When value rises above Pickup setpoint (A) and remains ≥ ΔT1 alarm ON",
+			"when value falls below Dropout setpoint (B) and remains ≥ ΔT2, alarm OFF."
+		],
+		"recorded_parameters": {
+			"A": "Pickup setpoint value",
+			"B": "Dropout setpoint value",
+			"dT1": "Pickup time delay period (s)",
+			"EV1": "Start of alarm condition",
+			"dT2": "Dropout time delay (s)",
+			"EV2": "End of alarm condition",
+			"dT3": "Alarm duration (s)",
+			"Max1": "Maximum value during pickup period",
+			"Max2": "Maximum value during alarm period"
+		}
+	},
+	"under_setpoint": {
+		"logic": [
+			"When value falls below Pickup setpoint (A) and remains ≥ ΔT1, alarm ON",
+			"when value rises above Dropout setpoint (B) and remains ≥ ΔT2, alarm OFF."
+		],
+		"recorded_parameters": {
+			"A": "Pickup setpoint value",
+			"B": "Dropout setpoint value",
+			"dT1": "Pickup time delay period (s)",
+			"EV1": "Start of alarm condition",
+			"dT2": "Dropout time delay (s)",
+			"EV2": "End of alarm condition",
+			"dT3": "Alarm duration (s)",
+			"Min1": "Minimum value during pickup period",
+			"Min2": "Minimum value during alarm period"
+		}
+	},
+	"pf_quadrant": [
+		{
+			"Quadrant": "I",
+			"P_sign": "+",
+			"Q_sign": "+",
+			"pf_nature": "Lagging",
+			"pf_range": "(0.0, 1.0]",
+			"pf_direction_flag": "LAG",
+			"load_nature": "Inductive",
+			"load_type": "Consumptive",
+			"active_power_flow": "to load",
+			"reactive_power_flow": "to load",
+			"apparent_power_flow": "to load"
+		},
+		{
+			"Quadrant": "II",
+			"P_sign": "-",
+			"Q_sign": "+",
+			"pf_nature": "Lagging",
+			"pf_range": "(0.0, 1.0]",
+			"pf_direction_flag": "LAG",
+			"load_nature": "Inductive",
+			"load_type": "Generative",
+			"active_power_flow": "from load",
+			"reactive_power_flow": "to load",
+			"apparent_power_flow": "from load"
+		},
+		{
+			"Quadrant": "III",
+			"P_sign": "-",
+			"Q_sign": "-",
+			"pf_nature": "Leading",
+			"pf_range": "(0.0, 1.0]",
+			"pf_direction_flag": "LEAD",
+			"load_nature": "Capacitive",
+			"load_type": "Generative",
+			"active_power_flow": "from load",
+			"reactive_power_flow": "from load",
+			"apparent_power_flow": "from load"
+		},
+		{
+			"Quadrant": "IV",
+			"P_sign": "+",
+			"Q_sign": "-",
+			"pf_nature": "Leading",
+			"pf_range": "(0.0, 1.0]",
+			"pf_direction_flag": "LEAD",
+			"load_nature": "Capacitive",
+			"load_type": "Consumptive",
+			"active_power_flow": "to load",
+			"reactive_power_flow": "from load",
+			"apparent_power_flow": "to load"
+		}
+	],
+	"pf_lead_setpoint": {
+		"description": "Defines the logic for Leading Power Factor (PF) alarm conditions.",
+		"logic": [
+			"When PF enters Quadrant II or IV and remains ≥ ΔT1, alarm ON",
+			"when PF leaves Quadrant II or IV and remains ≥ ΔT2, alarm OFF."
+		],
+		"recorded_parameters": {
+			"A": "Pickup setpoint value",
+			"B": "Dropout setpoint value",
+			"dT1": "Pickup time delay period (s)",
+			"EV1": "Start of alarm condition",
+			"dT2": "Dropout time delay (s)",
+			"EV2": "End of alarm condition",
+			"dT3": "Alarm duration (s)"
+		}
+	},
+	"pf_lag_setpoint": {
+		"description": "Defines the logic for Lagging Power Factor (PF) alarm conditions.",
+		"logic": [
+			"When PF enters Quadrant I or III and remains ≥ ΔT1, alarm ON",
+			"when PF leaves Quadrant I or III and remains ≥ ΔT2, alarm OFF."
+		],
+		"recorded_parameters": {
+			"A": "Pickup setpoint value",
+			"B": "Dropout setpoint value",
+			"dT1": "Pickup time delay period (s)",
+			"EV1": "Start of alarm condition",
+			"dT2": "Dropout time delay (s)",
+			"EV2": "End of alarm condition",
+			"dT3": "Alarm duration (s)"
+		}
+	}
+}

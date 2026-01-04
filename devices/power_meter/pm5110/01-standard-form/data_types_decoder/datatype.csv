@@ -1,32 +1,42 @@
-﻿group,name,offset,width,type,value,max,meaning,standard
-DataType,DATETIME,0,6,number,0,127,Year,IEC 870-5-4
-DataType,DATETIME,7,9,number,0,0,Reserved,IEC 870-5-5
-DataType,DATETIME,16,5,number,1,31,Day,IEC 870-5-6
-DataType,DATETIME,21,3,number,1,7,Weekday,IEC 870-5-7
-DataType,DATETIME,24,4,number,1,12,Month,IEC 870-5-8
-DataType,DATETIME,28,4,number,0,0,Reserved,IEC 870-5-9
-DataType,DATETIME,32,6,number,0,59,Minutes,IEC 870-5-10
-DataType,DATETIME,38,1,flag,0,0,Reserved,IEC 870-5-11
-DataType,DATETIME,39,1,flag,0,1,Time synchronization quality,IEC 870-5-12
-DataType,DATETIME,39,1,flag,1,1,non valid/non synchronization,IEC 870-5-13
-DataType,DATETIME,40,5,number,0,23,Hour,IEC 870-5-14
-DataType,DATETIME,45,2,number,0,0,Reserved,IEC 870-5-15
-DataType,DATETIME,47,1,flag,0,0,Standard time,IEC 870-5-16
-DataType,DATETIME,47,1,flag,1,1,Daylight Savings Time,IEC 870-5-17
-DataType,DATETIME,48,16,number,0,59999,Millisecond,IEC 870-5-18
-DataType,DATE,0,8,number,0,99,Year,
-DataType,DATE,8,8,number,0,0,Reserved,
-DataType,DATE,16,5,number,1,31,Day,
-DataType,DATE,21,3,number,1,7,Weekday,
-DataType,DATE,24,4,number,1,12,Month,
-DataType,DATE,28,4,number,0,0,Reserved,
-DataType,TIME,0,6,number,0,59,Minutes,
-DataType,TIME,6,1,flag,0,0,Reserved,
-DataType,TIME,7,1,flag,0,1,Time synchronization quality,
-DataType,TIME,7,1,flag,1,1,non valid/non synchronization,
-DataType,TIME,8,5,number,0,23,Hour,
-DataType,TIME,13,2,number,0,0,Reserved,
-DataType,TIME,15,1,flag,0,0,Standard time,
-DataType,TIME,15,1,flag,1,1,Daylight Savings Time,
-DataType,TIME,16,16,number,0,59999,Millisecond,
-DataType,4Q FP PF,0,32,number,-2,2,Four Quadrant Floating Point Power Factor,
+﻿group,name,total_width,offset,width,type,value,max,meaning,standard
+DataType,DATETIME,64,0,6,number,0,127,Year,IEC 870-5-4
+DataType,DATETIME,64,7,9,number,0,0,Reserved,IEC 870-5-5
+DataType,DATETIME,64,16,5,number,1,31,Day,IEC 870-5-6
+DataType,DATETIME,64,21,3,number,1,7,Weekday,IEC 870-5-7
+DataType,DATETIME,64,24,4,number,1,12,Month,IEC 870-5-8
+DataType,DATETIME,64,28,4,number,0,0,Reserved,IEC 870-5-9
+DataType,DATETIME,64,32,6,number,0,59,Minutes,IEC 870-5-10
+DataType,DATETIME,64,38,1,flag,0,0,Reserved,IEC 870-5-11
+DataType,DATETIME,64,39,1,flag,0,1,Time synchronization quality,IEC 870-5-12
+DataType,DATETIME,64,39,1,flag,1,1,non valid/non synchronization,IEC 870-5-13
+DataType,DATETIME,64,40,5,number,0,23,Hour,IEC 870-5-14
+DataType,DATETIME,64,45,2,number,0,0,Reserved,IEC 870-5-15
+DataType,DATETIME,64,47,1,flag,0,0,Standard time,IEC 870-5-16
+DataType,DATETIME,64,47,1,flag,1,1,Daylight Savings Time,IEC 870-5-17
+DataType,DATETIME,64,48,16,number,0,59999,Millisecond,IEC 870-5-18
+DataType,DATE,32,0,8,number,0,99,Year,Device specific DataType
+DataType,DATE,32,8,8,number,0,0,Reserved,Device specific DataType
+DataType,DATE,32,16,5,number,1,31,Day,Device specific DataType
+DataType,DATE,32,21,3,number,1,7,Weekday,Device specific DataType
+DataType,DATE,32,24,4,number,1,12,Month,Device specific DataType
+DataType,DATE,32,28,4,number,0,0,Reserved,Device specific DataType
+DataType,TIME,32,0,6,number,0,59,Minutes,Device specific DataType
+DataType,TIME,32,6,1,flag,0,0,Reserved,Device specific DataType
+DataType,TIME,32,7,1,flag,0,1,Time synchronization quality,Device specific DataType
+DataType,TIME,32,7,1,flag,1,1,non valid/non synchronization,Device specific DataType
+DataType,TIME,32,8,5,number,0,23,Hour,Device specific DataType
+DataType,TIME,32,13,2,number,0,0,Reserved,Device specific DataType
+DataType,TIME,32,15,1,flag,0,0,Standard time,Device specific DataType
+DataType,TIME,32,15,1,flag,1,1,Daylight Savings Time,Device specific DataType
+DataType,TIME,32,16,16,number,0,59999,Millisecond,Device specific DataType
+DataType,4QPF,32,0,32,number,-2,2,Four Quadrant Floating Point Power Factor,Device specific DataType
+DataType,RecordType,16,0,8,number,0xFF,255,Valid Record Type,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0000,255,Boolean,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0010,255,INT16U,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0011,255,INT16,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0020,255,INT32U,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0021,255,INT32,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0030,255,INT64U,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0031,255,INT64,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0040,255,FLOAT32,Custom DataType
+DataType,RecordType,16,8,8,enum,0x0041,255,FLOAT64,Custom DataType

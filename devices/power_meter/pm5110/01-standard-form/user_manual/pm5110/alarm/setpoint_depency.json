@@ -1,0 +1,34 @@
+{
+	"description": "Maximum allowable setpoint values for standard alarms, The meter is programmed to help prevent user data entry errors.",
+	"ct_ratio": {
+		"description": "Current Transformer ratio = CT primary / CT secondary",
+		"data_type": "float",
+		"unit": "A/A",
+		"min": 0.1
+	},
+	"vt_ratio": {
+		"description": "Voltage Transformer ratio = VT primary / VT secondary",
+		"data_type": "float",
+		"unit": "V/V",
+		"min": 0.1
+	},
+	"number_of_phases": {
+		"description": "Electrical system phase count",
+		"data_type": "uint8",
+		"allowed_values": [
+			1,
+			2,
+			3
+		]
+	},
+	"maximum_voltage": {
+		"description": "Factory-programmed maximum voltage (secondary side)",
+		"data_type": "float",
+		"unit": "V"
+	},
+	"maximum_current": {
+		"description": "Factory-programmed maximum current (secondary side)",
+		"data_type": "float",
+		"unit": "A"
+	}
+}

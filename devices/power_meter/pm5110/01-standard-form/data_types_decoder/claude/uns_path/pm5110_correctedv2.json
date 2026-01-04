@@ -1,0 +1,98 @@
+{
+	"device": "Schneider PM5110",
+	"corrections": {
+		"summary": "Move from device screen tree to semantic UNS structure",
+		"key_changes": [
+			"Remove 'summary' grouping - distribute by measurement type",
+			"Move energy from measurement/ to kpi/ (accumulated values)",
+			"Move demand from measurement/ to kpi/ (windowed averages)",
+			"Move resets from maintenance/ to command/ (imperative actions)",
+			"Move setup from maintenance/ to config/ (parameters)",
+			"Change alarm display names to machine-readable IDs",
+			"Reorder min_max: domain-first, not stat-first"
+		]
+	},
+	"branch_fixes": {
+		"measurement/summary/*": {
+			"issue": "Summary is a UI view, not a data category",
+			"fix": "Distribute to measurement/{voltage,current,power}/ or kpi/energy/"
+		},
+		"measurement/kpi/*": {
+			"issue": "KPI nested under measurement violates semantics",
+			"fix": "Move to top-level kpi/ branch"
+		},
+		"measurement/power/*/demand/*": {
+			"issue": "Demand is windowed average for billing, not instantaneous",
+			"fix": "Move to kpi/demand/"
+		},
+		"measurement/power_quality/min_max/current/*": {
+			"issue": "Stat-first hierarchy (min_max before current)",
+			"fix": "Reorder to domain-first: current/min_max/"
+		},
+		"alarm/count/{Display Name}": {
+			"issue": "Spaces in paths, human labels not machine-readable",
+			"fix": "Use alarm/counts/{snake_case_id}, store labels in meta/"
+		},
+		"maintenance/reset/*": {
+			"issue": "Resets are commands, not maintenance category",
+			"fix": "Move to command/reset_*"
+		},
+		"maintenance/setup/*": {
+			"issue": "Setup parameters are configuration, not maintenance",
+			"fix": "Move to config/{meter,comm,alarm}/"
+		},
+		"Clock/*": {
+			"issue": "Clock is about device health, not top-level concern",
+			"fix": "Move time to health/, offset to config/"
+		}
+	},
+	"path_corrections": {
+		"measurement": {
+			"summary/Vavg": "measurement/voltage/average",
+			"summary/Iavg": "measurement/current/average",
+			"summary/Ptot": "measurement/power/active/total",
+			"summary/EDel": "kpi/energy/active/delivered",
+			"Current/I1": "measurement/current/l1",
+			"Voltage/phase/V1": "measurement/voltage/phase/l1",
+			"Voltage/line/U12": "measurement/voltage/line/l1_l2",
+			"power/p/total": "measurement/power/active/total",
+			"power/q/total": "measurement/power/reactive/total",
+			"power/s/total": "measurement/power/apparent/total",
+			"power/p/demand/*": "kpi/demand/active/*",
+			"kpi/energy/p/*": "kpi/energy/active/*",
+			"kpi/energy/q/*": "kpi/energy/reactive/*",
+			"power_quality/frequency": "measurement/frequency",
+			"power_quality/min_max/current/min/*": "measurement/power_quality/current/min_max/min/*",
+			"power_quality/min_max/voltage/*/min/*": "measurement/power_quality/voltage/*/min_max/min/*",
+			"timer/*": "kpi/timers/*"
+		},
+		"alarm": {
+			"count/Over Phase Current": "alarm/counts/overcurrent_phase",
+			"count/Under Voltage L-L": "alarm/counts/undervoltage_line",
+			"count/Over Voltage L-N": "alarm/counts/overvoltage_phase",
+			"count/Phase Loss": "alarm/counts/phase_loss"
+		},
+		"command": {
+			"maintenance/reset/GlobalResets/Engeries": "command/reset_energy_accumulators",
+			"maintenance/reset/GlobalResets/Demands": "command/reset_demand_values",
+			"maintenance/reset/GlobalResets/MinMax": "command/reset_min_max"
+		},
+		"config": {
+			"maintenance/setup/Meter/Basic/PowerSystem": "config/meter/power_system",
+			"maintenance/setup/Meter/Basic/VT Primary": "config/meter/vt_primary",
+			"maintenance/setup/Meter/Basic/CT Primary": "config/meter/ct_primary",
+			"maintenance/setup/Comm/Protocol": "config/comm/protocol",
+			"maintenance/setup/Comm/Baud Rate": "config/comm/baud_rate",
+			"maintenance/setup/Alarm/*/Pickup Setpoint": "config/alarm/*_setpoint"
+		},
+		"health": {
+			"Clock/Meter Time": "health/clock_time"
+		}
+	},
+	"naming_standards": {
+		"phases": "Use l1, l2, l3, neutral (not I1, V1, U12)",
+		"power_types": "Use active, reactive, apparent (not p, q, s)",
+		"alarm_ids": "Use snake_case (overcurrent_phase not 'Over Phase Current')",
+		"paths": "Use lowercase, underscores, no spaces"
+	}
+}

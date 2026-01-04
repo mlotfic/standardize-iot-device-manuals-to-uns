@@ -1,0 +1,83 @@
+[
+    {
+        "uns": ".../measurement/Current/I1",
+        "display_IEC_path": ".../I/I/I1",
+        "display_IEEE_path": ".../Amps/Amps/I1",
+        "screen_IEC_title": "Amps Per Phase",
+        "screen_IEEE_title": "Amps Per Phase",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/I2",
+        "display_IEC_path": ".../I/I/I2",
+        "display_IEEE_path": ".../Amps/Amps/I2",
+        "screen_IEC_title": "Amps Per Phase",
+        "screen_IEEE_title": "Amps Per Phase",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/I3",
+        "display_IEC_path": ".../I/I/I3",
+        "display_IEEE_path": ".../Amps/Amps/I3",
+        "screen_IEC_title": "Amps Per Phase",
+        "screen_IEEE_title": "Amps Per Phase",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/In",
+        "display_IEC_path": ".../I/I/In",
+        "display_IEEE_path": ".../Amps/Amps/In",
+        "screen_IEC_title": "Amps Per Phase",
+        "screen_IEEE_title": "Amps Per Phase",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/demand/Present",
+        "display_IEC_path": ".../I/Dmd/IAvg/Pres",
+        "display_IEEE_path": ".../Amps/Amps/IAvg/Pres",
+        "screen_IEC_title": "Iavg Dmd",
+        "screen_IEEE_title": "Iavg Dmd",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/demand/Last",
+        "display_IEC_path": ".../I/Dmd/IAvg/Last",
+        "display_IEEE_path": ".../Amps/Amps/IAvg/Last",
+        "screen_IEC_title": "Iavg Dmd",
+        "screen_IEEE_title": "Iavg Dmd",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/demand/Predicted",
+        "display_IEC_path": ".../I/Dmd/IAvg/Pred",
+        "display_IEEE_path": ".../Amps/Amps/IAvg/Pred",
+        "screen_IEC_title": "Iavg Dmd",
+        "screen_IEEE_title": "Iavg Dmd",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/demand/Peak/value",
+        "display_IEC_path": ".../I/Dmd/IAvg/Peak",
+        "display_IEEE_path": ".../Amps/Amps/IAvg/Peak",
+        "screen_IEC_title": "Iavg Dmd",
+        "screen_IEEE_title": "Iavg Dmd",
+        "unit": "A",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Current/demand/Peak/timestamp",
+        "display_IEC_path": ".../I/Dmd/PKDT",
+        "display_IEEE_path": ".../Amps/Amps/IAvg/Peak/DateTime",
+        "screen_IEC_title": "Iavg Dmd PKDT",
+        "screen_IEEE_title": "Iavg Dmd PKDT",
+        "unit": "",
+        "scale": ""
+    }
+]

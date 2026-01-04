@@ -1,0 +1,23 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+Communications,RS-485 Base,RS-485 Base Port 1 Settings,RS-485 Comm Port (M/S) Protocol,6500,---,1,INT16U,RWC,0 – 3,0,"0 = Modbus  
+1 = Jbus 
+2 = Modbus ASCII 8-Bit 
+3 = Modbus ASCII 7-Bit
+"
+Communications,RS-485 Base,RS-485 Base Port 1 Settings,RS-485 Comm Port (M/S) Address,6501,---,1,INT16U,RWC,1 – 255,1,"Valid Addresses:
+Modbus: 1 – 247      
+Jbus: 1 – 255
+"
+Communications,RS-485 Base,RS-485 Base Port 1 Settings,RS-485 Comm Port (M/S) Baud Rate,6502,---,1,INT16U,RWC,0 – 2,1,"0 = 9600 
+1 = 19200
+2 = 38400
+For PM2000,EM6400, EM72xx
+0 = 4800
+1 = 9600 
+2 = 19200
+3 = 38400"
+Communications,RS-485 Base,RS-485 Base Port 1 Settings,RS-485 Comm Port (M/S) Parity,6503,---,1,INT16U,RWC,0 – 2,0,"0 = Even 
+1 = Odd 
+2 = None
+"

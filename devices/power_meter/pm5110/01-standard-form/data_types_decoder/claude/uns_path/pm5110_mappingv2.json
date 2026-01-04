@@ -1,0 +1,231 @@
+{
+	"device": "Schneider PM5110",
+	"version": "2.0",
+	"mappings": [
+		{
+			"original": "measurement/summary/Vavg",
+			"corrected": "measurement/voltage/average",
+			"hmi": "Measurement > Summary > Vavg"
+		},
+		{
+			"original": "measurement/summary/Iavg",
+			"corrected": "measurement/current/average",
+			"hmi": "Measurement > Summary > Iavg"
+		},
+		{
+			"original": "measurement/summary/Ptot",
+			"corrected": "measurement/power/active/total",
+			"hmi": "Measurement > Summary > Ptot"
+		},
+		{
+			"original": "measurement/summary/EDel",
+			"corrected": "kpi/energy/active/delivered",
+			"hmi": "Measurement > Summary > EDel"
+		},
+		{
+			"original": "measurement/Current/I1",
+			"corrected": "measurement/current/l1",
+			"hmi": "Measurement > Current > I1"
+		},
+		{
+			"original": "measurement/Current/I2",
+			"corrected": "measurement/current/l2",
+			"hmi": "Measurement > Current > I2"
+		},
+		{
+			"original": "measurement/Current/I3",
+			"corrected": "measurement/current/l3",
+			"hmi": "Measurement > Current > I3"
+		},
+		{
+			"original": "measurement/Current/In",
+			"corrected": "measurement/current/neutral",
+			"hmi": "Measurement > Current > In"
+		},
+		{
+			"original": "measurement/Voltage/line/U12",
+			"corrected": "measurement/voltage/line/l1_l2",
+			"hmi": "Measurement > Voltage > line > U12"
+		},
+		{
+			"original": "measurement/Voltage/line/U23",
+			"corrected": "measurement/voltage/line/l2_l3",
+			"hmi": "Measurement > Voltage > line > U23"
+		},
+		{
+			"original": "measurement/Voltage/line/U31",
+			"corrected": "measurement/voltage/line/l3_l1",
+			"hmi": "Measurement > Voltage > line > U31"
+		},
+		{
+			"original": "measurement/Voltage/phase/V1",
+			"corrected": "measurement/voltage/phase/l1",
+			"hmi": "Measurement > Voltage > phase > V1"
+		},
+		{
+			"original": "measurement/Voltage/phase/V2",
+			"corrected": "measurement/voltage/phase/l2",
+			"hmi": "Measurement > Voltage > phase > V2"
+		},
+		{
+			"original": "measurement/Voltage/phase/V3",
+			"corrected": "measurement/voltage/phase/l3",
+			"hmi": "Measurement > Voltage > phase > V3"
+		},
+		{
+			"original": "measurement/power/p/total",
+			"corrected": "measurement/power/active/total",
+			"hmi": "Measurement > power > p > total"
+		},
+		{
+			"original": "measurement/power/q/total",
+			"corrected": "measurement/power/reactive/total",
+			"hmi": "Measurement > power > q > total"
+		},
+		{
+			"original": "measurement/power/s/total",
+			"corrected": "measurement/power/apparent/total",
+			"hmi": "Measurement > power > s > total"
+		},
+		{
+			"original": "measurement/power/p/demand/last",
+			"corrected": "kpi/demand/active/last",
+			"hmi": "Measurement > power > p > demand > last"
+		},
+		{
+			"original": "measurement/power/p/demand/present",
+			"corrected": "kpi/demand/active/present",
+			"hmi": "Measurement > power > p > demand > present"
+		},
+		{
+			"original": "measurement/power/p/demand/predicted",
+			"corrected": "kpi/demand/active/predicted",
+			"hmi": "Measurement > power > p > demand > predicted"
+		},
+		{
+			"original": "measurement/power/p/demand/peak/datetime",
+			"corrected": "kpi/demand/active/peak_timestamp",
+			"hmi": "Measurement > power > p > demand > peak > datetime"
+		},
+		{
+			"original": "measurement/kpi/energy/p/delivery",
+			"corrected": "kpi/energy/active/delivered",
+			"hmi": "Measurement > kpi > energy > p > delivery"
+		},
+		{
+			"original": "measurement/kpi/energy/p/recieved",
+			"corrected": "kpi/energy/active/received",
+			"hmi": "Measurement > kpi > energy > p > recieved"
+		},
+		{
+			"original": "measurement/kpi/energy/p/total",
+			"corrected": "kpi/energy/active/total",
+			"hmi": "Measurement > kpi > energy > p > total"
+		},
+		{
+			"original": "measurement/kpi/energy/p/net",
+			"corrected": "kpi/energy/active/net",
+			"hmi": "Measurement > kpi > energy > p > net"
+		},
+		{
+			"original": "measurement/power_quality/frequency",
+			"corrected": "measurement/frequency",
+			"hmi": "Measurement > power_quality > frequency"
+		},
+		{
+			"original": "measurement/power_quality/min_max/current/min/Ix",
+			"corrected": "measurement/power_quality/current/min_max/min/l1",
+			"hmi": "Measurement > power_quality > min_max > current > min > Ix"
+		},
+		{
+			"original": "measurement/power_quality/min_max/current/max/Ix",
+			"corrected": "measurement/power_quality/current/min_max/max/l1",
+			"hmi": "Measurement > power_quality > min_max > current > max > Ix"
+		},
+		{
+			"original": "measurement/power_quality/min_max/voltage/line/min/Uxx",
+			"corrected": "measurement/power_quality/voltage/line/min_max/min/l1_l2",
+			"hmi": "Measurement > power_quality > min_max > voltage > line > min > Uxx"
+		},
+		{
+			"original": "measurement/power_quality/min_max/voltage/line/max/Uxx",
+			"corrected": "measurement/power_quality/voltage/line/min_max/max/l1_l2",
+			"hmi": "Measurement > power_quality > min_max > voltage > line > max > Uxx"
+		},
+		{
+			"original": "alarm/count/Over Phase Current",
+			"corrected": "alarm/counts/overcurrent_phase",
+			"hmi": "alarm > count > Over Phase Current"
+		},
+		{
+			"original": "alarm/count/Under Voltage L-L",
+			"corrected": "alarm/counts/undervoltage_line",
+			"hmi": "alarm > count > Under Voltage L-L"
+		},
+		{
+			"original": "alarm/count/Phase Loss",
+			"corrected": "alarm/counts/phase_loss",
+			"hmi": "alarm > count > Phase Loss"
+		},
+		{
+			"original": "maintenance/reset/GlobalResets/Engeries",
+			"corrected": "command/reset_energy_accumulators",
+			"hmi": "maintenance > reset > GlobalResets > Engeries"
+		},
+		{
+			"original": "maintenance/reset/GlobalResets/Demands",
+			"corrected": "command/reset_demand_values",
+			"hmi": "maintenance > reset > GlobalResets > Demands"
+		},
+		{
+			"original": "maintenance/reset/GlobalResets/MinMax",
+			"corrected": "command/reset_min_max",
+			"hmi": "maintenance > reset > GlobalResets > MinMax"
+		},
+		{
+			"original": "maintenance/setup/Meter/Basic/PowerSystem",
+			"corrected": "config/meter/power_system",
+			"hmi": "maintenance > setup > Meter > Basic > PowerSystem"
+		},
+		{
+			"original": "maintenance/setup/Meter/Basic/VT Primary",
+			"corrected": "config/meter/vt_primary",
+			"hmi": "maintenance > setup > Meter > Basic > VT Primary"
+		},
+		{
+			"original": "maintenance/setup/Meter/Basic/CT Primary",
+			"corrected": "config/meter/ct_primary",
+			"hmi": "maintenance > setup > Meter > Basic > CT Primary"
+		},
+		{
+			"original": "maintenance/setup/Comm/Protocol",
+			"corrected": "config/comm/protocol",
+			"hmi": "maintenance > setup > Comm > Protocol"
+		},
+		{
+			"original": "maintenance/setup/Comm/Baud Rate",
+			"corrected": "config/comm/baud_rate",
+			"hmi": "maintenance > setup > Comm > Baud Rate"
+		},
+		{
+			"original": "maintenance/setup/Alarm/1Sec/OverCurrent/Pickup Setpoint",
+			"corrected": "config/alarm/overcurrent_phase_setpoint",
+			"hmi": "maintenance > setup > Alarm > 1Sec > OverCurrent > Pickup Setpoint"
+		},
+		{
+			"original": "Clock/Meter Time",
+			"corrected": "health/clock_time",
+			"hmi": "Clock > Meter Time"
+		},
+		{
+			"original": "Clock/GMT Offset (h)",
+			"corrected": "config/timezone_offset_hours",
+			"hmi": "Clock > GMT Offset (h)"
+		},
+		{
+			"original": "measurement/timer/active_load_time",
+			"corrected": "kpi/timers/active_load_hours",
+			"hmi": "measurement > timer > active_load_time"
+		}
+	]
+}

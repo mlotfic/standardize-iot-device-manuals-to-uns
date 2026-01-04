@@ -1,0 +1,58 @@
+[
+    {
+        "Category": "Communications",
+        "Sub Cat 1": "RS-485 Base",
+        "Sub Cat 2": "RS-485 Base Port 1 Settings",
+        "Description": "RS-485 Comm Port (M/S) Protocol",
+        "Register": "6500",
+        "Units": "---",
+        "Size\n(INT16)": "1",
+        "Data Type": "INT16U",
+        "Access": "RWC",
+        "Range": "0 – 3",
+        "Default": "0",
+        "User Notes": "0 = Modbus  \n1 = Jbus \n2 = Modbus ASCII 8-Bit \n3 = Modbus ASCII 7-Bit\n"
+    },
+    {
+        "Category": "Communications",
+        "Sub Cat 1": "RS-485 Base",
+        "Sub Cat 2": "RS-485 Base Port 1 Settings",
+        "Description": "RS-485 Comm Port (M/S) Address",
+        "Register": "6501",
+        "Units": "---",
+        "Size\n(INT16)": "1",
+        "Data Type": "INT16U",
+        "Access": "RWC",
+        "Range": "1 – 255",
+        "Default": "1",
+        "User Notes": "Valid Addresses:\nModbus: 1 – 247      \nJbus: 1 – 255\n"
+    },
+    {
+        "Category": "Communications",
+        "Sub Cat 1": "RS-485 Base",
+        "Sub Cat 2": "RS-485 Base Port 1 Settings",
+        "Description": "RS-485 Comm Port (M/S) Baud Rate",
+        "Register": "6502",
+        "Units": "---",
+        "Size\n(INT16)": "1",
+        "Data Type": "INT16U",
+        "Access": "RWC",
+        "Range": "0 – 2",
+        "Default": "1",
+        "User Notes": "0 = 9600 \n1 = 19200\n2 = 38400\nFor PM2000,EM6400, EM72xx\n0 = 4800\n1 = 9600 \n2 = 19200\n3 = 38400"
+    },
+    {
+        "Category": "Communications",
+        "Sub Cat 1": "RS-485 Base",
+        "Sub Cat 2": "RS-485 Base Port 1 Settings",
+        "Description": "RS-485 Comm Port (M/S) Parity",
+        "Register": "6503",
+        "Units": "---",
+        "Size\n(INT16)": "1",
+        "Data Type": "INT16U",
+        "Access": "RWC",
+        "Range": "0 – 2",
+        "Default": "0",
+        "User Notes": "0 = Even \n1 = Odd \n2 = None\n"
+    }
+]

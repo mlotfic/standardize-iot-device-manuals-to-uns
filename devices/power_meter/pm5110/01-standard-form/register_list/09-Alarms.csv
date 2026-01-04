@@ -1,0 +1,2239 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+Alarms,,,,,---,,---,---,---,---,
+Alarms,Alarm Status,,,,---,,---,---,---,---,
+Alarms,Alarm Status,Detected Priority Status,,11010,---,,---,---,---,---,
+Alarms,Alarm Status,Detected Priority Status,Detected Priority Status Bitmap,11010,---,1,BITMAP,R,0x0000 - 0x001F,0,"Bit 01 = 1 if any priority 1-3 alarm is active
+Bit 02 = 1 if a “High” (1) priority alarm is active
+Bit 03 = 1 if a “Medium” (2) priority alarm is active
+Bit 04 = 1 if a “Low” (3) priority alarm is active
+Bit 05 = 1 if a ""None"" (0) priority alarm is active"
+Alarms,,Enabled Alarm Bitmaps,,11040,---,,---,---,---,---,
+Alarms,,Enabled Alarm Bitmaps,Standard – 1 second 1,11040,---,1,BITMAP,R,,0,0 = Disabled; 1 = Enabled
+Alarms,,Enabled Alarm Bitmaps,Standard – 1 second 2,11041,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Standard – 1 second 3,11042,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Custom – 1 second,11043,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Standard – High Speed 1,11044,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Standard – High Speed 2,11045,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Custom – High Speed,11046,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Disturbance,11047,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Transient,11048,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Waveshape,11049,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Unary,11050,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Digital 1,11051,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Digital 2,11052,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Digital 3,11053,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Digital 4,11054,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Digital 5,11055,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Binary,11056,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Time_of_day,11057,---,1,BITMAP,R,,0,
+Alarms,,Enabled Alarm Bitmaps,Logic,11058,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,,11059,---,,---,---,---,---,
+Alarms,,Detected Alarm Bitmaps,Standard – 1 second Group 1,11059,---,1,BITMAP,R,,0,0 = Not Detected; 1 = Detected
+Alarms,,Detected Alarm Bitmaps,Standard – 1 second Group 2,11060,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Standard – 1 second Group 3,11061,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Custom – 1 second,11062,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Standard – High Speed Group 1,11063,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Standard – High Speed Group 2,11064,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Custom – High Speed,11065,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Disturbance,11066,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Transient,11067,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Waveshape,11068,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Unary,11069,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Digital Group 1,11070,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Digital Group 2,11071,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Digital Group 3,11072,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Digital Group 4,11073,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Digital Group 5,11074,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Binary,11075,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Time_of_day,11076,---,1,BITMAP,R,,0,
+Alarms,,Detected Alarm Bitmaps,Logic,11077,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,,11078,---,,---,---,---,---,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Standard – 1 second 1,11078,---,1,BITMAP,R,,0,0 = Acknowledged; 1 = Unacknowledged
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Standard – 1 second 2,11079,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Standard – 1 second 3,11080,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Custom – 1 second,11081,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Standard – High Speed 1,11082,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Standard – High Speed 2,11083,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Custom – High Speed,11084,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Disturbance,11085,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Transient,11086,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Waveshape,11087,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Unary,11088,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Digital 1,11089,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Digital 2,11090,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Digital 3,11091,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Digital 4,11092,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Digital 5,11093,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Binary,11094,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Time_of_day,11095,---,1,BITMAP,R,,0,
+Alarms,,Unacknowledged High Priority Alarm Bitmaps,Logic,11096,---,1,BITMAP,R,,0,
+Alarms,Alarm Event Queue,,,11111,---,,---,---,---,---,
+Alarms,Alarm Event Queue,,Version of Event Queue,11111,---,1,INT16U,R,,0,
+Alarms,Alarm Event Queue,,Event Types to Log,11112,,1,INT16U,RWC,0x0000 - 0xFFFF,0xFFFF,
+Alarms,Alarm Event Queue,,Size of Event Queue,11113,---,1,INT16U,R,,100,
+Alarms,Alarm Event Queue,,Number of Entries in Event Queue,11114,---,1,INT16U,R,0 – 100,0,
+Alarms,Alarm Event Queue,,Entry Number of Most Recent Event,11115,---,1,INT16U,R,,0,Rolls over from 65535 to 0.
+Alarms,Alarm Event Queue,Entry 001,,11116,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 001,Entry Number,11116,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 001,Date/Time,11117,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 001,Record Type,11121,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 001,Register Number or Event Code,11122,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 001,Value,11123,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 001,Sequence Number,11127,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 002,,11128,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 002,Entry Number,11128,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 002,Date/Time,11129,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 002,Record Type,11133,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 002,Register Number or Event Code,11134,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 002,Value,11135,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 002,Sequence Number,11139,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 003,,11140,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 003,Entry Number,11140,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 003,Date/Time,11141,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 003,Record Type,11145,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 003,Register Number or Event Code,11146,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 003,Value,11147,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 003,Sequence Number,11151,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 004,,11152,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 004,Entry Number,11152,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 004,Date/Time,11153,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 004,Record Type,11157,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 004,Register Number or Event Code,11158,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 004,Value,11159,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 004,Sequence Number,11163,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 005,,11164,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 005,Entry Number,11164,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 005,Date/Time,11165,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 005,Record Type,11169,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 005,Register Number or Event Code,11170,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 005,Value,11171,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 005,Sequence Number,11175,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 006,,11176,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 006,Entry Number,11176,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 006,Date/Time,11177,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 006,Record Type,11181,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 006,Register Number or Event Code,11182,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 006,Value,11183,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 006,Sequence Number,11187,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 007,,11188,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 007,Entry Number,11188,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 007,Date/Time,11189,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 007,Record Type,11193,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 007,Register Number or Event Code,11194,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 007,Value,11195,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 007,Sequence Number,11199,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 008,,11200,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 008,Entry Number,11200,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 008,Date/Time,11201,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 008,Record Type,11205,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 008,Register Number or Event Code,11206,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 008,Value,11207,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 008,Sequence Number,11211,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 009,,11212,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 009,Entry Number,11212,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 009,Date/Time,11213,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 009,Record Type,11217,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 009,Register Number or Event Code,11218,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 009,Value,11219,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 009,Sequence Number,11223,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 010,,11224,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 010,Entry Number,11224,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 010,Date/Time,11225,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 010,Record Type,11229,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 010,Register Number or Event Code,11230,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 010,Value,11231,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 010,Sequence Number,11235,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 011,,11236,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 011,Entry Number,11236,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 011,Date/Time,11237,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 011,Record Type,11241,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 011,Register Number or Event Code,11242,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 011,Value,11243,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 011,Sequence Number,11247,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 012,,11248,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 012,Entry Number,11248,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 012,Date/Time,11249,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 012,Record Type,11253,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 012,Register Number or Event Code,11254,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 012,Value,11255,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 012,Sequence Number,11259,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 013,,11260,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 013,Entry Number,11260,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 013,Date/Time,11261,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 013,Record Type,11265,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 013,Register Number or Event Code,11266,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 013,Value,11267,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 013,Sequence Number,11271,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 014,,11272,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 014,Entry Number,11272,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 014,Date/Time,11273,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 014,Record Type,11277,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 014,Register Number or Event Code,11278,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 014,Value,11279,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 014,Sequence Number,11283,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 015,,11284,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 015,Entry Number,11284,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 015,Date/Time,11285,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 015,Record Type,11289,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 015,Register Number or Event Code,11290,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 015,Value,11291,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 015,Sequence Number,11295,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 016,,11296,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 016,Entry Number,11296,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 016,Date/Time,11297,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 016,Record Type,11301,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 016,Register Number or Event Code,11302,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 016,Value,11303,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 016,Sequence Number,11307,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 017,,11308,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 017,Entry Number,11308,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 017,Date/Time,11309,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 017,Record Type,11313,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 017,Register Number or Event Code,11314,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 017,Value,11315,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 017,Sequence Number,11319,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 018,,11320,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 018,Entry Number,11320,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 018,Date/Time,11321,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 018,Record Type,11325,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 018,Register Number or Event Code,11326,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 018,Value,11327,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 018,Sequence Number,11331,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 019,,11332,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 019,Entry Number,11332,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 019,Date/Time,11333,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 019,Record Type,11337,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 019,Register Number or Event Code,11338,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 019,Value,11339,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 019,Sequence Number,11343,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 020,,11344,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 020,Entry Number,11344,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 020,Date/Time,11345,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 020,Record Type,11349,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 020,Register Number or Event Code,11350,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 020,Value,11351,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 020,Sequence Number,11355,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 021,,11356,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 021,Entry Number,11356,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 021,Date/Time,11357,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 021,Record Type,11361,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 021,Register Number or Event Code,11362,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 021,Value,11363,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 021,Sequence Number,11367,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 022,,11368,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 022,Entry Number,11368,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 022,Date/Time,11369,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 022,Record Type,11373,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 022,Register Number or Event Code,11374,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 022,Value,11375,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 022,Sequence Number,11379,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 023,,11380,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 023,Entry Number,11380,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 023,Date/Time,11381,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 023,Record Type,11385,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 023,Register Number or Event Code,11386,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 023,Value,11387,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 023,Sequence Number,11391,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 024,,11392,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 024,Entry Number,11392,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 024,Date/Time,11393,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 024,Record Type,11397,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 024,Register Number or Event Code,11398,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 024,Value,11399,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 024,Sequence Number,11403,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 025,,11404,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 025,Entry Number,11404,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 025,Date/Time,11405,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 025,Record Type,11409,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 025,Register Number or Event Code,11410,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 025,Value,11411,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 025,Sequence Number,11415,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 026,,11416,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 026,Entry Number,11416,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 026,Date/Time,11417,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 026,Record Type,11421,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 026,Register Number or Event Code,11422,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 026,Value,11423,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 026,Sequence Number,11427,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 027,,11428,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 027,Entry Number,11428,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 027,Date/Time,11429,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 027,Record Type,11433,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 027,Register Number or Event Code,11434,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 027,Value,11435,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 027,Sequence Number,11439,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 028,,11440,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 028,Entry Number,11440,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 028,Date/Time,11441,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 028,Record Type,11445,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 028,Register Number or Event Code,11446,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 028,Value,11447,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 028,Sequence Number,11451,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 029,,11452,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 029,Entry Number,11452,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 029,Date/Time,11453,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 029,Record Type,11457,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 029,Register Number or Event Code,11458,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 029,Value,11459,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 029,Sequence Number,11463,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 030,,11464,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 030,Entry Number,11464,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 030,Date/Time,11465,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 030,Record Type,11469,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 030,Register Number or Event Code,11470,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 030,Value,11471,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 030,Sequence Number,11475,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 031,,11476,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 031,Entry Number,11476,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 031,Date/Time,11477,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 031,Record Type,11481,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 031,Register Number or Event Code,11482,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 031,Value,11483,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 031,Sequence Number,11487,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 032,,11488,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 032,Entry Number,11488,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 032,Date/Time,11489,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 032,Record Type,11493,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 032,Register Number or Event Code,11494,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 032,Value,11495,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 032,Sequence Number,11499,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 033,,11500,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 033,Entry Number,11500,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 033,Date/Time,11501,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 033,Record Type,11505,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 033,Register Number or Event Code,11506,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 033,Value,11507,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 033,Sequence Number,11511,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 034,,11512,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 034,Entry Number,11512,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 034,Date/Time,11513,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 034,Record Type,11517,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 034,Register Number or Event Code,11518,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 034,Value,11519,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 034,Sequence Number,11523,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 035,,11524,---,,---,---,---,---,
+Alarms,Alarm Event Queue,,Entry Number,11524,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Date/Time,11525,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,,Record Type,11529,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,,Register Number or Event Code,11530,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,,Value,11531,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Sequence Number,11535,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 036,,11536,---,,---,---,---,---,
+Alarms,Alarm Event Queue,,Entry Number,11536,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Date/Time,11537,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,,Record Type,11541,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,,Register Number or Event Code,11542,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,,Value,11543,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Sequence Number,11547,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 037,,11548,---,,---,---,---,---,
+Alarms,Alarm Event Queue,,Entry Number,11548,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Date/Time,11549,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,,Record Type,11553,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,,Register Number or Event Code,11554,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,,Value,11555,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Sequence Number,11559,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 038,,11560,---,,---,---,---,---,
+Alarms,Alarm Event Queue,,Entry Number,11560,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Date/Time,11561,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,,Record Type,11565,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,,Register Number or Event Code,11566,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,,Value,11567,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Sequence Number,11571,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 039,,11572,---,,---,---,---,---,
+Alarms,Alarm Event Queue,,Entry Number,11572,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Date/Time,11573,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,,Record Type,11577,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,,Register Number or Event Code,11578,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,,Value,11579,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,,Sequence Number,11583,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 040,,11584,---,,---,---,---,---,
+Alarms,Alarm Event Queue,Entry 040,Entry Number,11584,---,1,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 040,Date/Time,11585,---,4,DATETIME,R,,N/A,
+Alarms,Alarm Event Queue,Entry 040,Record Type,11589,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm Event Queue,Entry 040,Register Number or Event Code,11590,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm Event Queue,Entry 040,Value,11591,---,4,INT16U,R,,N/A,
+Alarms,Alarm Event Queue,Entry 040,Sequence Number,11595,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 040,,12316,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 040,Size of History Log,12316,---,1,INT16U,R,,25,
+Alarms,Alarm History Log,Entry 040,Number of Entries in History Log,12317,---,1,INT16U,R,,0,
+Alarms,Alarm History Log,Entry 040,Entry Number of Most Recent Event,12318,---,1,INT16U,R,,0,Value rolls over from 65535 (0xFFFF) to 0.
+Alarms,Alarm History Log,Entry 001,,12319,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 001,Entry Number,12319,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 001,Date/Time,12320,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 001,Record Type,12324,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 001,Register Number or Event Code,12325,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 001,Value,12326,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 001,Sequence Number,12330,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 002,,12331,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 002,Entry Number,12331,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 002,Date/Time,12332,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 002,Record Type,12336,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 002,Register Number or Event Code,12337,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 002,Value,12338,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 002,Sequence Number,12342,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 003,,12343,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 003,Entry Number,12343,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 003,Date/Time,12344,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 003,Record Type,12348,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 003,Register Number or Event Code,12349,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 003,Value,12350,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 003,Sequence Number,12354,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 004,,12355,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 004,Entry Number,12355,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 004,Date/Time,12356,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 004,Record Type,12360,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 004,Register Number or Event Code,12361,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 004,Value,12362,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 004,Sequence Number,12366,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 005,,12367,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 005,Entry Number,12367,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 005,Date/Time,12368,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 005,Record Type,12372,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 005,Register Number or Event Code,12373,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 005,Value,12374,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 005,Sequence Number,12378,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 006,,12379,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 006,Entry Number,12379,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 006,Date/Time,12380,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 006,Record Type,12384,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 006,Register Number or Event Code,12385,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 006,Value,12386,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 006,Sequence Number,12390,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 007,,12391,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 007,Entry Number,12391,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 007,Date/Time,12392,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 007,Record Type,12396,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 007,Register Number or Event Code,12397,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 007,Value,12398,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 007,Sequence Number,12402,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 008,,12403,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 008,Entry Number,12403,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 008,Date/Time,12404,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 008,Record Type,12408,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 008,Register Number or Event Code,12409,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 008,Value,12410,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 008,Sequence Number,12414,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 009,,12415,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 009,Entry Number,12415,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 009,Date/Time,12416,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 009,Record Type,12420,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 009,Register Number or Event Code,12421,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 009,Value,12422,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 009,Sequence Number,12426,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 010,,12427,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 010,Entry Number,12427,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 010,Date/Time,12428,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 010,Record Type,12432,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 010,Register Number or Event Code,12433,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 010,Value,12434,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 010,Sequence Number,12438,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 011,,12439,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 011,Entry Number,12439,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 011,Date/Time,12440,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 011,Record Type,12444,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 011,Register Number or Event Code,12445,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 011,Value,12446,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 011,Sequence Number,12450,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 012,,12451,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 012,Entry Number,12451,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 012,Date/Time,12452,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 012,Record Type,12456,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 012,Register Number or Event Code,12457,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 012,Value,12458,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 012,Sequence Number,12462,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 013,,12463,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 013,Entry Number,12463,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 013,Date/Time,12464,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 013,Record Type,12468,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 013,Register Number or Event Code,12469,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 013,Value,12470,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 013,Sequence Number,12474,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 014,,12475,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 014,Entry Number,12475,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 014,Date/Time,12476,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 014,Record Type,12480,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 014,Register Number or Event Code,12481,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 014,Value,12482,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 014,Sequence Number,12486,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 015,,12487,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 015,Entry Number,12487,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 015,Date/Time,12488,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 015,Record Type,12492,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 015,Register Number or Event Code,12493,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 015,Value,12494,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 015,Sequence Number,12498,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 016,,12499,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 016,Entry Number,12499,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 016,Date/Time,12500,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 016,Record Type,12504,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 016,Register Number or Event Code,12505,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 016,Value,12506,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 016,Sequence Number,12510,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 017,,12511,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 017,Entry Number,12511,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 017,Date/Time,12512,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 017,Record Type,12516,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 017,Register Number or Event Code,12517,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 017,Value,12518,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 017,Sequence Number,12522,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 018,,12523,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 018,Entry Number,12523,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 018,Date/Time,12524,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 018,Record Type,12528,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 018,Register Number or Event Code,12529,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 018,Value,12530,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 018,Sequence Number,12534,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 019,,12535,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 019,Entry Number,12535,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 019,Date/Time,12536,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 019,Record Type,12540,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 019,Register Number or Event Code,12541,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 019,Value,12542,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 019,Sequence Number,12546,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 020,,12547,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 020,Entry Number,12547,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 020,Date/Time,12548,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 020,Record Type,12552,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 020,Register Number or Event Code,12553,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 020,Value,12554,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 020,Sequence Number,12558,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 021,,12559,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 021,Entry Number,12559,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 021,Date/Time,12560,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 021,Record Type,12564,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 021,Register Number or Event Code,12565,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 021,Value,12566,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 021,Sequence Number,12570,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 022,,12571,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 022,Entry Number,12571,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 022,Date/Time,12572,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 022,Record Type,12576,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 022,Register Number or Event Code,12577,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 022,Value,12578,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 022,Sequence Number,12582,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 023,,12583,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 023,Entry Number,12583,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 023,Date/Time,12584,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 023,Record Type,12588,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 023,Register Number or Event Code,12589,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 023,Value,12590,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 023,Sequence Number,12594,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 024,,12595,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 024,Entry Number,12595,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 024,Date/Time,12596,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 024,Record Type,12600,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 024,Register Number or Event Code,12601,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 024,Value,12602,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 024,Sequence Number,12606,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 025,,12607,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 025,Entry Number,12607,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 025,Date/Time,12608,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 025,Record Type,12612,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 025,Register Number or Event Code,12613,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 025,Value,12614,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 025,Sequence Number,12618,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 026,,12619,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 026,Entry Number,12619,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 026,Date/Time,12620,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 026,Record Type,12624,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 026,Register Number or Event Code,12625,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 026,Value,12626,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 026,Sequence Number,12630,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 027,,12631,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 027,Entry Number,12631,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 027,Date/Time,12632,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 027,Record Type,12636,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 027,Register Number or Event Code,12637,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 027,Value,12638,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 027,Sequence Number,12642,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 028,,12643,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 028,Entry Number,12643,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 028,Date/Time,12644,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 028,Record Type,12648,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 028,Register Number or Event Code,12649,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 028,Value,12650,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 028,Sequence Number,12654,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 029,,12655,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 029,Entry Number,12655,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 029,Date/Time,12656,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 029,Record Type,12660,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 029,Register Number or Event Code,12661,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 029,Value,12662,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 029,Sequence Number,12666,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 030,,12667,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 030,Entry Number,12667,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 030,Date/Time,12668,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 030,Record Type,12672,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 030,Register Number or Event Code,12673,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 030,Value,12674,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 030,Sequence Number,12678,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 031,,12679,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 031,Entry Number,12679,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 031,Date/Time,12680,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 031,Record Type,12684,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 031,Register Number or Event Code,12685,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 031,Value,12686,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 031,Sequence Number,12690,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 032,,12691,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 032,Entry Number,12691,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 032,Date/Time,12692,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 032,Record Type,12696,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 032,Register Number or Event Code,12697,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 032,Value,12698,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 032,Sequence Number,12702,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 033,,12703,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 033,Entry Number,12703,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 033,Date/Time,12704,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 033,Record Type,12708,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 033,Register Number or Event Code,12709,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 033,Value,12710,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 033,Sequence Number,12714,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 034,,12715,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 034,Entry Number,12715,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 034,Date/Time,12716,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 034,Record Type,12720,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 034,Register Number or Event Code,12721,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 034,Value,12722,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 034,Sequence Number,12726,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 035,,12727,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 035,Entry Number,12727,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 035,Date/Time,12728,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 035,Record Type,12732,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 035,Register Number or Event Code,12733,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 035,Value,12734,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 035,Sequence Number,12738,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 036,,12739,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 036,Entry Number,12739,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 036,Date/Time,12740,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 036,Record Type,12744,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 036,Register Number or Event Code,12745,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 036,Value,12746,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 036,Sequence Number,12750,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 037,,12751,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 037,Entry Number,12751,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 037,Date/Time,12752,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 037,Record Type,12756,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 037,Register Number or Event Code,12757,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 037,Value,12758,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 037,Sequence Number,12762,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 038,,12763,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 038,Entry Number,12763,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 038,Date/Time,12764,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 038,Record Type,12768,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 038,Register Number or Event Code,12769,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 038,Value,12770,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 038,Sequence Number,12774,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 039,,12775,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 039,Entry Number,12775,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 039,Date/Time,12776,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 039,Record Type,12780,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 039,Register Number or Event Code,12781,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 039,Value,12782,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 039,Sequence Number,12786,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 040,,12787,---,,---,---,---,---,
+Alarms,Alarm History Log,Entry 040,Entry Number,12787,---,1,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 040,Date/Time,12788,---,4,DATETIME,R,,N/A,
+Alarms,Alarm History Log,Entry 040,Record Type,12792,---,1,INT16U,R,,N/A,"The high byte shall be 0xFF
+
+The low byte Indicates datatype of Value.
+
+0x0000    Boolean
+0x0010    INT16U
+0x0011    INT16
+0x0020    INT32U
+0x0021    INT32
+0x0030    INT64U
+0x0031    INT64
+0x0040    FLOAT32
+0x0041    FLOAT64
+"
+Alarms,Alarm History Log,Entry 040,Register Number or Event Code,12793,---,1,INT16U,R,,N/A,"See Event Codes for secondary events and 
+Alarm Attributes for Primary events"
+Alarms,Alarm History Log,Entry 040,Value,12794,---,4,INT16U,R,,N/A,
+Alarms,Alarm History Log,Entry 040,Sequence Number,12798,---,1,INT16U,R,,N/A,
+Alarms,Alarm Counters,,,13519,---,,---,---,---,---,
+Alarms,Alarm Counters,Summary,,13519,---,,---,---,---,---,
+Alarms,Alarm Counters,Summary,Total Counter,13519,---,1,INT16U,R,---,0,
+Alarms,Alarm Counters,Summary,Low Priority Counter,13520,---,1,INT16U,R,---,0,
+Alarms,Alarm Counters,Summary,Medium Priority Counter,13521,---,1,INT16U,R,---,0,
+Alarms,Alarm Counters,Summary,High Priority Counter,13522,---,1,INT16U,R,---,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,,13523,---,,---,---,---,---,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Current, Phase",13523,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Under Current, Phase",13524,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Current, Neutral",13525,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Current, Ground",13526,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Voltage, L-L",13527,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Under Voltage, L-L",13528,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Voltage, L-N",13529,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Under Voltage, L-N",13530,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Power, Active",13531,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Power, Reactive",13532,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Power, Apparent",13533,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Lead Power Factor, True",13534,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Lag Power Factor, True",13535,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Lead Power Factor, Displacement",13536,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Lag Power Factor, Displacement",13537,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Active Power, Present",13538,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Active Power, Last",13539,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Active Power, Predicted",13540,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Reactive Power, Present",13541,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Reactive Power, Last",13542,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Reactive Power, Predicted",13543,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Apparent Power, Present",13544,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Apparent Power, Last",13545,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,"Over Demand, Apparent Power, Predicted",13546,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,Over Frequency,13547,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,Under Frequency,13548,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,Over Voltage Unbalance,13549,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,Over Voltage Total Harmonic Distortion,13550,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,1-Second Alarms - Standard,Phase Loss,13551,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,Unary Alarms,,13623,---,,---,---,---,---,
+Alarms,Alarm Counters,Unary Alarms,Meter Powerup (Control Power Loss),13623,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,Unary Alarms,Meter Reset,13624,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,Unary Alarms,Meter Diagnostic,13625,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,Unary Alarms,Phase Reversal,13626,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,Unary Alarms,Unused,13627,---,6,INT16U,R,---,N/A,
+Alarms,Alarm Counters,Digital Alarms,,13633,---,,---,---,---,---,
+Alarms,Alarm Counters,Digital Alarms,Digital Alarm DI1,13633,---,1,INT16U,R,0 – 9999,0,
+Alarms,Alarm Counters,Digital Alarms,Digital Alarm DI2,13634,---,1,INT16U,R,0 – 9999,0,
+Alarms,1-Second Alarms - Standard,,,14000,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",,14000,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Attributes,14000,---,2,INT32U,RWC,,0x10848B80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Source Register A,14002,---,1,INT16U,R,,R_IA_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Source Register B,14003,---,1,INT16U,R,,R_IB_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Source Register C,14004,---,1,INT16U,R,,R_IC_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Pickup Setpoint,14005,A,2,FLOAT32,RWC,See User Notes,0,The maximum pickup setpoint allowed  is the maximum current that can be reported under the present configuration of CT ratio.
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Pickup Time Delay,14007,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Dropout Setpoint,14009,A,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,"Over Current, Phase",Dropout Time Delay,14011,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate – Base,14013,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Under Current, Phase",,14020,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14020,---,2,INT32U,RWC,,0x11048B80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14022,---,1,INT16U,R,,R_IA_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14023,---,1,INT16U,R,,R_IB_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register C,14024,---,1,INT16U,R,,R_IC_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14025,A,2,FLOAT32,RWC,See User Notes,0,Must be < Dropout Setpoint.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14027,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14029,A,2,FLOAT32,RWC,See User Notes,0,The maximum pickup setpoint allowed  is the maximum current that can be reported under the present configuration of CT ratio.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14031,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14033,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Current, Neutral",,14040,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14040,---,2,INT32U,RWC,,0x10849400,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14042,---,1,INT16U,R,,R_IN_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Reserved,14043,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Reserved,14044,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14045,A,2,FLOAT32,RWC,See User Notes,0,The maximum pickup setpoint allowed  is the maximum current that can be reported under the present configuration of CT ratio.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14047,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14049,A,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14051,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14053,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Current, Ground",,14060,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14060,---,2,INT32U,RWC,,0x10849C80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14062,---,1,INT16U,R,,R_IG_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Reserved,14063,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Reserved,14064,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14065,A,2,FLOAT32,RWC,See User Notes,0,The maximum pickup setpoint allowed  is the maximum current that can be reported under the present configuration of CT ratio.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14067,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14069,A,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14071,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14073,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Voltage, L-L",,14080,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14080,---,2,INT32U,RWC,,0x1082AB80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14082,---,1,INT16U,R,,R_VAB_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14083,---,1,INT16U,R,,R_VBC_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register C,14084,---,1,INT16U,R,,R_VCA_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14085,V,2,FLOAT32,RWC,See User Notes,0,The maximum pickup setpoint allowed  is the maximum voltage  that can be reported under the present configuration of VT ratio.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14087,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14089,V,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14091,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14093,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Under Voltage, L-L",,14100,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14100,---,2,INT32U,RWC,,0x1102AB80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14102,---,1,INT16U,R,,R_VAB_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14103,---,1,INT16U,R,,R_VBC_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register C,14104,---,1,INT16U,R,,R_VCA_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14105,V,2,FLOAT32,RWC,See User Notes,0,Must be < Dropout Setpoint.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14107,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14109,V,2,FLOAT32,RWC,See User Notes,0,"The maximum dropout setpoint allowed  is the maximum voltage that can be reported under the present configuration of VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14111,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14113,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Voltage, L-N",,14120,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14120,---,2,INT32U,RWC,,0x1082A380,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14122,---,1,INT16U,R,,R_VAN_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14123,---,1,INT16U,R,,R_VBN_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register C,14124,---,1,INT16U,R,,R_VCN_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14125,V,2,FLOAT32,RWC,See User Notes,0,The maximum pickup setpoint allowed  is the maximum voltage  that can be reported under the present configuration of VT ratio.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14127,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14129,V,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14131,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14133,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Under Voltage, L-N",,14140,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14140,---,2,INT32U,RWC,,0x1102A380,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14142,---,1,INT16U,R,,R_VAN_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14143,---,1,INT16U,R,,R_VBN_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register C,14144,---,1,INT16U,R,,R_VCN_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14145,V,2,FLOAT32,RWC,See User Notes,0,Must be < Dropout Setpoint.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14147,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14149,V,2,FLOAT32,RWC,See User Notes,0,"The maximum dropout setpoint allowed  is the maximum voltage that can be reported under the present configuration of VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14151,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14153,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Power, Active",,14160,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14160,---,2,INT32U,RWC,,0x10875580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14162,---,1,INT16U,R,,R_PTOT_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14163,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14164,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14165,kW,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14167,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14169,kW,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14171,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14173,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Power, Reactive",,14180,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14180,---,2,INT32U,RWC,,0x10895580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14182,---,1,INT16U,R,,R_QTOT_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14183,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14184,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14185,kVAR,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14187,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14189,kVAR,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14191,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14193,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Power, Apparent",,14200,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14200,---,2,INT32U,RWC,,0x108B5580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14202,---,1,INT16U,R,,R_STOT_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14203,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14204,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14205,kVA,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14207,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14209,kVA,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14211,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14213,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Leading Power Factor, True",,14220,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14220,---,2,INT32U,RWC,,0x118EC380,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14222,---,1,INT16U,R,,R_PFA_50_60_CYC_TRUE,
+Alarms,1-Second Alarms - Standard,,Reserved,14223,---,1,INT16U,R,,R_PFB_50_60_CYC_TRUE,
+Alarms,1-Second Alarms - Standard,,Reserved,14224,---,1,INT16U,R,,R_PFC_50_60_CYC_TRUE,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14225,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14227,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14229,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14231,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14233,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Lagging Power Factor, True",,14240,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14240,---,2,INT32U,RWC,,0x120EC380,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14242,---,1,INT16U,R,,R_PFA_50_60_CYC_TRUE,
+Alarms,1-Second Alarms - Standard,,Reserved,14243,---,1,INT16U,R,,R_PFB_50_60_CYC_TRUE,
+Alarms,1-Second Alarms - Standard,,Reserved,14244,---,1,INT16U,R,,R_PFC_50_60_CYC_TRUE,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14245,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14247,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14249,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14251,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14253,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Leading Power Factor, Displacement",,14260,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14260,---,2,INT32U,RWC,,0x118ECB80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14262,---,1,INT16U,R,,R_PFA_50_60_CYC_DISP,
+Alarms,1-Second Alarms - Standard,,Reserved,14263,---,1,INT16U,R,,R_PFB_50_60_CYC_DISP,
+Alarms,1-Second Alarms - Standard,,Reserved,14264,---,1,INT16U,R,,R_PFC_50_60_CYC_DISP,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14265,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14267,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14269,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14271,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14273,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Lagging Power Factor, Displacement",,14280,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14280,---,2,INT32U,RWC,,0x120ECB80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14282,---,1,INT16U,R,,R_PFA_50_60_CYC_DISP,
+Alarms,1-Second Alarms - Standard,,Reserved,14283,---,1,INT16U,R,,R_PFB_50_60_CYC_DISP,
+Alarms,1-Second Alarms - Standard,,Reserved,14284,---,1,INT16U,R,,R_PFC_50_60_CYC_DISP,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14285,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14287,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14289,---,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14291,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14293,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Active Power, Present",,14300,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14300,---,2,INT32U,RWC,,0x1086E580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14302,---,1,INT16U,R,,R_DMD_CH_01_PRES,
+Alarms,1-Second Alarms - Standard,,Source Register B,14303,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14304,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14305,kW,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14307,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14309,kW,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14311,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14313,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Active Power, Last",,14320,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14320,---,2,INT32U,RWC,,0x1086D580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14322,---,1,INT16U,R,,R_DMD_CH_01_LAST,
+Alarms,1-Second Alarms - Standard,,Source Register B,14323,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14324,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14325,kW,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14327,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14329,kW,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14331,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14333,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Active Power, Predicted",,14340,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14340,---,2,INT32U,RWC,,0x1086DD80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14342,---,1,INT16U,R,,R_DMD_CH_01_PREDICTED,
+Alarms,1-Second Alarms - Standard,,Source Register B,14343,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14344,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14345,kW,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14347,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14349,kW,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14351,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14353,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Reactive Power, Present",,14360,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14360,---,2,INT32U,RWC,,0x1088E580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14362,---,1,INT16U,R,,R_DMD_CH_02_PRES,
+Alarms,1-Second Alarms - Standard,,Source Register B,14363,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14364,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14365,kVAR,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14367,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14369,kVAR,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14371,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14373,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Reactive Power, Last",,14380,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14380,---,2,INT32U,RWC,,0x1088D580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14382,---,1,INT16U,R,,R_DMD_CH_02_LAST,
+Alarms,1-Second Alarms - Standard,,Source Register B,14383,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14384,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14385,kVAR,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14387,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14389,kVAR,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14391,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14393,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Reactive Power, Predicted",,14400,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14400,---,2,INT32U,RWC,,0x1088DD80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14402,---,1,INT16U,R,,R_DMD_CH_02_PREDICTED,
+Alarms,1-Second Alarms - Standard,,Source Register B,14403,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14404,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14405,kVAR,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14407,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14409,kVAR,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14411,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14413,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Apparent Power, Present",,14420,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14420,---,2,INT32U,RWC,,0x108AE580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14422,---,1,INT16U,R,,R_DMD_CH_03_PRES,
+Alarms,1-Second Alarms - Standard,,Source Register B,14423,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14424,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14425,kVA,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14427,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14429,kVA,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14431,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14433,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Apparent Power, Last",,14440,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14440,---,2,INT32U,RWC,,0x108AD580,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14442,---,1,INT16U,R,,R_DMD_CH_03_LAST,
+Alarms,1-Second Alarms - Standard,,Source Register B,14443,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14444,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14445,kVA,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14447,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14449,kVA,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14451,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14453,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,"Over Demand, Apparent Power, Predicted",,14460,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14460,---,2,INT32U,RWC,,0x108ADD80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14462,---,1,INT16U,R,,R_DMD_CH_03_PREDICTED,
+Alarms,1-Second Alarms - Standard,,Source Register B,14463,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Source Register C,14464,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14465,kVA,2,FLOAT32,RWC,See User Notes,0,"The maximum pickup setpoint allowed  is the maximum power that can be reported under the present configuration of CT and VT ratio.
+"
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14467,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14469,kVA,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14471,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14473,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,Over Frequency,,14480,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14480,---,2,INT32U,RWC,,0x108C0000,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14482,---,1,INT16U,R,,R_FREQ_50_60_CYC_AVG,
+Alarms,1-Second Alarms - Standard,,Reserved,14483,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Reserved,14484,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14485,Hz,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14487,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14489,Hz,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14491,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14493,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,Under Frequency,,14500,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14500,---,2,INT32U,RWC,,0x110C0000,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14502,---,1,INT16U,R,,R_FREQ_50_60_CYC_AVG,
+Alarms,1-Second Alarms - Standard,,Reserved,14503,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Reserved,14504,---,1,INT16U,R,,N/A,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14505,Hz,2,FLOAT32,RWC,See User Notes,0,Must be < Dropout Setpoint.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14507,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14509,Hz,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14511,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14513,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,Over Voltage Unbalance,,14520,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14520,---,2,INT32U,RWC,,0x1082BB80,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14522,---,1,INT16U,R,,R_VAB_50_60_CYC_UNB,
+Alarms,1-Second Alarms - Standard,,Source Register B,14523,---,1,INT16U,R,,R_VBC_50_60_CYC_UNB,
+Alarms,1-Second Alarms - Standard,,Source Register C,14524,---,1,INT16U,R,,R_VCA_50_60_CYC_UNB,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14525,%,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14527,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14529,%,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14531,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14533,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,Over Voltage Total Harmonic Distortion,,14540,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14540,---,2,INT32U,RWC,,0x1082B000,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14542,---,1,INT16U,R,,R_VAB_50_60_CYC_THD,
+Alarms,1-Second Alarms - Standard,,Source Register B,14543,---,1,INT16U,R,,R_VBC_50_60_CYC_THD,
+Alarms,1-Second Alarms - Standard,,Source Register C,14544,---,1,INT16U,R,,R_VCA_50_60_CYC_THD,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14545,%,2,FLOAT32,RWC,,0,
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14547,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14549,%,2,FLOAT32,RWC,See User Notes,0,Must be < Pickup Setpoint.
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14551,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14553,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,1-Second Alarms - Standard,Phase Loss,,14560,---,,---,---,---,---,
+Alarms,1-Second Alarms - Standard,,Attributes,14560,---,2,INT32U,RWC,,0x12820380,See Alarm Attributes for details.
+Alarms,1-Second Alarms - Standard,,Source Register A,14562,---,1,INT16U,R,,R_VAB_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register B,14563,---,1,INT16U,R,,R_VBC_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Source Register C,14564,---,1,INT16U,R,,R_VCA_50_60_CYC_RMS,
+Alarms,1-Second Alarms - Standard,,Pickup Setpoint,14565,V,2,FLOAT32,RWC,,0,Must be < Dropout Setpoint.
+Alarms,1-Second Alarms - Standard,,Pickup Time Delay,14567,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Dropout Setpoint,14569,V,2,FLOAT32,RWC,See User Notes,0,
+Alarms,1-Second Alarms - Standard,,Dropout Time Delay,14571,seconds,2,INT32U,RWC,---,0,
+Alarms,1-Second Alarms - Standard,,Digital Outputs to Associate –  Standard,14573,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,Unary Alarms,,,,---,,---,---,---,---,
+Alarms,Unary Alarms,Meter Power Up (Control Power Loss),,,---,,---,---,---,---,
+Alarms,Unary Alarms,Meter Power Up (Control Power Loss),Attributes,16200,---,2,INT32U,RWC,---,0x84000019,See Alarm Attributes for details.
+Alarms,Unary Alarms,Meter Power Up (Control Power Loss),Digital Outputs to Associate –  Standard,16202,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,Unary Alarms,Meter Reset,,16210,---,,---,---,---,---,
+Alarms,Unary Alarms,Meter Reset,Attributes,16210,---,2,INT32U,RWC,---,0x84800019,See Alarm Attributes for details.
+Alarms,Unary Alarms,Meter Reset,Digital Outputs to Associate –  Standard,16212,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,Unary Alarms,Meter Diagnostic,,16220,---,,---,---,---,---,
+Alarms,Unary Alarms,Meter Diagnostic,Attributes,16220,---,2,INT32U,RWC,---,0x851A0000,See Alarm Attributes for details.
+Alarms,Unary Alarms,Meter Diagnostic,Digital Outputs to Associate –  Standard,16222,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,Unary Alarms,Phase Reversal,,16230,---,,---,---,---,---,
+Alarms,Unary Alarms,Phase Reversal,Attributes,16230,---,2,INT32U,RWC,---,0x83000000,See Alarm Attributes for details.
+Alarms,Unary Alarms,Phase Reversal,Digital Outputs to Associate –  Standard,16232,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,Digital Alarms,,,,---,,---,---,---,---,
+Alarms,Digital Alarms,Digital Alarm DI1,,,---,,---,---,---,---,
+Alarms,Digital Alarms,Digital Alarm DI1,Attributes,16300,---,2,INT32U,RWC,---,0x95900800,See Alarm Attributes for details.
+Alarms,Digital Alarms,Digital Alarm DI1,Pickup Time Delay,16302,seconds,2,INT32U,RWC,---,---,
+Alarms,Digital Alarms,Digital Alarm DI1,Dropout Time Delay,16304,seconds,2,INT32U,RWC,---,---,
+Alarms,Digital Alarms,Digital Alarm DI1,Digital Outputs to Associate –  Standard,16306,---,1,BITMAP,RWC,---,---,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"
+Alarms,Digital Alarms,Digital Alarm DI2,,16314,---,,---,---,---,---,
+Alarms,Digital Alarms,Digital Alarm DI2,Attributes,16314,---,2,INT32U,RWC,---,0x95901000,See Alarm Attributes for details.
+Alarms,Digital Alarms,Digital Alarm DI2,Pickup Time Delay,16316,seconds,2,INT32U,RWC,---,---,
+Alarms,Digital Alarms,Digital Alarm DI2,Dropout Time Delay,16318,seconds,2,INT32U,RWC,---,---,
+Alarms,Digital Alarms,Digital Alarm DI2,Digital Outputs to Associate –  Standard,16320,---,1,BITMAP,RWC,,0,"Bitmap of digital outputs to associate with this alarm.
+Bitmap is right-justified with the least significant bit associated with digital output ID of 1.
+
+For PM5xxx series, the maximum value is 0x0003. (There are 2 digital outputs.)"

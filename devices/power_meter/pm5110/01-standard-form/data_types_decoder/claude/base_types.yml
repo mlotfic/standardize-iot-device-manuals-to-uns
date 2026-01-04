@@ -1,0 +1,99 @@
+# types.yaml - Reusable base type definitions
+# Version: 1.0.0
+# Last Modified: 2025-12-29
+
+meta:
+  schema_version: "1.0.0"
+  namespace: "modbus.registers"
+  
+# Primitive bitfield structure
+bitfield_base:
+  total_width: 32  # bits
+  byte_order: big_endian
+
+# Standard enum patterns that repeat across devices
+enum_patterns:
+  phases:
+    width: 4
+    offset: 7
+    values:
+      0: {name: NONE, desc: "No phase specified"}
+      1: {name: A, desc: "Phase A only"}
+      2: {name: B, desc: "Phase B only"}
+      3: {name: C, desc: "Phase C only"}
+      4: {name: AB, desc: "Phases A and B"}
+      5: {name: BC, desc: "Phases B and C"}
+      6: {name: CA, desc: "Phases C and A"}
+      7: {name: ABC, desc: "All three phases (A → B → C)"}
+      8: {name: N, desc: "Neutral conductor"}
+      9: {name: G, desc: "Ground conductor"}
+      10: {name: NG, desc: "Neutral and ground conductors"}
+      11: {name: "3PHASE_TOTAL", desc: "Three-phase total (sum or average)"}
+  
+  priority:
+    width: 2
+    offset: 3
+    values:
+      0: {name: NONE, desc: "No priority assigned"}
+      1: {name: HIGH, desc: "Requires immediate attention", color: red}
+      2: {name: MEDIUM, desc: "Requires timely attention", color: yellow}
+      3: {name: LOW, desc: "Informational", color: green}
+  
+  binary_state:
+    width: 1
+    values:
+      0: {name: DISABLED, desc: "Inactive"}
+      1: {name: ENABLED, desc: "Active"}
+
+# Measurement units (reusable across all devices)
+units:
+  electrical:
+    voltage: {code: 8, symbol: "V", name: "Volts"}
+    current: {code: 6, symbol: "A", name: "Amperes"}
+    power_active: {code: 11, symbol: "W", name: "Watts"}
+    power_reactive: {code: 14, symbol: "VAR", name: "Volt-Ampere Reactive"}
+    power_apparent: {code: 17, symbol: "VA", name: "Volt-Amperes"}
+    frequency: {code: 5, symbol: "Hz", name: "Hertz"}
+    energy: {code: 20, symbol: "WH", name: "Watt-Hour"}
+  
+  temperature:
+    celsius: {code: 2, symbol: "°C", name: "Degrees Celsius"}
+    fahrenheit: {code: 3, symbol: "°F", name: "Degrees Fahrenheit"}
+  
+  time:
+    seconds: {code: 29, symbol: "s", name: "Seconds"}
+    milliseconds: {code: 46, symbol: "ms", name: "Milliseconds"}
+    minutes: {code: 30, symbol: "min", name: "Minutes"}
+    hours: {code: 31, symbol: "h", name: "Hours"}
+
+# Standard data types (IEC 61850, IEC 870-5-4)
+standard_types:
+  DATETIME:
+    standard: "IEC 870-5-4"
+    width: 64
+    structure:
+      - {name: year, offset: 0, width: 6, range: [0, 127]}
+      - {name: reserved1, offset: 7, width: 9}
+      - {name: day, offset: 16, width: 5, range: [1, 31]}
+      - {name: weekday, offset: 21, width: 3, range: [1, 7]}
+      - {name: month, offset: 24, width: 4, range: [1, 12]}
+      - {name: reserved2, offset: 28, width: 4}
+      - {name: minutes, offset: 32, width: 6, range: [0, 59]}
+      - {name: reserved3, offset: 38, width: 1}
+      - {name: time_sync_quality, offset: 39, width: 1, type: flag}
+      - {name: hour, offset: 40, width: 5, range: [0, 23]}
+      - {name: reserved4, offset: 45, width: 2}
+      - {name: dst_flag, offset: 47, width: 1, type: flag}
+      - {name: millisecond, offset: 48, width: 16, range: [0, 59999]}
+  
+  DATE:
+    standard: "Device Specific"
+    width: 32
+    inherits: "DATETIME"
+    fields: [year, day, weekday, month]
+  
+  TIME:
+    standard: "Device Specific"
+    width: 32
+    inherits: "DATETIME"
+    fields: [minutes, time_sync_quality, hour, dst_flag, millisecond]

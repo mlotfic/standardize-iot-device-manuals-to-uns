@@ -1,0 +1,103 @@
+{
+	"power_system": {
+		"description": "Select the power system type (power transformer) the meter is wired to.",
+		"value": "3PH4W_WYE_GND",
+		"allowed_values": {
+			"1PH2W_LN": "Single-phase 2-wire line-to-neutral",
+			"1PH2W_LL": "Single-phase 2-wire line-to-line",
+			"1PH3W_LL_N": "Single-phase 3-wire line-to-line with neutral",
+			"3PH3W_DLT_UNGND": "3-phase 3-wire ungrounded delta",
+			"3PH3W_DLT_CRNR_GND": "3-phase 3-wire corner grounded delta",
+			"3PH3W_WYE_UNGND": "3-phase 3-wire ungrounded wye",
+			"3PH3W_WYE_GND": "3-phase 3-wire grounded wye",
+			"3PH3W_WYE_RES_GND": "3-phase 3-wire resistance-grounded wye",
+			"3PH4W_OPN_DLT_CTR_TP": "3-phase 4-wire center-tapped open delta",
+			"3PH4W_DLT_CTR_TP": "3-phase 4-wire center-tapped delta",
+			"3PH4W_WYE_UNGND": "3-phase 4-wire ungrounded wye",
+			"3PH4W_WYE_GND": "3-phase 4-wire grounded wye",
+			"3PH4W_WYE_RES_GND": "3-phase 4-wire resistance-grounded wye"
+		},
+		"enum": 1,
+		"data_type": "string",
+		"unit": null
+	},
+	"VT_connection": {
+		"description": "Select how many voltage transformers (VT) are connected to the electrical power system.",
+		"value": "DIRECT",
+		"allowed_connection_types": {
+			"DIRECT_Con": "Direct connection, no VTs",
+			"2VT": "Two voltage transformers",
+			"3VT": "Three voltage transformers"
+		},
+		"enum": 1,
+		"data_type": "string",
+		"unit": null
+	},
+	"VT_primary": {
+		"description": "Set the voltage transformer (VT) primary and secondary voltage ratings.",
+		"value": 11000,
+		"allowed_values": [1, 1000000],
+		"enum": 0,
+		"data_type": "INT32",
+		"unit": "V"
+	},
+	"VT_secondary": {
+		"description": "Select the voltage transformer (VT) secondary voltage rating.",
+		"value": 110,
+		"allowed_values": [	100, 110, 115, 120],
+		"enum": 1,
+		"data_type": "UINT16",
+		"unit": "V"
+	},
+	"CT_on_Terminal": {
+		"description": "Define how many current transformers (CT) are connected to the meter, and which terminals they are connected to.",
+		"value": "I1_I2_I3",
+		"allowed_sets": {
+			"I1": "1 CT connected to I1 terminal",
+			"I2": "1 CT connected to I2 terminal",
+			"I3": "1 CT connected to I3 terminal",
+			"I1_I2": "2 CTs connected to I1 and I2 terminals",
+			"I1_I3": "2 CTs connected to I1 and I3 terminals",
+			"I2_I3": "2 CTs connected to I2 and I3 terminals",
+			"I1_I2_I3": "3 CTs connected to I1, I2, and I3 terminals"
+		},
+		"enum": 1,
+		"data_type": "string",
+		"unit": null
+	},
+	"CT_Primary": {
+		"description": "Enter the size of the CT primary, in Amps.",
+		"value": 800,
+		"allowed_values": [1, 32767],
+		"enum": 0,
+		"data_type": "INT16",
+		"unit": "A"
+	},
+	"CT_secondary": {
+		"description": "Select the size of the CT secondary, in Amps.",
+		"value": 5,
+		"allowed_values": [1, 5],
+		"enum": 1,
+		"data_type": "UINT16",
+		"unit": "A"
+	},
+	"sys_frequency": {
+		"description": "Set the system frequency for the electrical power system.",
+		"value": 50,
+		"allowed_values": [50,	60],
+		"enum": 1,
+		"data_type": "UINT16",
+		"unit": "Hz"
+	},
+	"phase_rotation": {
+		"description": "Set the phase rotation for the electrical power system.",
+		"value": "ABC",
+		"allowed_values": {
+			"ABC": "Forward rotation",
+			"CBA": "Reverse rotation"
+		},
+		"enum": 1,
+		"data_type": "string",
+		"unit": null
+	}
+}

@@ -1,0 +1,81 @@
+unit_code,symbol,full_name,category,conversion_to_si,si_unit
+0,,No Units,dimensionless,1,
+1,%,Percentage,dimensionless,0.01,
+2,°C,Degrees Celsius,temperature,1,K
+3,°F,Degrees Fahrenheit,temperature,0.556,K
+4,Deg,Degrees Angular,angle,0.0174533,rad
+5,Hz,Hertz,frequency,1,Hz
+6,A,Amperes,current,1,A
+7,kA,Kilo Amperes,current,1000,A
+8,V,Volts,voltage,1,V
+9,kV,Kilo Volts,voltage,1000,V
+10,MV,Mega Volts,voltage,1000000,V
+11,W,Watts,power,1,W
+12,kW,Kilowatts,power,1000,W
+13,MW,Megawatts,power,1000000,W
+14,VAR,Volt-Ampere Reactive,reactive_power,1,VAR
+15,kVAR,Kilo Volt-Ampere Reactive,reactive_power,1000,VAR
+16,MVAR,Mega Volt-Ampere Reactive,reactive_power,1000000,VAR
+17,VA,Volt-Amperes,apparent_power,1,VA
+18,kVA,Kilo Volt-Amperes,apparent_power,1000,VA
+19,MVA,Mega Volt-Amperes,apparent_power,1000000,VA
+20,WH,Watt-Hour,energy,3600,J
+21,kWH,Kilowatt-Hour,energy,3600000,J
+22,MWH,Megawatt-Hour,energy,3600000000,J
+23,VARH,Reactive Volt-Ampere Hour,reactive_energy,3600,VARh
+24,kVARH,Reactive Kilo Volt-Ampere Hour,reactive_energy,3600000,VARh
+25,MVARH,Reactive Mega Volt-Ampere Hour,reactive_energy,3600000000,VARh
+26,VAH,Volt-Ampere Hours,apparent_energy,3600,VAh
+27,kVAH,Kilo Volt-Ampere Hours,apparent_energy,3600000,VAh
+28,MVAH,Mega Volt-Ampere Hours,apparent_energy,3600000000,VAh
+29,s,Seconds,time,1,s
+30,min,Minutes,time,60,s
+31,h,Hours,time,3600,s
+46,ms,Milliseconds,time,0.001,s
+20,°,Degrees,temperature,1,K
+34,$,Dollars,currency,1,USD
+35,gal,Gallons,volume,0.00378541,m³
+36,gal/hr,Gallons/hour,flow_rate,0.00378541,m³/h
+37,gal/min,Gallons/minute,flow_rate,0.0000630902,m³/s
+38,cfm,Cubic feet/min,flow_rate,0.000471947,m³/s
+39,PSI,PSI,pressure,6894.76,Pa
+40,BTU,BTU,energy,1055.06,J
+41,L,Liters,volume,0.001,m³
+42,ton-hours,Ton-hours,energy,12660670,J
+43,L/hr,Liters/hour,flow_rate,0.001,m³/h
+44,L/min,Liters/min,flow_rate,0.0000166667,m³/s
+45,€,Euros,currency,1,EUR
+47,m³,Cubic meters,volume,1,m³
+48,m³/s,Cubic meters/sec,flow_rate,1,m³/s
+49,m³/min,Cubic meters/min,flow_rate,0.0166667,m³/s
+50,m³/hr,Cubic meters/hour,flow_rate,0.000277778,m³/s
+51,Pa,Pascals,pressure,1,Pa
+52,bar,Bar,pressure,100000,Pa
+53,RPM,Revolutions/min,rotational_speed,0.104720,rad/s
+55,BTU/hr,BTU/hour,power,0.293071,W
+56,PSIG,Pounds/square inch gauge,pressure,6894.76,Pa
+57,SCFM,Standard cubic feet/min,flow_rate,0.000471947,m³/s
+58,MCF,Thousand cubic feet,volume,28.3168,m³
+59,Therm,Therm,energy,105505600,J
+60,SCFH,Standard cubic feet/hour,flow_rate,0.00000786579,m³/s
+61,PSIA,Pounds/square inch absolute,pressure,6894.76,Pa
+62,lbs,Pounds,mass,0.453592,kg
+63,kg,Kilogram,mass,1,kg
+64,klbs,Kilopounds,mass,453.592,kg
+65,lb/hr,Pound/hour,mass_flow,0.000125998,kg/s
+66,ton/hr,Ton/hour,mass_flow,0.251996,kg/s
+67,kg/hr,Kilogram/hour,mass_flow,0.000277778,kg/s
+68,in. Hg,Inch of Mercury,pressure,3386.39,Pa
+69,kPa,KiloPascals,pressure,1000,Pa
+70,%RH,Percentage of relative humidity,dimensionless,0.01,
+71,MPH,Miles per hour,velocity,0.44704,m/s
+72,m/s,Meters/sec,velocity,1,m/s
+73,mV/cal/(cm²/min),milliVolts/calorie per square centimeters per min,heat_flux,0.697333,W/m²
+74,in,Inches,length,0.0254,m
+75,mm,Millimeter,length,0.001,m
+76,GWH,GigaWatt-Hour,energy,3600000000000,J
+77,GVARH,Reactive Giga Volt-Ampere Hour,reactive_energy,3600000000000,VARh
+78,GVAH,Giga Volt-Ampere Hours,apparent_energy,3600000000000,VAh
+79,AH,Ampere-Hours,charge,3600,C
+80,kAH,Kiloamp-Hours,charge,3600000,C
+81,Therm/hr,Therm/hour,power,29307.1,W

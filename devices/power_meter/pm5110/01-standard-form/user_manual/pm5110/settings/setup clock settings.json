@@ -1,0 +1,48 @@
+{
+	"date": {
+		"description": "Set the current date using the format displayed on screen, where DD = day, MM = month and YY = year.",
+		"value": "DD/MM/YY",
+		"allowed_values": [
+			"DD/MM/YY",
+			"MM/DD/YY",
+			"YY/MM/DD"
+		],
+        "enum": 1,
+		"data_type": "string",
+        "unit": null
+	},
+	"time": {
+		"description": "Use the 24-hour format to set the current time in UTC (GMT).",
+		"value": "12:00:00",
+		"allowed_formats": [
+			"HH:MM:SS (24-hour)",
+			"HH:MM:SS AM/PM"
+		],
+        "enum": 1,
+		"data_type": "string",
+        "unit": null,
+		"time_zone": "UTC"
+	},
+	"meter_time": {
+		"description": "Select GMT if you set the current time to Greenwich Mean Time zone. Otherwise, select Local.",
+		"value": "Local",
+		"allowed_values": [
+			"GMT",
+			"Local"
+		],
+		"enum": 1,
+		"data_type": "string",
+        "unit": null
+	},
+	"gmt_offset_hours": {
+		"description": "Available only when Meter Time is set to Local. Set the GMT Offset between ±00.0 and ±12.0.",
+		"value": 2.0,
+        "allowed_values": [-12.0, 12.0],
+		"unit": "h",
+		"data_type": "float",
+		"dependency": {
+			"parameter": "meter_time_mode",
+			"required_value": "Local"
+		}
+	}
+}

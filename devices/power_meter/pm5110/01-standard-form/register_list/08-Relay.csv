@@ -1,0 +1,52 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+Relay,,Base Unit - Digital Output DO3,Type,9235,---,1,INT16U,R,201 – 299,201,
+Relay,,Base Unit - Digital Output DO3,Label,9236,---,20,UTF8,RWC,---,"""Digital Output DO3""",
+Relay,,Base Unit - Digital Output DO3,Enable/Disable,9256,---,1,INT16U,RWC,0 – 1,1,"0 = Disable, 1 = Enable"
+Relay,,Base Unit - Digital Output DO3,Behavioral Mode,9257,---,1,INT16U,RWC,0 – 2,0,"0 = Normal
+1 = Timed
+2 = Coil Hold
+"
+Relay,,Base Unit - Digital Output DO3,On Time For Timed Mode,9258,seconds,1,INT16U,RWC,---,1,"The time for the output to remain energized when the output is energized in timed mode.
+"
+Relay,,Base Unit - Digital Output DO4,Type,9259,---,1,INT16U,R,201 – 299,201,
+Relay,,Base Unit - Digital Output DO4,Label,9260,---,20,UTF8,RWC,---,"""Digital Output DO4""",
+Relay,,Base Unit - Digital Output DO4,Enable/Disable,9280,---,1,INT16U,RWC,0 – 1,1,"0 = Disable, 1 = Enable"
+Relay,,Base Unit - Digital Output DO4,Behavioral Mode,9281,---,1,INT16U,RWC,0 – 2,0,"0 = Normal
+1 = Timed
+2 = Coil Hold
+"
+Relay,,Base Unit - Digital Output DO4,On Time For Timed Mode,9282,seconds,1,INT16U,RWC,---,1,"The time for the output to remain energized when the output is energized in timed mode.
+"
+Relay,Digital Outputs Status,On/Off Status,Digital Output Status – Base Unit,9667,---,1,BITMAP,R,0x0000 – 0x000F,0x0000,
+Relay,Digital Outputs Status,On/Off Status,Digital Output Validity,9668,---,1,BITMAP,R,0x0000 – 0x000F,0x0000,
+Relay,,Base Unit - Digital Output DO1,Operating Mode Status,9672,---,1,INT16U,R,0 – 1,0,"0 = Normal, 1 = Override
+Operating Mode is changed by command. 
+Override is considered a temporary condition used for troubleshooting. 
+The state is volatile. That is to say that if the meter resets,  the digital output will revert to normal operation."
+Relay,,Base Unit - Digital Output DO1,Control Mode Status,9673,---,1,INT16U,R,0 – 3,0,"0 = External
+1 = Demand Sync
+2 = Alarm
+3 = Energy (Energy control modes are not available for electromechanical relays.)
+"
+Relay,,Base Unit - Digital Output DO1,Behavioral Mode Status,9674,---,1,INT16U,R,0 – 2,0,"0 = Normal
+1 = Timed
+2 = Coil Hold
+(Behavioral Mode will be forced to Normal when in Override Operating Mode.)"
+Relay,,Base Unit - Digital Output DO1,Count,9675,---,2,INT32U,R,---,0,
+Relay,,Base Unit - Digital Output DO1,On Time,9677,seconds,2,INT32U,R,---,0,
+Relay,,Base Unit - Digital Output DO2,Operating Mode Status,9680,---,1,INT16U,R,0 – 1,0,
+Relay,,Base Unit - Digital Output DO2,Control Mode Status,9681,---,1,INT16U,R,0 – 3,0,
+Relay,,Base Unit - Digital Output DO2,Behavioral Mode Status,9682,---,1,INT16U,R,0 – 2,0,
+Relay,,Base Unit - Digital Output DO2,Count,9683,---,2,INT32U,R,---,0,
+Relay,,Base Unit - Digital Output DO2,On Time,9685,seconds,2,INT32U,R,---,0,
+Relay,,Base Unit - Digital Output DO3,Operating Mode Status,9688,---,1,INT16U,R,0 – 1,0,
+Relay,,Base Unit - Digital Output DO3,Control Mode Status,9689,---,1,INT16U,R,0 – 3,0,
+Relay,,Base Unit - Digital Output DO3,Behavioral Mode Status,9690,---,1,INT16U,R,0 – 2,0,
+Relay,,Base Unit - Digital Output DO3,Count,9691,---,2,INT32U,R,---,0,
+Relay,,Base Unit - Digital Output DO3,On Time,9693,seconds,2,INT32U,R,---,0,
+Relay,,Base Unit - Digital Output DO4,Operating Mode Status,9696,---,1,INT16U,R,0 – 1,0,
+Relay,,Base Unit - Digital Output DO4,Control Mode Status,9697,---,1,INT16U,R,0 – 3,0,
+Relay,,Base Unit - Digital Output DO4,Behavioral Mode Status,9698,---,1,INT16U,R,0 – 2,0,
+Relay,,Base Unit - Digital Output DO4,Count,9699,---,2,INT32U,R,---,0,
+Relay,,Base Unit - Digital Output DO4,On Time,9701,seconds,2,INT32U,R,---,0,

@@ -1,0 +1,13 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+Diagnostics,Self-Test Results,Processor Loading,Processor Loading,20000,%,1,INT16U,R,0 – 100,0,
+Diagnostics,Self-Test Results,Miscellaneous Self-Test,Meter Self-Test,20003,---,5,BITMAP,R,,0x0000 0000 0000 0000 0000,"0 = OK, 1 = Error Detected
+Bit 01 = Summary
+   ( on if any other bit is on - Maintenance Icon shown on HMI )
+Bit 02 = RAM Failure
+Bit 03 = NVRAM Failure
+Bit 04 = RTC Failure
+Bit 05 = Calibration Failure
+Bit 06 = Clipping Detected
+Bit 07 = Over-Running Energy Pulse Output
+Bit 08-16 Not Used "

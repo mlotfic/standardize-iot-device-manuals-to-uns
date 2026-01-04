@@ -1,0 +1,19 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+Files,Datalogs,Energy Log,Logging Status,19000,---,1,INT16U,RWC,0-1,0,"0 = Disabled, 1 = Enabled"
+Files,Datalogs,Energy Log,Allocated File Size,19001,---,1,INT16U,R,---,0,Max number of records in file
+Files,Datalogs,Energy Log,Allocated Record Size,19002,---,1,INT16U,R,---,0,Record length in registers
+Files,Datalogs,Energy Log,Record Management Method,19003,---,1,INT16U,RWC,0-1,0,"0 = Circular, 1 = Fill and hold"
+Files,Datalogs,Energy Log,File Status,19004,---,1,INT16U,R,---,0,"0 = OK, 200 = Internal failure, 210 = Disabled due to config
+220 = Disabled due to Null config."
+Files,Datalogs,Energy Log,Number of records in file,19005,---,1,INT16U,R,---,0,"Number of records wriiten, resets to 0 on file clear"
+Files,Datalogs,Energy Log,First Record Sequence Number,19006,---,1,INT16U,R,---,0,First record in log
+Files,Datalogs,Energy Log,Last Record Sequence Number,19007,---,1,INT16U,R,---,0,Last record in the log
+Files,Datalogs,Energy Log,Topic Mode,19008,---,1,INT16U,RWC,---,1,"0 = Power data model, 1 = Modbus register format"
+Files,Datalogs,Energy Log,Start Time,19009,Minuites,1,INT16U,RWC,---,0,Not used in PM5500
+Files,Datalogs,Energy Log,Stop Time,19010,seconds,1,INT16U,RWC,---,1440,Not used in PM5500
+Files,Datalogs,Energy Log,Interval Control Minutes,19011,Minuites,1,INT16U,RWC,"1,5,10,15,30,60.1440",15,
+Files,Datalogs,Energy Log,Interval Control Seconds,19012,seconds,1,INT16U,RWC,0-59,0,
+Files,Datalogs,Energy Log,Date/Time Last clear,19013,---,4,DATETIME,RWC,---,N/A,
+Files,Datalogs,Energy Log,Record Item 1,19017,---,1,INT16U,RWC,---,0,
+Files,Datalogs,Energy Log,Record Item 2,19018,---,1,INT16U,RWC,---,0,

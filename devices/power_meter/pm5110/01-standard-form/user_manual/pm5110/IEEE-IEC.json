@@ -1,0 +1,152 @@
+[
+	{
+		"IEEE": "Amps",
+		"IEC": "I",
+		"Description": "Instantaneous current measurements for each phase and calculated neutral (In) or calculated ground current (Ig) based on the meter wiring type."
+	},
+	{
+		"IEEE": "Dmd",
+		"Description": "Summary of peak current demand values at the last demand interval."
+	},
+	{
+		"IEEE": "Iavg",
+		"Description": "Real-time demand (Pres), peak demand (Peak) and predicted demand (Pred) for the present interval. Average demand for the previous (Last) interval."
+	},
+	{
+		"IEEE": "Pk DT",
+		"Description": "Date and timestamp for the peak demand readings."
+	},
+	{
+		"IEEE": "V L-L",
+		"IEC": "U",
+		"Description": "Line-to-line voltage for each phase."
+	},
+	{
+		"IEEE": "V L-N",
+		"IEC": "V",
+		"Description": "Line-to-neutral voltage for each phase."
+	},
+	{
+		"IEEE": "Power",
+		"IEC": "PQS",
+		"Description": "Summary of real-time power consumption values for total active power in kW (Total [Ptot]), total reactive power in kVAR (Total [Qtot]), and total apparent power in kVA (Total [Stot])."
+	},
+	{
+		"IEEE": "Phase",
+		"Description": "Per phase (A [P1], B [P2], C [P3]) and total (Total [Ptot]) power values for active power in kW, reactive power in kVAR and apparent power in kVA."
+	},
+	{
+		"IEEE": "Dmd",
+		"Description": "Summary of peak power demand values in the previous (Last) demand interval period for active power in kW, reactive power in kVAR and apparent power in kVA."
+	},
+	{
+		"IEEE": "Wd",
+		"IEC": "Pd",
+		"Description": "Total power demand values in the previous (Last) demand interval for active power demand (Wd [P]), reactive power demand (VARd [Q]) and apparent power demand (VAd [S]). Displays demand values for the present demand (Pres) interval, demand for the previous demand (Last) interval period, predicted demand (Pred) based on the current power consumption rate, and the recorded peak power demand (Peak) value."
+	},
+	{
+		"IEEE": "Pk DT",
+		"Description": "Date and timestamp for the peak power demand (Peak) value."
+	},
+	{
+		"IEEE": "QR",
+		"Description": "Power demand parameters embedded in QR code format."
+	},
+	{
+		"IEEE": "Energy",
+		"IEC": "E",
+		"Description": "Delivered (Del), received (Rec), delivered plus received (D+R) and delivered minus received (D-R) accumulated values for active energy (Wh), apparent energy (VAh) and reactive energy (VARh)."
+	},
+	{
+		"IEEE": "QR",
+		"Description": "Energy parameters (Wh, VAh, VARh, and multi-tariff) embedded in QR code format."
+	},
+	{
+		"IEEE": "PF",
+		"Description": "Per phase and total true power factor values and sign."
+	},
+	{
+		"IEEE": "Disp",
+		"Description": "Per phase and total displacement power factor values and sign."
+	},
+	{
+		"IEEE": "Hz",
+		"IEC": "F",
+		"Description": "Frequency (Freq). This page also displays average voltage (Vavg), average current (Iavg) and total power factor (PF) values."
+	},
+	{
+		"IEEE": "THD",
+		"Description": "THD (ratio of harmonic content to the fundamental) for current, line-to-line voltage and line-to-neutral voltage."
+	},
+	{
+		"IEEE": "thd",
+		"Description": "thd (ratio of harmonic content to the rms value of total harmonic content) for current, line-to-line voltage and line-to-neutral voltage."
+	},
+	{
+		"IEEE": "QR",
+		"Description": "Power quality parameters (THD and thd) embedded in QR code format."
+	},
+	{
+		"IEEE": "Active",
+		"IEC": "P",
+		"Description": "Active power values."
+	},
+	{
+		"IEEE": "Reac",
+		"IEC": "Q",
+		"Description": "Reactive power values."
+	},
+	{
+		"IEEE": "Appr",
+		"IEC": "S",
+		"Description": "Apparent power values."
+	},
+	{
+		"IEEE": "PF",
+		"Description": "Per phase and total true power factor values and sign."
+	},
+	{
+		"IEEE": "Disp",
+		"Description": "Per phase and total displacement power factor values and sign."
+	},
+	{
+		"IEEE": "Hz",
+		"IEC": "F",
+		"Description": "Frequency (Freq). This page also displays average voltage (Vavg), average current (Iavg) and total power factor (PF) values."
+	},
+	{
+		"IEEE": "THD",
+		"Description": "THD (ratio of harmonic content to the fundamental) for current, line-to-line voltage and line-to-neutral voltage."
+	},
+	{
+		"IEEE": "thd",
+		"Description": "thd (ratio of harmonic content to the rms value of total harmonic content) for current, line-to-line voltage and line-to-neutral voltage."
+	},
+	{
+		"IEEE": "QR",
+		"Description": "Power quality parameters (THD and thd) embedded in QR code format."
+	},
+	{
+		"IEEE": "Harm",
+		"Description": "Harmonics data display."
+	},
+	{
+		"IEEE": "V L-L",
+		"IEC": "U",
+		"Description": "Line-to-line voltage harmonics data: numeric magnitude and angle for the fundamental harmonic, and graphical representation of harmonics for the 3rd to 11th and 7th to 15th odd harmonics for each line-to-line phase voltage."
+	},
+	{
+		"IEEE": "V L-N",
+		"IEC": "V",
+		"Description": "Line-to-neutral voltage harmonics data: numeric magnitude and angle for the fundamental harmonic, and graphical representation of harmonics for the 3rd to 11th and 7th to 15th odd harmonics for each line-to-neutral phase voltage."
+	},
+	{
+		"IEEE": "Amps",
+		"IEC": "I",
+		"Description": "Current harmonics data: numeric magnitude and angle for the fundamental harmonics, and graphical representation of harmonics for the 3rd to 11th and 7th to 15th odd harmonics for each phase current."
+	},
+	{
+		"IEEE": "TDD",
+		"Description": "Total demand distortion each phase voltage."
+	}
+]

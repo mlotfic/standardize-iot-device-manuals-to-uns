@@ -1,0 +1,30 @@
+{
+	"load_timer_setpoint": {
+		"description": "Specifies the minimum average current at the load before the timer starts. The meter begins counting the operating time whenever the readings are equal to or above this average current threshold.",
+		"value": 0,
+		"allowed_values": [0, 99999],
+		"enum": 0,
+		"data_type": "uint32",
+		"unit": "A",
+		"behavior": {
+			"trigger_condition": "average_load_current >= setpoint",
+			"effect": "operating_time_counter_runs"
+		}
+	},
+	"peak_current_demand_for_tdd": {
+		"description": "Specifies the minimum peak current demand at the load for inclusion in total demand distortion (TDD) calculations. If the load current is below the minimum peak current demand threshold, the meter does not use the readings to calculate TDD. Set this to 0 if you want the power meter to use the metered peak current demand for this calculation.",
+		"value": 0,
+		"allowed_values": [0, 99999],
+		"enum": 0,
+		"data_type": "uint32",
+		"unit": "A",		
+		"behavior": {
+			"threshold_logic": "peak_current_demand >= setpoint",
+			"tdd_calculation": {
+				"below_threshold": "excluded",
+				"above_threshold": "included",
+				"zero_value_special_case": "use_metered_peak_current"
+			}
+		}
+	}
+}

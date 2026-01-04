@@ -1,0 +1,56 @@
+[
+    {
+        "uns": ".../measurement/Voltage/line/U12",
+        "display_IEC_path": ".../U-V/U/U12",
+        "display_IEEE_path": ".../Volts/VL-L/U12",
+        "screen_IEC_title": "U",
+        "screen_IEEE_title": "V L-L",
+        "unit": "V",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Voltage/line/U23",
+        "display_IEC_path": ".../U-V/U/U23",
+        "display_IEEE_path": ".../Volts/VL-L/U23",
+        "screen_IEC_title": "U",
+        "screen_IEEE_title": "V L-L",
+        "unit": "V",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Voltage/line/U31",
+        "display_IEC_path": ".../U-V/U/U31",
+        "display_IEEE_path": ".../Volts/VL-L/U31",
+        "screen_IEC_title": "U-V",
+        "screen_IEEE_title": "V L-L",
+        "unit": "V",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Voltage/phase/V1",
+        "display_IEC_path": ".../U-V/V/V1",
+        "display_IEEE_path": ".../Volts/VL-N/V1",
+        "screen_IEC_title": "V",
+        "screen_IEEE_title": "V L-N",
+        "unit": "V",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Voltage/phase/V2",
+        "display_IEC_path": ".../U-V/V/V2",
+        "display_IEEE_path": ".../Volts/VL-N/V2",
+        "screen_IEC_title": "V",
+        "screen_IEEE_title": "V L-N",
+        "unit": "V",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/Voltage/phase/V3",
+        "display_IEC_path": ".../U-V/V/V3",
+        "display_IEEE_path": ".../Volts/VL-N/V3",
+        "screen_IEC_title": "V",
+        "screen_IEEE_title": "V L-N",
+        "unit": "V",
+        "scale": "1"
+    }
+]

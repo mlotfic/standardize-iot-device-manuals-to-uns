@@ -1,0 +1,1373 @@
+{
+	"metadata": {
+		"device_model": "Schneider PM5110",
+		"namespace_version": "2.0",
+		"last_updated": "2025-01-02",
+		"description": "Corrected semantic UNS structure for PM5110 power meter - aligned with expert best practices"
+	},
+	"device_base_path": "enterprise/site/area/panel/pm5110_main",
+	"branches": {
+		"asset": {
+			"description": "Static device identity and specifications",
+			"question": "Does it describe the physical thing?",
+			"paths": {
+				"serial_number": {
+					"type": "string",
+					"example": "PM5110-2024-A15823",
+					"changed_from": null,
+					"description": "Unique identifier for the device"
+				},
+				"model": {
+					"type": "string",
+					"example": "PM5110",
+					"changed_from": null,
+					"description": "Device model identifier"
+				},
+				"manufacturer": {
+					"type": "string",
+					"example": "Schneider Electric",
+					"changed_from": null,
+					"description": "Device manufacturer"
+				},
+				"firmware_version": {
+					"type": "string",
+					"example": "v2.4.1",
+					"changed_from": null,
+					"description": "Device firmware version"
+				},
+				"hardware_revision": {
+					"type": "string",
+					"example": "B",
+					"changed_from": null,
+					"description": "Device hardware revision"
+				},
+				"manufacture_date": {
+					"type": "date",
+					"example": "2024-03-15",
+					"changed_from": null,
+					"description": "Device manufacture date"
+				},
+				"rated_voltage": {
+					"type": "float",
+					"example": 400,
+					"unit": "V",
+					"changed_from": null,
+					"description": "Device rated voltage"
+				},
+				"rated_current": {
+					"type": "float",
+					"example": 100,
+					"unit": "A",
+					"changed_from": null,
+					"description": "Device rated current"
+				},
+				"accuracy_class": {
+					"type": "string",
+					"example": "0.5S",
+					"changed_from": null,
+					"description": "Device accuracy class"
+				}
+			}
+		},
+		"measurement": {
+			"description": "Instantaneous process values - real-time observations",
+			"question": "Can I trend it in real-time?",
+			"paths": {
+				"voltage": {
+					"phase": {
+						"l1": {
+							"type": "float",
+							"unit": "V",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/Voltage/phase/V1"
+						},
+						"l2": {
+							"type": "float",
+							"unit": "V",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/Voltage/phase/V2"
+						},
+						"l3": {
+							"type": "float",
+							"unit": "V",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/Voltage/phase/V3"
+						}
+					},
+					"line": {
+						"l1_l2": {
+							"type": "float",
+							"unit": "V",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/Voltage/line/U12"
+						},
+						"l2_l3": {
+							"type": "float",
+							"unit": "V",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/Voltage/line/U23"
+						},
+						"l3_l1": {
+							"type": "float",
+							"unit": "V",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/Voltage/line/U31"
+						}
+					},
+					"average": {
+						"type": "float",
+						"unit": "V",
+						"update_rate_ms": 1000,
+						"changed_from": "measurement/summary/Vavg",
+						"description": "Real-time average of three phase voltages"
+					}
+				},
+				"current": {
+					"l1": {
+						"type": "float",
+						"unit": "A",
+						"update_rate_ms": 1000,
+						"changed_from": "measurement/Current/I1"
+					},
+					"l2": {
+						"type": "float",
+						"unit": "A",
+						"update_rate_ms": 1000,
+						"changed_from": "measurement/Current/I2"
+					},
+					"l3": {
+						"type": "float",
+						"unit": "A",
+						"update_rate_ms": 1000,
+						"changed_from": "measurement/Current/I3"
+					},
+					"neutral": {
+						"type": "float",
+						"unit": "A",
+						"update_rate_ms": 1000,
+						"changed_from": "measurement/Current/In"
+					},
+					"average": {
+						"type": "float",
+						"unit": "A",
+						"update_rate_ms": 1000,
+						"changed_from": "measurement/summary/Iavg"
+					}
+				},
+				"power": {
+					"active": {
+						"total": {
+							"type": "float",
+							"unit": "kW",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/power/p/total, measurement/summary/Ptot"
+						},
+						"l1": {
+							"type": "float",
+							"unit": "kW",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/power/p/line"
+						},
+						"l2": {
+							"type": "float",
+							"unit": "kW",
+							"update_rate_ms": 1000
+						},
+						"l3": {
+							"type": "float",
+							"unit": "kW",
+							"update_rate_ms": 1000
+						}
+					},
+					"reactive": {
+						"total": {
+							"type": "float",
+							"unit": "kVAr",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/power/q/total"
+						},
+						"l1": {
+							"type": "float",
+							"unit": "kVAr",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/power/q/line"
+						},
+						"l2": {
+							"type": "float",
+							"unit": "kVAr",
+							"update_rate_ms": 1000
+						},
+						"l3": {
+							"type": "float",
+							"unit": "kVAr",
+							"update_rate_ms": 1000
+						}
+					},
+					"apparent": {
+						"total": {
+							"type": "float",
+							"unit": "kVA",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/power/s/total"
+						},
+						"l1": {
+							"type": "float",
+							"unit": "kVA",
+							"update_rate_ms": 1000,
+							"changed_from": "measurement/power/s/line"
+						}
+					}
+				},
+				"frequency": {
+					"type": "float",
+					"unit": "Hz",
+					"update_rate_ms": 1000,
+					"changed_from": "measurement/power_quality/frequency"
+				},
+				"power_quality": {
+					"power_factor": {
+						"true": {
+							"l1": {
+								"type": "float",
+								"unit": "dimensionless",
+								"update_rate_ms": 1000,
+								"changed_from": "measurement/power_quality/powerfactor/true/1"
+							},
+							"l2": {
+								"type": "float",
+								"unit": "dimensionless",
+								"update_rate_ms": 1000,
+								"changed_from": "measurement/power_quality/powerfactor/true/2"
+							},
+							"l3": {
+								"type": "float",
+								"unit": "dimensionless",
+								"update_rate_ms": 1000,
+								"changed_from": "measurement/power_quality/powerfactor/true/3"
+							},
+							"total": {
+								"type": "float",
+								"unit": "dimensionless",
+								"update_rate_ms": 1000,
+								"changed_from": "measurement/power_quality/powerfactor/true/total"
+							},
+							"min_max": {
+								"min": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/powerfactor/true/min"
+								},
+								"max": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/powerfactor/true/max"
+								}
+							}
+						},
+						"displacement": {
+							"l1": {
+								"type": "float",
+								"unit": "dimensionless",
+								"changed_from": "measurement/power_quality/powerfactor/displacement/1"
+							},
+							"total": {
+								"type": "float",
+								"changed_from": "measurement/power_quality/powerfactor/displacement/total"
+							},
+							"min_max": {
+								"min": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/powerfactor/displacement/min"
+								},
+								"max": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/powerfactor/displacement/max"
+								}
+							}
+						}
+					},
+					"thd": {
+						"fundamental": {
+							"current": {
+								"l1": {
+									"type": "float",
+									"unit": "%",
+									"update_rate_ms": 5000,
+									"changed_from": "measurement/power_quality/THD/thd_fundamental/current/I1"
+								},
+								"l2": {
+									"type": "float",
+									"unit": "%",
+									"changed_from": "measurement/power_quality/THD/thd_fundamental/current/I2"
+								},
+								"l3": {
+									"type": "float",
+									"unit": "%",
+									"changed_from": "measurement/power_quality/THD/thd_fundamental/current/I3"
+								},
+								"neutral": {
+									"type": "float",
+									"unit": "%",
+									"changed_from": "measurement/power_quality/THD/thd_fundamental/current/In"
+								},
+								"min_max": {
+									"min": {
+										"l1": {
+											"type": "float",
+											"changed_from": "measurement/power_quality/min_max/THD/thd_fundamental/current/min/Ix"
+										}
+									},
+									"max": {
+										"l1": {
+											"type": "float",
+											"changed_from": "measurement/power_quality/min_max/THD/thd_fundamental/current/max/Ix"
+										}
+									}
+								}
+							},
+							"voltage": {
+								"phase": {
+									"l1": {
+										"type": "float",
+										"unit": "%",
+										"changed_from": "measurement/power_quality/THD/thd_fundamental/voltage/phase/V1"
+									},
+									"l2": {
+										"type": "float",
+										"unit": "%",
+										"changed_from": "measurement/power_quality/THD/thd_fundamental/voltage/phase/V2"
+									},
+									"l3": {
+										"type": "float",
+										"unit": "%",
+										"changed_from": "measurement/power_quality/THD/thd_fundamental/voltage/phase/V3"
+									},
+									"min_max": {
+										"min": {
+											"l1": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_fundamental/voltage/phase/min/Vx"
+											}
+										},
+										"max": {
+											"l1": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_fundamental/voltage/phase/max/Vx"
+											}
+										}
+									}
+								},
+								"line": {
+									"l1_l2": {
+										"type": "float",
+										"unit": "%",
+										"changed_from": "measurement/power_quality/THD/thd_fundamental/voltage/line/U12"
+									},
+									"min_max": {
+										"min": {
+											"l1_l2": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_fundamental/voltage/line/min/Uxx"
+											}
+										},
+										"max": {
+											"l1_l2": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_fundamental/voltage/line/max/Uxx"
+											}
+										}
+									}
+								}
+							}
+						},
+						"rms": {
+							"current": {
+								"l1": {
+									"type": "float",
+									"unit": "%",
+									"changed_from": "measurement/power_quality/THD/thd_rms/current/I1"
+								},
+								"min_max": {
+									"min": {
+										"l1": {
+											"type": "float",
+											"changed_from": "measurement/power_quality/min_max/THD/thd_rms/current/min/Ix"
+										}
+									},
+									"max": {
+										"l1": {
+											"type": "float",
+											"changed_from": "measurement/power_quality/min_max/THD/thd_rms/current/max/Ix"
+										}
+									}
+								}
+							},
+							"voltage": {
+								"phase": {
+									"l1": {
+										"type": "float",
+										"unit": "%",
+										"changed_from": "measurement/power_quality/THD/thd_rms/voltage/phase/V1"
+									},
+									"min_max": {
+										"min": {
+											"l1": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_rms/voltage/phase/min/Vx"
+											}
+										},
+										"max": {
+											"l1": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_rms/voltage/phase/max/Vx"
+											}
+										}
+									}
+								},
+								"line": {
+									"l1_l2": {
+										"type": "float",
+										"unit": "%",
+										"changed_from": "measurement/power_quality/THD/thd_rms/voltage/line/U1"
+									},
+									"min_max": {
+										"min": {
+											"l1_l2": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_rms/voltage/line/min/Uxx"
+											}
+										},
+										"max": {
+											"l1_l2": {
+												"type": "float",
+												"changed_from": "measurement/power_quality/min_max/THD/thd_rms/voltage/line/max/Uxx"
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"harmonics": {
+						"tdd": {
+							"type": "float",
+							"unit": "%",
+							"changed_from": "measurement/power_quality/harmonics/TDD"
+						},
+						"current": {
+							"h3_magnitude": {
+								"type": "float",
+								"unit": "A",
+								"changed_from": "measurement/power_quality/harmonics/current/3/magnitude"
+							},
+							"h5_magnitude": {
+								"type": "float",
+								"unit": "A",
+								"changed_from": "measurement/power_quality/harmonics/current/5/magnitude"
+							},
+							"h7_magnitude": {
+								"type": "float",
+								"unit": "A",
+								"changed_from": "measurement/power_quality/harmonics/current/7/magnitude"
+							}
+						},
+						"voltage": {
+							"phase": {
+								"h3_magnitude": {
+									"type": "float",
+									"unit": "V",
+									"changed_from": "measurement/power_quality/harmonics/voltage/phase/3/magnitude"
+								},
+								"h5_magnitude": {
+									"type": "float",
+									"unit": "V",
+									"changed_from": "measurement/power_quality/harmonics/voltage/phase/5/magnitude"
+								}
+							},
+							"line": {
+								"h3_magnitude": {
+									"type": "float",
+									"unit": "V",
+									"changed_from": "measurement/power_quality/harmonics/voltage/line/3/magnitude"
+								}
+							}
+						}
+					},
+					"unbalance": {
+						"current": {
+							"type": "float",
+							"unit": "%",
+							"changed_from": "measurement/power_quality/unbalance/current",
+							"min_max": {
+								"min": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/unbalance/current/min/Ix"
+								},
+								"max": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/unbalance/current/max/Ix"
+								}
+							}
+						},
+						"voltage_phase": {
+							"type": "float",
+							"unit": "%",
+							"changed_from": "measurement/power_quality/unbalance/voltage/phase",
+							"min_max": {
+								"min": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/unbalance/voltage/phase/min/Vx"
+								},
+								"max": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/unbalance/voltage/phase/max/Vx"
+								}
+							}
+						},
+						"voltage_line": {
+							"type": "float",
+							"unit": "%",
+							"changed_from": "measurement/power_quality/unbalance/voltage/line",
+							"min_max": {
+								"min": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/unbalance/voltage/line/min/Uxx"
+								},
+								"max": {
+									"type": "float",
+									"changed_from": "measurement/power_quality/min_max/unbalance/voltage/line/max/Uxx"
+								}
+							}
+						}
+					},
+					"current": {
+						"min_max": {
+							"min": {
+								"l1": {
+									"type": "float",
+									"unit": "A",
+									"changed_from": "measurement/power_quality/min_max/current/min/Ix",
+									"description": "Minimum current since last reset"
+								}
+							},
+							"max": {
+								"l1": {
+									"type": "float",
+									"unit": "A",
+									"changed_from": "measurement/power_quality/min_max/current/max/Ix",
+									"description": "Maximum current since last reset"
+								}
+							}
+						}
+					},
+					"voltage": {
+						"line": {
+							"min_max": {
+								"min": {
+									"l1_l2": {
+										"type": "float",
+										"unit": "V",
+										"changed_from": "measurement/power_quality/min_max/voltage/line/min/Uxx"
+									}
+								},
+								"max": {
+									"l1_l2": {
+										"type": "float",
+										"unit": "V",
+										"changed_from": "measurement/power_quality/min_max/voltage/line/max/Uxx"
+									}
+								}
+							}
+						},
+						"phase": {
+							"min_max": {
+								"min": {
+									"l1": {
+										"type": "float",
+										"unit": "V",
+										"changed_from": "measurement/power_quality/min_max/voltage/phase/min/Vx"
+									}
+								}
+							}
+						}
+					},
+					"power": {
+						"active": {
+							"min_max": {
+								"min": {
+									"type": "float",
+									"unit": "kW",
+									"changed_from": "measurement/power_quality/min_max/power/p/min"
+								},
+								"max": {
+									"type": "float",
+									"unit": "kW",
+									"changed_from": "measurement/power_quality/min_max/power/p/max"
+								}
+							}
+						},
+						"reactive": {
+							"min_max": {
+								"min": {
+									"type": "float",
+									"unit": "kVAr",
+									"changed_from": "measurement/power_quality/min_max/power/q/min"
+								},
+								"max": {
+									"type": "float",
+									"unit": "kVAr",
+									"changed_from": "measurement/power_quality/min_max/power/q/max"
+								}
+							}
+						}
+					},
+					"frequency": {
+						"min_max": {
+							"min": {
+								"type": "float",
+								"unit": "Hz",
+								"changed_from": "measurement/power_quality/min_max/frequency/min"
+							},
+							"max": {
+								"type": "float",
+								"unit": "Hz",
+								"changed_from": "measurement/power_quality/min_max/frequency/max"
+							}
+						}
+					}
+				}
+			}
+		},
+		"alarm": {
+			"description": "Active alarms requiring operator action",
+			"question": "Must a human act on this?",
+			"paths": {
+				"active": {
+					"count": {
+						"type": "integer",
+						"description": "Number of currently active alarms"
+					},
+					"highest_priority": {
+						"type": "integer",
+						"description": "Priority level of most critical active alarm"
+					},
+					"list": {
+						"type": "array",
+						"description": "Array of active alarm objects",
+						"changed_from": "alarm/active/order/*"
+					}
+				},
+				"unacknowledged": {
+					"count": {
+						"type": "integer"
+					},
+					"list": {
+						"type": "array",
+						"changed_from": "alarm/unacknowledged/order/*"
+					}
+				},
+				"state": {
+					"overcurrent_phase_l1": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Over Phase Current",
+						"display_name": "Over Phase Current"
+					},
+					"undercurrent_phase": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Under Phase Current",
+						"display_name": "Under Phase Current"
+					},
+					"overvoltage_line": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Over Voltage L-L",
+						"display_name": "Over Voltage L-L"
+					},
+					"undervoltage_line": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Under Voltage L-L",
+						"display_name": "Under Voltage L-L"
+					},
+					"overvoltage_phase": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Over Voltage L-N",
+						"display_name": "Over Voltage L-N"
+					},
+					"undervoltage_phase": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Under Voltage L-N",
+						"display_name": "Under Voltage L-N"
+					},
+					"overpower_active": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Over Active Power",
+						"display_name": "Over Active Power"
+					},
+					"power_factor_leading_true": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Leading True PF",
+						"display_name": "Leading True PF"
+					},
+					"over_frequency": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Over Frequency",
+						"display_name": "Over Frequency"
+					},
+					"under_frequency": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Under Frequency",
+						"display_name": "Under Frequency"
+					},
+					"voltage_unbalance": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Over Voltage Unbalance",
+						"display_name": "Over Voltage Unbalance"
+					},
+					"voltage_thd": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Over Voltage THD",
+						"display_name": "Over Voltage THD"
+					},
+					"phase_loss": {
+						"type": "boolean",
+						"changed_from": "alarm/count/Phase Loss",
+						"display_name": "Phase Loss"
+					}
+				},
+				"counts": {
+					"description": "Historical count of alarm occurrences",
+					"overcurrent_phase": {
+						"type": "integer",
+						"changed_from": "alarm/count/Over Phase Current"
+					},
+					"undercurrent_phase": {
+						"type": "integer",
+						"changed_from": "alarm/count/Under Phase Current"
+					},
+					"overvoltage_line": {
+						"type": "integer",
+						"changed_from": "alarm/count/Over Voltage L-L"
+					},
+					"undervoltage_line": {
+						"type": "integer",
+						"changed_from": "alarm/count/Under Voltage L-L"
+					},
+					"phase_loss": {
+						"type": "integer",
+						"changed_from": "alarm/count/Phase Loss"
+					}
+				}
+			}
+		},
+		"event": {
+			"description": "Discrete occurrences - historical log",
+			"question": "Did something happen?",
+			"paths": {
+				"last_alarm_triggered": {
+					"type": "object",
+					"properties": {
+						"alarm_id": "string",
+						"timestamp": "ISO8601",
+						"phase": "string",
+						"value": "float"
+					}
+				},
+				"alarm_history": {
+					"type": "array",
+					"description": "Last 100 alarm events",
+					"changed_from": "alarm/history/order/*"
+				}
+			}
+		},
+		"status": {
+			"description": "Current device operational state",
+			"question": "What is true right now?",
+			"paths": {
+				"measurement_mode": {
+					"type": "enum",
+					"valid_values": [
+						"3P4W",
+						"3P3W",
+						"1P2W"
+					]
+				},
+				"logging_active": {
+					"type": "boolean"
+				},
+				"digital_output_1": {
+					"type": "boolean",
+					"changed_from": "control/Digital Output"
+				},
+				"digital_output_2": {
+					"type": "boolean"
+				}
+			}
+		},
+		"health": {
+			"description": "Device self-diagnostics",
+			"question": "Is the device itself OK?",
+			"paths": {
+				"internal_temperature_c": {
+					"type": "float",
+					"unit": "°C"
+				},
+				"uptime_hours": {
+					"type": "float",
+					"unit": "hours"
+				},
+				"clock_time": {
+					"type": "timestamp",
+					"changed_from": "Clock/Meter Time"
+				},
+				"clock_drift_ms": {
+					"type": "integer",
+					"unit": "ms"
+				},
+				"device_status": {
+					"type": "enum",
+					"valid_values": [
+						"healthy",
+						"warning",
+						"fault"
+					]
+				}
+			}
+		},
+		"kpi": {
+			"description": "Calculated business metrics - derived values",
+			"question": "Is it derived or accumulated?",
+			"paths": {
+				"energy": {
+					"active": {
+						"delivered": {
+							"type": "float",
+							"unit": "kWh",
+							"changed_from": "measurement/kpi/energy/p/delivery, measurement/summary/EDel"
+						},
+						"received": {
+							"type": "float",
+							"unit": "kWh",
+							"changed_from": "measurement/kpi/energy/p/recieved"
+						},
+						"total": {
+							"type": "float",
+							"unit": "kWh",
+							"changed_from": "measurement/kpi/energy/p/total"
+						},
+						"net": {
+							"type": "float",
+							"unit": "kWh",
+							"changed_from": "measurement/kpi/energy/p/net"
+						}
+					},
+					"reactive": {
+						"delivered": {
+							"type": "float",
+							"unit": "kVArh",
+							"changed_from": "measurement/kpi/energy/q/delivery"
+						},
+						"received": {
+							"type": "float",
+							"unit": "kVArh",
+							"changed_from": "measurement/kpi/energy/q/recieved"
+						},
+						"total": {
+							"type": "float",
+							"unit": "kVArh",
+							"changed_from": "measurement/kpi/energy/q/total"
+						},
+						"net": {
+							"type": "float",
+							"unit": "kVArh",
+							"changed_from": "measurement/kpi/energy/q/net"
+						}
+					},
+					"apparent": {
+						"delivered": {
+							"type": "float",
+							"unit": "kVAh",
+							"changed_from": "measurement/kpi/energy/s/delivery"
+						},
+						"received": {
+							"type": "float",
+							"unit": "kVAh",
+							"changed_from": "measurement/kpi/energy/s/recieved"
+						},
+						"total": {
+							"type": "float",
+							"unit": "kVAh",
+							"changed_from": "measurement/kpi/energy/s/total"
+						},
+						"net": {
+							"type": "float",
+							"unit": "kVAh",
+							"changed_from": "measurement/kpi/energy/s/net"
+						}
+					}
+				},
+				"demand": {
+					"active": {
+						"present": {
+							"type": "float",
+							"unit": "kW",
+							"changed_from": "measurement/power/p/demand/present",
+							"description": "Current 15-minute demand window"
+						},
+						"last": {
+							"type": "float",
+							"unit": "kW",
+							"changed_from": "measurement/power/p/demand/last",
+							"description": "Previous 15-minute demand window"
+						},
+						"predicted": {
+							"type": "float",
+							"unit": "kW",
+							"changed_from": "measurement/power/p/demand/predicted"
+						},
+						"peak": {
+							"type": "float",
+							"unit": "kW"
+						},
+						"peak_timestamp": {
+							"type": "timestamp",
+							"changed_from": "measurement/power/p/demand/peak/datetime"
+						}
+					},
+					"reactive": {
+						"present": {
+							"type": "float",
+							"unit": "kVAr",
+							"changed_from": "measurement/power/q/demand/present"
+						},
+						"last": {
+							"type": "float",
+							"unit": "kVAr",
+							"changed_from": "measurement/power/q/demand/last"
+						}
+					},
+					"apparent": {
+						"present": {
+							"type": "float",
+							"unit": "kVA",
+							"changed_from": "measurement/power/s/demand/present"
+						},
+						"last": {
+							"type": "float",
+							"unit": "kVA",
+							"changed_from": "measurement/power/s/demand/last"
+						}
+					}
+				},
+				"timers": {
+					"active_load_hours": {
+						"type": "float",
+						"unit": "hours",
+						"changed_from": "measurement/timer/active_load_time"
+					},
+					"operating_hours": {
+						"type": "float",
+						"unit": "hours",
+						"changed_from": "measurement/timer/operating_time"
+					}
+				}
+			}
+		},
+		"command": {
+			"description": "Imperative actions sent to device",
+			"question": "Was intent sent to do something?",
+			"paths": {
+				"reset_energy_accumulators": {
+					"type": "boolean",
+					"changed_from": "maintenance/reset/GlobalResets/Engeries"
+				},
+				"reset_demand_values": {
+					"type": "boolean",
+					"changed_from": "maintenance/reset/GlobalResets/Demands"
+				},
+				"reset_min_max": {
+					"type": "boolean",
+					"changed_from": "maintenance/reset/GlobalResets/MinMax"
+				},
+				"reset_alarm_counts": {
+					"type": "boolean",
+					"changed_from": "maintenance/reset/GlobalResets/AlarmCountsLogs"
+				},
+				"reset_meter": {
+					"type": "boolean",
+					"changed_from": "maintenance/reset/GlobalResets/MeterInitalization",
+					"warning": "Factory reset - use with caution"
+				},
+				"reset_active_load_timer": {
+					"type": "boolean",
+					"changed_from": "maintenance/reset/SingleReset/ActiveLoadTimer"
+				},
+				"acknowledge_alarm": {
+					"type": "object"
+				},
+				"sync_clock": {
+					"type": "timestamp"
+				}
+			}
+		},
+		"control": {
+			"description": "Setpoints and control parameters",
+			"question": "What's the target/setpoint?",
+			"paths": {
+				"note": "PM5110 is a measurement device with no control loops - this branch is empty"
+			}
+		},
+		"comm": {
+			"description": "Communication health and quality",
+			"question": "Can I trust the connection?",
+			"paths": {
+				"modbus_errors_count": {
+					"type": "integer"
+				},
+				"modbus_success_rate_pct": {
+					"type": "float",
+					"unit": "%"
+				},
+				"last_successful_read": {
+					"type": "timestamp"
+				},
+				"last_failed_read": {
+					"type": "timestamp"
+				},
+				"link_status": {
+					"type": "enum",
+					"valid_values": [
+						"connected",
+						"disconnected",
+						"degraded"
+					]
+				},
+				"response_time_avg_ms": {
+					"type": "float",
+					"unit": "ms"
+				},
+				"time_sync_status": {
+					"type": "enum",
+					"valid_values": [
+						"synchronized",
+						"drift",
+						"unsynchronized"
+					]
+				},
+				"time_sync_source": {
+					"type": "enum",
+					"valid_values": [
+						"NTP",
+						"GPS",
+						"manual",
+						"none"
+					]
+				},
+				"last_time_sync": {
+					"type": "timestamp"
+				}
+			}
+		},
+		"config": {
+			"description": "Tunable device parameters",
+			"question": "Can this be configured?",
+			"paths": {
+				"meter": {
+					"power_system": {
+						"type": "enum",
+						"valid_values": [
+							"3P4W",
+							"3P3W",
+							"1P2W"
+						],
+						"changed_from": "maintenance/setup/Meter/Basic/PowerSystem"
+					},
+					"vt_connect": {
+						"type": "enum",
+						"valid_values": [
+							"wye",
+							"delta"
+						],
+						"changed_from": "maintenance/setup/Meter/Basic/VT Connect"
+					},
+					"vt_primary": {
+						"type": "integer",
+						"unit": "V",
+						"changed_from": "maintenance/setup/Meter/Basic/VT Primary"
+					},
+					"vt_secondary": {
+						"type": "integer",
+						"unit": "V",
+						"changed_from": "maintenance/setup/Meter/Basic/VT Secondary"
+					},
+					"ct_primary": {
+						"type": "integer",
+						"unit": "A",
+						"changed_from": "maintenance/setup/Meter/Basic/CT Primary"
+					},
+					"ct_secondary": {
+						"type": "integer",
+						"unit": "A",
+						"changed_from": "maintenance/setup/Meter/Basic/CT Secondary"
+					},
+					"frequency_nominal": {
+						"type": "integer",
+						"unit": "Hz",
+						"valid_values": [
+							50,
+							60
+						],
+						"changed_from": "maintenance/setup/Meter/Basic/Sys Frequency"
+					},
+					"phase_rotation": {
+						"type": "enum",
+						"valid_values": [
+							"ABC",
+							"CBA"
+						],
+						"changed_from": "maintenance/setup/Meter/Basic/Phase Rotation"
+					},
+					"label": {
+						"type": "string",
+						"changed_from": "maintenance/setup/Meter/Advan/Label"
+					}
+				},
+				"demand": {
+					"power": {
+						"method": {
+							"type": "enum",
+							"valid_values": [
+								"thermal",
+								"block"
+							],
+							"changed_from": "maintenance/setup/Meter/Dmd/Power Demand/Method"
+						},
+						"interval_min": {
+							"type": "integer",
+							"unit": "minutes",
+							"changed_from": "maintenance/setup/Meter/Dmd/Power Demand/Interval"
+						}
+					},
+					"current": {
+						"method": {
+							"type": "enum",
+							"changed_from": "maintenance/setup/Meter/Dmd/Current Demand/Method"
+						},
+						"interval_min": {
+							"type": "integer",
+							"changed_from": "maintenance/setup/Meter/Dmd/Current Demand/Interval"
+						}
+					}
+				},
+				"comm": {
+					"protocol": {
+						"type": "enum",
+						"valid_values": [
+							"modbus_rtu",
+							"modbus_tcp"
+						],
+						"changed_from": "maintenance/setup/Comm/Protocol"
+					},
+					"address": {
+						"type": "integer",
+						"range": [
+							1,
+							247
+						],
+						"changed_from": "maintenance/setup/Comm/Address"
+					},
+					"baud_rate": {
+						"type": "integer",
+						"valid_values": [
+							9600,
+							19200,
+							38400,
+							57600,
+							115200
+						],
+						"changed_from": "maintenance/setup/Comm/Baud Rate"
+					},
+					"parity": {
+						"type": "enum",
+						"valid_values": [
+							"none",
+							"even",
+							"odd"
+						],
+						"changed_from": "maintenance/setup/Comm/Parity"
+					},
+					"data_bits": {
+						"type": "integer",
+						"valid_values": [
+							7,
+							8
+						],
+						"changed_from": "maintenance/setup/Comm/Data Bits"
+					},
+					"stop_bits": {
+						"type": "integer",
+						"valid_values": [
+							1,
+							2
+						],
+						"changed_from": "maintenance/setup/Comm/Stop Bits"
+					}
+				},
+				"alarm": {
+					"overcurrent_phase_setpoint": {
+						"type": "float",
+						"unit": "A",
+						"changed_from": "maintenance/setup/Alarm/1Sec/OverCurrent/Pickup Setpoint"
+					}
+				},
+				"hmi": {
+					"display_contrast": {
+						"type": "integer",
+						"range": [
+							0,
+							100
+						],
+						"unit": "%",
+						"changed_from": "maintenance/setup/hmi/Displ/Contrast"
+					},
+					"backlight_timeout_min": {
+						"type": "integer",
+						"unit": "minutes",
+						"changed_from": "maintenance/setup/hmi/Displ/Bcklght Timeout (min)"
+					},
+					"screen_timeout_min": {
+						"type": "integer",
+						"unit": "minutes",
+						"changed_from": "maintenance/setup/hmi/Displ/Screen Timeout (min)"
+					},
+					"language": {
+						"type": "enum",
+						"valid_values": [
+							"EN",
+							"FR",
+							"ES",
+							"DE"
+						],
+						"changed_from": "maintenance/setup/hmi/Region/Language"
+					},
+					"date_format": {
+						"type": "enum",
+						"changed_from": "maintenance/setup/hmi/Region/Date Format"
+					}
+				},
+				"timezone_offset_hours": {
+					"type": "integer",
+					"range": [
+						-12,
+						14
+					],
+					"changed_from": "Clock/GMT Offset (h)"
+				}
+			}
+		},
+		"security": {
+			"description": "Access control and audit trail",
+			"question": "Who can do what?",
+			"paths": {
+				"password_setup_enabled": {
+					"type": "boolean",
+					"changed_from": "maintenance/setup/hmi/Pass/Setup"
+				},
+				"password_energy_reset_enabled": {
+					"type": "boolean",
+					"changed_from": "maintenance/setup/hmi/Pass/Energy Resets"
+				},
+				"password_demand_reset_enabled": {
+					"type": "boolean",
+					"changed_from": "maintenance/setup/hmi/Pass/Demand Resets"
+				},
+				"last_config_change_user": {
+					"type": "string"
+				},
+				"last_config_change_timestamp": {
+					"type": "timestamp"
+				}
+			}
+		},
+		"diagnostic": {
+			"description": "Debug and troubleshooting information",
+			"question": "Can I debug with this?",
+			"paths": {
+				"meter_info": {
+					"type": "object",
+					"changed_from": "maintenance/Diagnostic/Info"
+				},
+				"calculated_power": {
+					"type": "object",
+					"changed_from": "maintenance/Diagnostic/ClPwr",
+					"description": "Calculated power values for verification"
+				},
+				"phase_angles": {
+					"type": "object",
+					"changed_from": "maintenance/Diagnostic/PhAng",
+					"description": "Phase angle measurements for wiring verification"
+				}
+			}
+		},
+		"maintenance": {
+			"description": "Service lifecycle tracking",
+			"question": "When/what maintenance work?",
+			"paths": {
+				"last_calibration": {
+					"type": "date"
+				},
+				"next_calibration_due": {
+					"type": "date"
+				},
+				"calibration_certificate": {
+					"type": "string"
+				},
+				"install_date": {
+					"type": "date"
+				},
+				"warranty_expiry": {
+					"type": "date"
+				},
+				"last_firmware_update": {
+					"type": "date"
+				}
+			}
+		},
+		"meta": {
+			"description": "Namespace documentation and metadata",
+			"paths": {
+				"namespace_version": {
+					"type": "string",
+					"example": "2.0"
+				},
+				"last_updated": {
+					"type": "date"
+				},
+				"device_type": {
+					"type": "string",
+					"example": "power_meter"
+				},
+				"manufacturer": {
+					"type": "string",
+					"example": "Schneider Electric"
+				},
+				"data_sheet_url": {
+					"type": "url"
+				},
+				"support_contact": {
+					"type": "string"
+				},
+				"alarm_labels": {
+					"type": "object",
+					"description": "Display names for machine-readable alarm IDs"
+				},
+				"device_integration": {
+					"hmi_structure": {
+						"type": "url",
+						"description": "Link to original device menu tree documentation"
+					},
+					"mapping_table": {
+						"type": "url",
+						"description": "Link to UNS-to-HMI mapping configuration"
+					}
+				}
+			}
+		}
+	}
+}

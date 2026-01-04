@@ -1,7 +1,6 @@
 ﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
 (INT16)",Data Type,Access,Range,Default,User Notes
 System Setup & Status,,,,1,---,,---,---,---,---,
-System Setup & Status,Product & Features,,,30,---,,---,---,---,---,
 System Setup & Status,Product & Features,,Meter Name,30,---,20,UTF8,RWC,---,"PM5xxx = ""Power Meter""",
 System Setup & Status,Product & Features,,Meter Model,50,---,20,UTF8,RWC,---,"
 PM5110 = ""PM5110""

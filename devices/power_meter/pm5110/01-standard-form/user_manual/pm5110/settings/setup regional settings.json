@@ -1,0 +1,53 @@
+{
+	"language": {
+		"description": "Select the language you want the meter to display.",
+		"value": "English US",
+		"allowed_values": {
+			"English US": "English US",
+			"French": "French",
+			"Spanish": "Spanish",
+			"German": "German",
+			"Italian": "Italian",
+			"Portuguese": "Portuguese",
+			"Chinese": "Chinese",
+			"Russian": "Russian"
+		},
+        "enum": 1,
+		"data_type": "string",
+        "unit": null
+	},
+	"date_format": {
+		"description": "Set how you want the date to be displayed, e.g., month/day/year.",
+		"value": "MM/DD/YY",
+		"allowed_values": {
+			"MM/DD/YY": "MM/DD/YY",
+			"YY/MM/DD": "YY/MM/DD",
+			"DD/MM/YY": "DD/MM/YY"
+		},
+        "enum": 1,
+		"data_type": "string",
+        "unit": null
+	},
+	"time_format": {
+		"description": "Set how you want the time to be displayed, e.g., 17:00:00 or 5:00:00 PM.",
+		"value": "24Hr",
+		"allowed_values": {
+			"24Hr": "24-hour format",
+			"AM/PM": "12-hour format with AM/PM"
+		},
+		"enum": 1,
+		"data_type": "string",
+        "unit": null
+	},
+	"hmi_mode": {
+		"description": "Select the standards convention used to display menu names or meter data.",
+		"value": "IEC",
+		"allowed_values": {
+			"IEC": "IEC",
+			"IEEE": "IEEE"
+		},
+		"enum": 1,
+		"data_type": "string",
+        "unit": null
+	}
+}

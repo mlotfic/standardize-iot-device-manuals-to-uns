@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Register Decoder</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: flex-end;
+        }
+        
+        .input-field {
+            flex: 1;
+        }
+        
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        input[type="text"] {
+            font-family: 'Courier New', monospace;
+        }
+        
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .results {
+            margin-top: 20px;
+        }
+        
+        .register-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .register-info h3 {
+            color: #0056b3;
+            margin-bottom: 8px;
+        }
+        
+        .field-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .field-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .field-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .field-bits {
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .field-value {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        
+        .value-badge {
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+        
+        .enum-name {
+            background: #ffc107;
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .unit-badge {
+            background: #6c757d;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .field-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .bit-viewer {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .bit-viewer h4 {
+            margin-bottom: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .bit-display {
+            display: flex;
+            gap: 2px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .bit {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .bit.set {
+            background: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #f5c6cb;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Device Register Decoder</h1>
+        <p class="subtitle">Decode device registers using CSV configuration</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <div class="input-field">
+                    <label>Register</label>
+                    <select id="registerSelect">
+                        <option value="">Load config first...</option>
+                    </select>
+                </div>
+                
+                <div class="input-field">
+                    <label>Raw Value (Hex)</label>
+                    <input type="text" id="rawValue" placeholder="0x12003401" value="0x12003401">
+                </div>
+                
+                <button id="decodeBtn" onclick="decodeRegister()">Decode</button>
+            </div>
+            
+            <div style="margin-top: 10px;">
+                <label>Or upload CSV config:</label>
+                <input type="file" id="csvFile" accept=".csv" onchange="loadCSV()">
+            </div>
+        </div>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        // Global state
+        let config = {
+            registers: {},
+            units: {}
+        };
+        
+        // Sample CSV data (embedded for demo - normally loaded from file)
+        const SAMPLE_CSV = `group,name,total_width,offset,width,type,value,meaning,description,standard
+AlarmAttributes,type,32,28,4,enum,0,NONE,No alarm type defined,Device specific
+AlarmAttributes,type,32,28,4,enum,1,STANDARD1S,Standard 1-second alarm for continuous monitoring,Device specific
+AlarmAttributes,type,32,28,4,enum,2,CUSTOM1S,Custom 1-second alarm with user-defined parameters,Device specific
+AlarmAttributes,type,32,28,4,enum,5,DISTURBANCE,Power quality disturbance alarm,Device specific
+AlarmAttributes,parameter,32,17,4,enum,0,NONE,No parameter specified,Device specific
+AlarmAttributes,parameter,32,17,4,enum,1,VOLTAGE,Voltage measurement parameter,Device specific
+AlarmAttributes,parameter,32,17,4,enum,2,CURRENT,Current measurement parameter,Device specific
+AlarmAttributes,phases,32,7,4,enum,0,NONE,No phase specified,Device specific
+AlarmAttributes,phases,32,7,4,enum,1,A,Phase A only,Device specific
+AlarmAttributes,phases,32,7,4,enum,7,ABC,All three phases,Device specific
+AlarmAttributes,priority,32,3,2,enum,0,NONE,No priority assigned,Device specific
+AlarmAttributes,priority,32,3,2,enum,1,HIGH,High priority - requires immediate attention,Device specific
+AlarmAttributes,priority,32,3,2,enum,2,MEDIUM,Medium priority - requires timely attention,Device specific
+AlarmAttributes,enable,32,0,1,flag,0,DISABLED,Alarm disabled (not active),Device specific
+AlarmAttributes,enable,32,0,1,flag,1,ENABLED,Alarm enabled (active),Device specific`;
+        
+        // Parse CSV text
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            const headers = lines[0].split(',');
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',');
+                const row = {};
+                headers.forEach((h, idx) => {
+                    row[h.trim()] = values[idx]?.trim() || '';
+                });
+                data.push(row);
+            }
+            
+            return data;
+        }
+        
+        // Build config from CSV data
+        function buildConfig(rows) {
+            const registers = {};
+            
+            // Group by register
+            rows.forEach(row => {
+                const group = row.group;
+                const fieldName = row.name;
+                
+                if (!registers[group]) {
+                    registers[group] = {
+                        name: group,
+                        totalWidth: parseInt(row.total_width),
+                        fields: {}
+                    };
+                }
+                
+                if (!registers[group].fields[fieldName]) {
+                    registers[group].fields[fieldName] = {
+                        name: fieldName,
+                        offset: parseInt(row.offset),
+                        width: parseInt(row.width),
+                        type: row.type,
+                        values: {}
+                    };
+                }
+                
+                // Add enum value if present
+                if (row.value) {
+                    const code = parseInt(row.value);
+                    registers[group].fields[fieldName].values[code] = {
+                        code: code,
+                        name: row.meaning,
+                        description: row.description
+                    };
+                }
+            });
+            
+            return registers;
+        }
+        
+        // Extract bit field value
+        function extractField(rawValue, offset, width) {
+            const mask = (1 << width) - 1;
+            return (rawValue >> offset) & mask;
+        }
+        
+        // Decode register
+        function decode(registerName, rawValue) {
+            const register = config.registers[registerName];
+            if (!register) {
+                throw new Error(`Unknown register: ${registerName}`);
+            }
+            
+            const result = {
+                register: registerName,
+                rawValue: rawValue,
+                fields: {}
+            };
+            
+            for (const [fieldName, field] of Object.entries(register.fields)) {
+                const value = extractField(rawValue, field.offset, field.width);
+                
+                result.fields[fieldName] = {
+                    fieldName: fieldName,
+                    rawValue: value,
+                    offset: field.offset,
+                    width: field.width,
+                    bits: `[${field.offset}:${field.offset + field.width - 1}]`
+                };
+                
+                // Add enum info if available
+                if (field.values[value]) {
+                    const enumVal = field.values[value];
+                    result.fields[fieldName].enumName = enumVal.name;
+                    result.fields[fieldName].description = enumVal.description;
+                }
+            }
+            
+            return result;
+        }
+        
+        // Render results
+        function renderResults(result) {
+            const resultsDiv = document.getElementById('results');
+            
+            let html = `
+                <div class="register-info">
+                    <h3>${result.register}</h3>
+                    <p>Raw Value: <code>0x${result.rawValue.toString(16).toUpperCase().padStart(8, '0')}</code> (${result.rawValue})</p>
+                </div>
+            `;
+            
+            // Render each field
+            for (const field of Object.values(result.fields)) {
+                html += `
+                    <div class="field-card">
+                        <div class="field-header">
+                            <span class="field-name">${field.fieldName}</span>
+                            <span class="field-bits">bits ${field.bits}</span>
+                        </div>
+                        <div class="field-value">
+                            <span class="value-badge">${field.rawValue}</span>
+                            ${field.enumName ? `<span class="enum-name">${field.enumName}</span>` : ''}
+                        </div>
+                        ${field.description ? `<p class="field-description">${field.description}</p>` : ''}
+                    </div>
+                `;
+            }
+            
+            // Add bit viewer
+            html += renderBitViewer(result.rawValue, 32);
+            
+            resultsDiv.innerHTML = html;
+        }
+        
+        // Render bit viewer
+        function renderBitViewer(value, width) {
+            let html = `
+                <div class="bit-viewer">
+                    <h4>Binary Representation</h4>
+                    <div class="bit-display">
+            `;
+            
+            for (let i = width - 1; i >= 0; i--) {
+                const bit = (value >> i) & 1;
+                const className = bit ? 'bit set' : 'bit';
+                html += `<div class="${className}">${bit}</div>`;
+                
+                // Add separator every 4 bits
+                if (i % 4 === 0 && i > 0) {
+                    html += '<div style="width: 10px"></div>';
+                }
+            }
+            
+            html += `
+                    </div>
+                    <div style="margin-top: 10px; font-size: 12px; color: #666;">
+                        Binary: ${value.toString(2).padStart(width, '0')}<br>
+                        Hex: 0x${value.toString(16).toUpperCase().padStart(width/4, '0')}<br>
+                        Decimal: ${value}
+                    </div>
+                </div>
+            `;
+            
+            return html;
+        }
+        
+        // Load CSV file
+        function loadCSV() {
+            const file = document.getElementById('csvFile').files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const rows = parseCSV(e.target.result);
+                    config.registers = buildConfig(rows);
+                    
+                    // Populate register dropdown
+                    const select = document.getElementById('registerSelect');
+                    select.innerHTML = '<option value="">Select register...</option>';
+                    
+                    Object.keys(config.registers).forEach(name => {
+                        const option = document.createElement('option');
+                        option.value = name;
+                        option.textContent = name;
+                        select.appendChild(option);
+                    });
+                    
+                    document.getElementById('results').innerHTML = `
+                        <div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 6px;">
+                            ✓ Loaded ${Object.keys(config.registers).length} register(s)
+                        </div>
+                    `;
+                } catch (err) {
+                    document.getElementById('results').innerHTML = `
+                        <div class="error">Error loading CSV: ${err.message}</div>
+                    `;
+                }
+            };
+            reader.readAsText(file);
+        }
+        
+        // Decode button handler
+        function decodeRegister() {
+            try {
+                const registerName = document.getElementById('registerSelect').value;
+                const rawValueStr = document.getElementById('rawValue').value.trim();
+                
+                if (!registerName) {
+                    throw new Error('Please select a register');
+                }
+                
+                // Parse hex or decimal value
+                let rawValue;
+                if (rawValueStr.startsWith('0x') || rawValueStr.startsWith('0X')) {
+                    rawValue = parseInt(rawValueStr, 16);
+                } else {
+                    rawValue = parseInt(rawValueStr, 10);
+                }
+                
+                if (isNaN(rawValue)) {
+                    throw new Error('Invalid value format');
+                }
+                
+                const result = decode(registerName, rawValue);
+                renderResults(result);
+                
+            } catch (err) {
+                document.getElementById('results').innerHTML = `
+                    <div class="error">${err.message}</div>
+                `;
+            }
+        }
+        
+        // Initialize with sample data
+        window.onload = function() {
+            const rows = parseCSV(SAMPLE_CSV);
+            config.registers = buildConfig(rows);
+            
+            // Populate register dropdown
+            const select = document.getElementById('registerSelect');
+            select.innerHTML = '<option value="">Select register...</option>';
+            
+            Object.keys(config.registers).forEach(name => {
+                const option = document.createElement('option');
+                option.value = name;
+                option.textContent = name;
+                select.appendChild(option);
+            });
+            
+            // Auto-select first register
+            if (Object.keys(config.registers).length > 0) {
+                select.value = Object.keys(config.registers)[0];
+            }
+        };
+    </script>
+</body>
+</html>

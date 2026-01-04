@@ -1,0 +1,137 @@
+[
+    {
+        "uns": ".../measurement/power/p/total",
+        "display_IEC_path": ".../PQS/Dmd/Last/Ptot",
+        "display_IEEE_path": ".../Power/Dmd/Last/Ptot",
+        "screen_IEC_title": "Pwr Dmd Summary",
+        "screen_IEEE_title": "Pwr Dmd Summary",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/q/total",
+        "display_IEC_path": ".../PQS/PQS/Qtot",
+        "display_IEEE_path": ".../Power/Power/Qtot",
+        "screen_IEC_title": "Power Summary",
+        "screen_IEEE_title": "Power Summary",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/s/total",
+        "display_IEC_path": ".../PQS/PQS/Stot",
+        "display_IEEE_path": ".../Power/Power/Stot",
+        "screen_IEC_title": "Power Summary",
+        "screen_IEEE_title": "Power Summary",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/p/1",
+        "display_IEC_path": ".../PQS/Phase/P/P1",
+        "display_IEEE_path": ".../Power/Phase/active/P1",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/p/2",
+        "display_IEC_path": ".../PQS/Phase/P/P2",
+        "display_IEEE_path": ".../Power/Phase/active/P2",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/p/3",
+        "display_IEC_path": ".../PQS/Phase/P/P3",
+        "display_IEEE_path": ".../Power/Phase/active/P3",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/p/total",
+        "display_IEC_path": ".../PQS/Phase/P/Ptot",
+        "display_IEEE_path": ".../Power/Phase/active/Ptot",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/q/1",
+        "display_IEC_path": ".../PQS/Phase/Q/Q1",
+        "display_IEEE_path": ".../Power/Phase/reactive/Q1",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/q/2",
+        "display_IEC_path": ".../PQS/Phase/Q/Q2",
+        "display_IEEE_path": ".../Power/Phase/reactive/Q2",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/q/3",
+        "display_IEC_path": ".../PQS/Phase/Q/Q3",
+        "display_IEEE_path": ".../Power/Phase/reactive/Q3",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/q/total",
+        "display_IEC_path": ".../PQS/Phase/Q/Qtot",
+        "display_IEEE_path": ".../Power/Phase/reactive/Qtot",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/s/1",
+        "display_IEC_path": ".../PQS/Phase/S/S1",
+        "display_IEEE_path": ".../Power/Phase/apparent/S1",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/s/2",
+        "display_IEC_path": ".../PQS/Phase/S/S2",
+        "display_IEEE_path": ".../Power/Phase/apparent/S2",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/s/3",
+        "display_IEC_path": ".../PQS/Phase/S/S3",
+        "display_IEEE_path": ".../Power/Phase/apparent/S3",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/power/s/total",
+        "display_IEC_path": ".../PQS/Phase/S/Stot",
+        "display_IEEE_path": ".../Power/Phase/apparent/Stot",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+]

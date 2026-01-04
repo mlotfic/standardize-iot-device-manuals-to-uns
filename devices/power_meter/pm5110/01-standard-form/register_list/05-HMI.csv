@@ -1,0 +1,57 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+HMI,Setup,Basic HMI Setup,HMI Model Present,6000,---,1,INT16U,R,0 – 1,0,"0 = No HMI Connected 
+1 = 128x128 Dot Matrix LCD HMI connected"
+HMI,Setup,Basic HMI Setup,HMI Contrast Setting,6001,---,1,INT16U,RWC,1 – 9,5,1 = Brightest…9 = Dimmest
+HMI,Setup,Basic HMI Setup,HMI Brightness Setting,6002,---,1,INT16U,RWC,0 – 7,0,0 = Brightest...7 = Dimmest
+HMI,Setup,Basic HMI Setup,HMI Language,6003,---,1,INT16U,RWC,0 – 12,0,"0 = EnglishUS
+1 = EnglishUK
+2 = French
+3 = Spanish
+4 = German
+5 = Italian
+6 = Polish
+7 = Portuguese
+8 = Turkish
+9 = Chinese
+10 = Russian
+11 = Arabic
+12 = Dutch
+"
+HMI,Setup,Basic HMI Setup,HMI Date Format,6004,---,1,INT16U,RWC,0 – 2,0,"0 = MM/DD/YYYY
+1 = YYYY/MM/DD
+2 = DD/MM/YYYY
+"
+HMI,Setup,Basic HMI Setup,HMI Time Format,6005,---,1,INT16U,RWC,0 – 1,0,"0 = 2400hr
+1 = AM/PM
+"
+HMI,Setup,Basic HMI Setup,HMI IEC/IEEE Mode,6006,---,1,INT16U,RWC,0 – 1,0,"0 = IEC
+1 = IEEE
+"
+HMI,Setup,Basic HMI Setup,HMI Screen Timeout,6007,minutes,1,INT16U,RWC,0 – 60,0,0 = disabled
+HMI,Setup,Basic HMI Setup,HMI Backlight Timeout,6008,minutes,1,INT16U,RWC,0 – 60,5,0 = disabled
+HMI,Languages,Alternate Languages Available,,6079,---,,---,---,---,---,
+HMI,Languages,Alternate Languages Available,HMI Language 01,6079,---,1,INT16U,R,0 – 20,0,"0 = EnglishUS  EnglishUS is always available.
+1 = EnglishUK
+2 = French
+3 = Spanish
+4 = German
+5 = Italian
+6 = Polish
+7 = Portuguese
+8 = Turkish
+9 = Chinese
+10 = Russian
+11 = Arabic
+12 = Dutch
+"
+HMI,Languages,Alternate Languages Available,HMI Language 02,6080,---,1,INT16U,R,0 – 20,0,
+HMI,Languages,Alternate Languages Available,HMI Language 03,6081,---,1,INT16U,R,0 – 20,0,
+HMI,Languages,Alternate Languages Available,HMI Language 04,6082,---,1,INT16U,R,0 – 20,0,
+HMI,Languages,Alternate Languages Available,HMI Language 05,6083,---,1,INT16U,R,0 – 20,0,
+HMI,Languages,Alternate Languages Available,HMI Language 06,6084,---,1,INT16U,R,0 – 20,0,
+HMI,Languages,Alternate Languages Available,HMI Language 07,6085,---,1,INT16U,R,0 – 20,0,
+HMI,Languages,Alternate Languages Available,HMI Language 08,6086,---,1,INT16U,R,0 – 20,0,
+HMI,Misc HMI,,,6099,---,,---,---,---,---,
+HMI,Misc HMI,QR Code Screen,,6099,---,,---,---,---,---,
+HMI,Misc HMI,QR Code Screen,QR Code Screen Enable,6099,---,1,INT16U,R,0 –1,1,"0 = Disable, 1 = Enable"

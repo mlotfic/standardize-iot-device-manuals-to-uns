@@ -1,0 +1,106 @@
+[
+	{
+		"power_system": "Single-phase 2-wire line-to-neutral",
+		"meter_setting": "1PH2W LN",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N",
+		"direct_connect_max_iec": "400 V L-N",
+		"vt_count": "1 VT"
+	},
+	{
+		"power_system": "Single-phase 2-wire line-to-line",
+		"meter_setting": "1PH2W LL",
+		"symbol": null,
+		"direct_connect_max_ul": "600 V L-L",
+		"direct_connect_max_iec": "690 V L-L",
+		"vt_count": "1 VT"
+	},
+	{
+		"power_system": "Single-phase 3-wire line-to-line with neutral",
+		"meter_setting": "1PH3W LL with N",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "2 VT"
+	},
+	{
+		"power_system": "3-phase 3-wire Delta ungrounded",
+		"meter_setting": "3PH3W Dlt Ungnd",
+		"symbol": null,
+		"direct_connect_max_ul": "600 V L-L",
+		"direct_connect_max_iec": "600 V L-L",
+		"vt_count": "2 VT"
+	},
+	{
+		"power_system": "3-phase 3-wire Delta corner grounded",
+		"meter_setting": "3PH3W Dlt Crnr Gnd",
+		"symbol": null,
+		"direct_connect_max_ul": "600 V L-L",
+		"direct_connect_max_iec": "600 V L-L",
+		"vt_count": "2 VT"
+	},
+	{
+		"power_system": "3-phase 3-wire Wye ungrounded",
+		"meter_setting": "3PH3W Wye Ungnd",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "2 VT"
+	},
+	{
+		"power_system": "3-phase 3-wire Wye grounded",
+		"meter_setting": "3PH3W Wye Gnd",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "2 VT"
+	},
+	{
+		"power_system": "3-phase 3-wire Wye resistance-grounded",
+		"meter_setting": "3PH3W Wye Res Gnd",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "2 VT"
+	},
+	{
+		"power_system": "3-phase 4-wire open Delta center-tapped",
+		"meter_setting": "3PH4W Opn Dlt Ctr Tp",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "3 VT"
+	},
+	{
+		"power_system": "3-phase 4-wire Delta center-tapped",
+		"meter_setting": "3PH4W Dlt Ctr Tp",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "3 VT"
+	},
+	{
+		"power_system": "3-phase 4-wire ungrounded Wye",
+		"meter_setting": "3PH4W Wye Ungnd",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "3 VT or 2 VT"
+	},
+	{
+		"power_system": "3-phase 4-wire grounded Wye",
+		"meter_setting": "3PH4W Wye Gnd",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "3 VT or 2 VT"
+	},
+	{
+		"power_system": "3-phase 4-wire resistance-grounded Wye",
+		"meter_setting": "3PH4W Wye Res Gnd",
+		"symbol": null,
+		"direct_connect_max_ul": "347 V L-N / 600 V L-L",
+		"direct_connect_max_iec": "400 V L-N / 690 V L-L",
+		"vt_count": "3 VT or 2 VT"
+	}
+]

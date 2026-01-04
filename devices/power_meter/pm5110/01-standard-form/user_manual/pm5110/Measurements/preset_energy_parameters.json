@@ -1,0 +1,54 @@
+{
+	"preset_energy_parameters": {
+		"value_range": {
+			"min": 0,
+			"max": 9.2233,
+			"unit": "E"
+		},
+		"applies_to": [
+			{
+				"parameter": "Active Energy Delivered",
+				"quantity": "P",
+				"direction": "Delivered",
+				"unit_type": "Energy",
+				"description": "Preset value for accumulated active energy delivered by the meter."
+			},
+			{
+				"parameter": "Active Energy Received",
+				"quantity": "P",
+				"direction": "Received",
+				"unit_type": "Energy",
+				"description": "Preset value for accumulated active energy received by the meter."
+			},
+			{
+				"parameter": "Reactive Energy Delivered",
+				"quantity": "Q",
+				"direction": "Delivered",
+				"unit_type": "Energy",
+				"description": "Preset value for accumulated reactive energy delivered by the meter."
+			},
+			{
+				"parameter": "Reactive Energy Received",
+				"quantity": "Q",
+				"direction": "Received",
+				"unit_type": "Energy",
+				"description": "Preset value for accumulated reactive energy received by the meter."
+			},
+			{
+				"parameter": "Apparent Energy Delivered",
+				"quantity": "S",
+				"direction": "Delivered",
+				"unit_type": "Energy",
+				"description": "Preset value for accumulated apparent energy delivered by the meter."
+			},
+			{
+				"parameter": "Apparent Energy Received",
+				"quantity": "S",
+				"direction": "Received",
+				"unit_type": "Energy",
+				"description": "Preset value for accumulated apparent energy received by the meter."
+			}
+		],
+		"description": "Preset energy parameters allow manual entry of accumulated energy values for active, reactive, and apparent energy in delivered and received directions. Valid preset range is 0 to 9.2233 E."
+	}
+}

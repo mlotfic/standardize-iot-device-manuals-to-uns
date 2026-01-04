@@ -1,0 +1,158 @@
+group,name,total_width,offset,width,type,value,meaning,description,standard
+AlarmAttributes,type,32,28,4,enum,0,NONE,No alarm type defined,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,1,STANDARD1S,Standard 1-second alarm for continuous monitoring,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,2,CUSTOM1S,Custom 1-second alarm with user-defined parameters,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,3,STANDARDHS,Standard high-speed alarm for rapid event detection,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,4,CUSTOMHS,Custom high-speed alarm with user-defined parameters,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,5,DISTURBANCE,Power quality disturbance alarm,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,6,TRANSIENT,Transient event alarm for short-duration anomalies,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,7,WAVESHAPE,Waveform shape deviation alarm,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,8,UNARY,Single-condition alarm,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,9,DIGITAL,Digital input-based alarm,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,10,BINARY,Binary state alarm,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,11,TIME_OF_DAY,Time-of-day scheduled alarm,Device specific AlarmAttributes
+AlarmAttributes,type,32,28,4,enum,12,LOGIC,Logic-based alarm combining multiple conditions,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,0,NONE,No alarm subtype defined,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,1,OVER SIGNED,Value exceeds upper threshold (signed comparison),Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,2,UNDER SIGNED,Value falls below lower threshold (signed comparison),Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,3,LEADING,Leading power factor condition,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,4,LAGGING,Lagging power factor condition,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,5,PHASELOSS,Phase loss detected,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,6,PHASEREV,Phase reversal detected,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,7,REVPOWER,Reverse power flow detected,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,8,POWERUP,Power-up event,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,9,RESET,System reset event,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,10,DIAGNOSTIC,Diagnostic alarm triggered,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,11,OFF2ON,Transition from OFF to ON state,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,12,ON2OFF,Transition from ON to OFF state,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,13,SWELL,Voltage swell (overvoltage) condition,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,14,SAG,Voltage sag (undervoltage) condition,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,15,AND,Logical AND operation,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,16,NAND,Logical NAND operation,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,17,OR,Logical OR operation,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,18,NOR,Logical NOR operation,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,19,XOR,Logical XOR operation,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,20,NOT,Logical NOT operation,Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,21,OVER ABSOLUTE,Value exceeds upper threshold (absolute comparison),Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,22,UNDER ABSOLUTE,Value falls below lower threshold (absolute comparison),Device specific AlarmAttributes
+AlarmAttributes,subtype,32,23,4,enum,31,NOT_USED,Reserved - not used,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,0,NONE,No parameter specified,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,1,VOLTAGE,Voltage measurement parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,2,CURRENT,Current measurement parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,3,ACTIVE_POWER,Active power (W) parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,4,REACTIVE_POWER,Reactive power (VAR) parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,5,APPARENT_POWER,Apparent power (VA) parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,6,FREQUENCY,Frequency (Hz) parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,7,POWER_FACTOR,Power factor parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,8,STANDARD,Standard measurement parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,9,OPTION_SLOT_A,Optional module slot A parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,10,OPTION_SLOT_B,Optional module slot B parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,11,OPTION_SLOT_C,Optional module slot C parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,12,OPTION_SLOT_D,Optional module slot D parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,13,SELF_TEST,Self-test diagnostic parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,14,HARMONIC,Harmonic distortion parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,15,INTERHARMONIC,Interharmonic distortion parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,16,K_FACTOR,K-factor (transformer derating) parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,17,FLICKER,Voltage flicker parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,18,ENERGY,Energy measurement parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,19,DATETIME,Date and time parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,20,TEMPERATURE,Temperature measurement parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,21,INPUT_METERING_1,Input metering channel 1 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,22,INPUT_METERING_2,Input metering channel 2 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,23,INPUT_METERING_3,Input metering channel 3 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,24,INPUT_METERING_4,Input metering channel 4 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,25,INPUT_METERING_5,Input metering channel 5 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,26,INPUT_METERING_6,Input metering channel 6 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,27,INPUT_METERING_7,Input metering channel 7 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,28,INPUT_METERING_8,Input metering channel 8 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,29,INPUT_METERING_9,Input metering channel 9 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,30,INPUT_METERING_10,Input metering channel 10 parameter,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,61,USER_DEFINED1,User-defined parameter 1,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,62,USER_DEFINED2,User-defined parameter 2,Device specific AlarmAttributes
+AlarmAttributes,parameter,32,17,4,enum,63,USER_DEFINED3,User-defined parameter 3,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,0,NONE,No modifier applied,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,1,1,Harmonic order 1 (fundamental),Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,2,2,Harmonic order 2,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,3,3,Harmonic order 3,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,4,4,Harmonic order 4,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,5,5,Harmonic order 5,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,6,6,Harmonic order 6,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,7,7,Harmonic order 7,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,8,8,Harmonic order 8,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,9,9,Harmonic order 9,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,10,10,Harmonic order 10,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,11,11,Harmonic order 11,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,12,12,Harmonic order 12,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,13,13,Harmonic order 13,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,14,14,Harmonic order 14,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,15,15,Harmonic order 15,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,16,16,Harmonic order 16,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,17,PHASE,Phase conductor measurement,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,18,NEUTRAL,Neutral conductor measurement,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,19,GROUND,Ground conductor measurement,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,20,LN,Line-to-neutral measurement,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,21,LL,Line-to-line measurement,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,22,THD,Total harmonic distortion calculation,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,23,UNBALANCE,Phase unbalance calculation,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,24,TRUE,True power factor,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,25,DISPLACEMENT,Displacement power factor,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,26,DEMAND_LAST,Last completed demand interval,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,27,DEMAND_PREDICTED,Predicted demand value,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,28,DEMAND_PRESENT,Present demand interval,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,29,RMS,Root mean square calculation,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,30,FUNDAMENTAL,Fundamental frequency component,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,31,ANGLE,Phase angle measurement,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,32,DEMAND_PEAK,Peak demand value,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,33,CREST_FACTOR,Crest factor calculation,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,34,DISTORTION,Distortion power factor,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,35,INSTANTANEOUS,Instantaneous value,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,36,SHORT_TERM,Short-term average (Pst flicker),Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,37,LONG_TERM,Long-term average (Plt flicker),Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,38,POSITIVE_SEQUENCE,Positive sequence component,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,39,NEGATIVE_SEQUENCE,Negative sequence component,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,40,ZERO_SEQUENCE,Zero sequence component,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,41,TREND,Trending calculation,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,42,3_PHASE,Three-phase total calculation,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,43,ACCUMULATED,Accumulated value,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,44,CONDITIONAL,Conditional measurement,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,45,INCREMENTAL,Incremental value,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,46,TOU_RATE_1,Time-of-use rate 1,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,47,TOU_RATE_2,Time-of-use rate 2,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,48,TOU_RATE_3,Time-of-use rate 3,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,49,TOU_RATE_4,Time-of-use rate 4,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,61,USER_DEFINED1,User-defined modifier 1,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,62,USER_DEFINED2,User-defined modifier 2,Device specific AlarmAttributes
+AlarmAttributes,modifier,32,11,4,enum,63,USER_DEFINED3,User-defined modifier 3,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,0,NONE,No phase specified,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,1,A,Phase A only,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,2,B,Phase B only,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,3,C,Phase C only,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,4,AB,Phases A and B,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,5,BC,Phases B and C,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,6,CA,Phases C and A,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,7,ABC,All three phases (A -> B -> C),Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,8,N,Neutral conductor,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,9,G,Ground conductor,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,10,NG,Neutral and ground conductors,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,11,3PHASE_TOTAL,Three-phase total (sum or average),Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,12,NOT_USED,Reserved - not used,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,13,NOT_USED,Reserved - not used,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,14,NOT_USED,Reserved - not used,Device specific AlarmAttributes
+AlarmAttributes,phases,32,7,4,enum,15,NOT_USED,Reserved - not used,Device specific AlarmAttributes
+AlarmAttributes,level,32,5,2,enum,0,LEVEL0,Alarm threshold level 0 (lowest),Device specific AlarmAttributes
+AlarmAttributes,level,32,5,2,enum,1,LEVEL1,Alarm threshold level 1,Device specific AlarmAttributes
+AlarmAttributes,level,32,5,2,enum,2,LEVEL2,Alarm threshold level 2,Device specific AlarmAttributes
+AlarmAttributes,level,32,5,2,enum,3,LEVEL3,Alarm threshold level 3 (highest),Device specific AlarmAttributes
+AlarmAttributes,priority,32,3,2,enum,0,NONE,No priority assigned,Device specific AlarmAttributes
+AlarmAttributes,priority,32,3,2,enum,1,HIGH,High priority alarm - requires immediate attention,Device specific AlarmAttributes
+AlarmAttributes,priority,32,3,2,enum,2,MEDIUM,Medium priority alarm - requires timely attention,Device specific AlarmAttributes
+AlarmAttributes,priority,32,3,2,enum,3,LOW,Low priority alarm - informational,Device specific AlarmAttributes
+AlarmAttributes,setpoints,32,2,1,enum,0,FIXED,Fixed setpoint values (not adjustable),Device specific AlarmAttributes
+AlarmAttributes,setpoints,32,2,1,enum,1,VARIABLE,Variable setpoint values (user-adjustable),Device specific AlarmAttributes
+AlarmAttributes,learning,32,1,1,enum,0,NOT_LEARNING,Learning mode disabled,Device specific AlarmAttributes
+AlarmAttributes,learning,32,1,1,enum,1,LEARNING,Learning mode enabled (adaptive thresholds),Device specific AlarmAttributes
+AlarmAttributes,enable,32,0,1,enum,0,DISABLED,Alarm disabled (not active),Device specific AlarmAttributes
+AlarmAttributes,enable,32,0,1,enum,1,ENABLED,Alarm enabled (active),Device specific AlarmAttributes
+
+
+

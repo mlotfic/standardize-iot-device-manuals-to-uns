@@ -1,0 +1,81 @@
+{
+	"High": {
+		"display": {
+			"alarm_led": {
+				"behavior": "blinks",
+				"condition": "while_alarm_active"
+			},
+			"alarm_icon": {
+				"behavior": "blinks",
+				"condition": "while_alarm_active",
+				"post_acknowledge": "remains_displayed_until_acknowledged"
+			}
+		},
+		"operator_actions": {
+			"details": "Displays cause of pickup or drop-off",
+			"acknowledge": true
+		},
+		"logging": {
+			"log_type": "alarm_log",
+			"recorded": true
+		}
+	},
+	"Medium": {
+		"display": {
+			"alarm_led": {
+				"behavior": "blinks",
+				"condition": "while_alarm_active"
+			},
+			"alarm_icon": {
+				"behavior": "blinks",
+				"condition": "while_alarm_active"
+			}
+		},
+		"operator_actions": {
+			"details": "Displays cause of pickup or drop-off",
+			"acknowledge": false
+		},
+		"logging": {
+			"log_type": "alarm_log",
+			"recorded": true
+		}
+	},
+	"Low": {
+		"display": {
+			"alarm_led": {
+				"behavior": "blinks",
+				"condition": "while_alarm_active"
+			},
+			"alarm_icon": {
+				"behavior": "blinks",
+				"condition": "while_alarm_active"
+			}
+		},
+		"operator_actions": {
+			"details": "Displays cause of pickup or drop-off",
+			"acknowledge": false
+		},
+		"logging": {
+			"log_type": "alarm_log",
+			"recorded": true
+		}
+	},
+	"events_with_no_priority": {
+		"display": {
+			"alarm_led": {
+				"behavior": "none"
+			},
+			"alarm_icon": {
+				"behavior": "none"
+			}
+		},
+		"operator_actions": {
+			"details": null,
+			"acknowledge": false
+		},
+		"logging": {
+			"log_type": "event_log",
+			"recorded": true
+		}
+	}
+}

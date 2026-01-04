@@ -1,0 +1,107 @@
+{
+	"setup_parameters_ion": {
+		"enable": {
+			"allowed_values": {
+				"true": "Enable",
+				"false": "Disable"
+			},
+			"data_type": "boolean",
+			"applies_to": ["standard_alarms", "unary_alarms"],
+			"description": "Enables or disables the alarm."
+		},
+		"priority": {
+			"allowed_values": {
+				"High": "High Priority",
+				"Medium": "Medium Priority",
+				"Low": "Low Priority",
+				"None": "No Priority"
+			},
+			"data_type": "enum",
+			"applies_to": ["standard_alarms", "unary_alarms"],
+			"description": "Sets the alarm priority and notification behavior."
+		},
+		"pickup_setpoint": {
+			"allowed_values": {},
+			"data_type": "float",
+			"unit": "signal_unit",
+			"applies_to": [
+				"over_limit_alarms",
+				"under_limit_alarms"
+			],
+			"description": "Threshold that causes the alarm to pick up. Over alarms trigger above this value; under alarms trigger below it."
+		},
+		"pickup_time_delay": {
+			"allowed_values": {
+				"min": 0,
+				"max": 999999
+			},
+			"data_type": "integer",
+			"unit": "seconds",
+			"applies_to": [
+				"over_limit_alarms",
+				"under_limit_alarms"
+			],
+			"description": "Time the signal must remain beyond the pickup setpoint before the alarm becomes active."
+		},
+		"dropout_setpoint": {
+			"allowed_values": null,
+			"data_type": "float",
+			"unit": "signal_unit",
+			"applies_to": [
+				"over_limit_alarms",
+				"under_limit_alarms"
+			],
+			"description": "Threshold that causes the alarm to drop out. Over alarms clear below this value; under alarms clear above it."
+		},
+		"dropout_time_delay": {
+			"allowed_values": {
+				"min": 0,
+				"max": 999999
+			},
+			"data_type": "integer",
+			"unit": "seconds",
+			"applies_to": [
+				"over_limit_alarms",
+				"under_limit_alarms"
+			],
+			"description": "Time the signal must remain beyond the dropout setpoint before the alarm clears."
+		},
+		"pickup_pf_lead_lag": {
+			"allowed_values": {
+				"Lead": "Lead PF",
+				"Lag": "Lag PF"
+			},
+			"data_type": "enum",
+			"applies_to": ["power_factor"],
+			"description": "Defines the PF quadrant used for the pickup setpoint. Lead = leading PF, Lag = lagging PF."
+		},
+		"dropout_pf_lead_lag": {
+			"allowed_values": {
+				"Lead": "Lead PF",
+				"Lag": "Lag PF"
+			},
+			"data_type": "enum",
+			"applies_to": ["power_factor"],
+			"description": "Defines the PF quadrant used for the dropout setpoint."
+		},
+		"select_digital_output": {
+			"allowed_values": {
+				"Digital Output D1": "Digital Output D1"
+			},
+			"data_type": "enum",
+			"applies_to": ["digital_output"],
+			"description": "Selects the digital output(s) activated when the alarm is active."
+		}
+	},
+	"keys": [
+		"enable",
+		"priority",
+		"pickup_setpoint",
+		"pickup_time_delay",
+		"dropout_setpoint",
+		"dropout_time_delay",
+		"pickup_pf_lead_lag",
+		"dropout_pf_lead_lag",
+		"select_digital_output"
+	]
+}

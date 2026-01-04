@@ -1,0 +1,30 @@
+[
+    {
+        "Category": "Diagnostics",
+        "Sub Cat 1": "Self-Test Results",
+        "Sub Cat 2": "Processor Loading",
+        "Description": "Processor Loading",
+        "Register": "20000",
+        "Units": "%",
+        "Size\n(INT16)": "1",
+        "Data Type": "INT16U",
+        "Access": "R",
+        "Range": "0 – 100",
+        "Default": "0",
+        "User Notes": ""
+    },
+    {
+        "Category": "Diagnostics",
+        "Sub Cat 1": "Self-Test Results",
+        "Sub Cat 2": "Miscellaneous Self-Test",
+        "Description": "Meter Self-Test",
+        "Register": "20003",
+        "Units": "---",
+        "Size\n(INT16)": "5",
+        "Data Type": "BITMAP",
+        "Access": "R",
+        "Range": "",
+        "Default": "0x0000 0000 0000 0000 0000",
+        "User Notes": "0 = OK, 1 = Error Detected\nBit 01 = Summary\n   ( on if any other bit is on - Maintenance Icon shown on HMI )\nBit 02 = RAM Failure\nBit 03 = NVRAM Failure\nBit 04 = RTC Failure\nBit 05 = Calibration Failure\nBit 06 = Clipping Detected\nBit 07 = Over-Running Energy Pulse Output\nBit 08-16 Not Used "
+    }
+]

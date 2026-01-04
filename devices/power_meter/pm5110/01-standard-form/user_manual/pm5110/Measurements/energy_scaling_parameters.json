@@ -1,0 +1,157 @@
+{
+	"energy_scaling_parameters": [
+		{
+			"mode": "Auto",
+			"default": true,
+			"unit_range": {
+				"min": 0,
+				"max": 9.2233,
+				"unit": "E"
+			},
+			"unit_progression": [
+				"k",
+				"M",
+				"G",
+				"T",
+				"P",
+				"E"
+			],
+			"auto_scale": true,
+			"reset_condition": {
+				"trigger": "any_energy_parameter_exceeds_max",
+				"scope": "all_energy_parameters",
+				"action": "reset_to_zero"
+			},
+			"description": "Energy units automatically scale from Kilo through Exa based on accumulated value. When any delivered or received energy exceeds 9.2233 E, all energy parameters reset to 0."
+		},
+		{
+			"mode": "Kilo",
+			"symbol": "k",
+			"unit_range": {
+				"min": 0,
+				"max": 999.99,
+				"unit": "k"
+			},
+			"unit_progression": [
+
+			],
+			"auto_scale": false,
+			"reset_condition": {
+				"trigger": "any_energy_parameter_exceeds_max",
+				"scope": "all_energy_parameters",
+				"action": "reset_to_zero"
+			},
+			"description": "Energy values fixed in kilo-units. When any delivered or received energy exceeds 999.99 k, all energy parameters reset to 0."
+		},
+		{
+			"mode": "Mega",
+			"symbol": "M",
+			"unit_range": {
+				"min": 0,
+				"max": 999.99,
+				"unit": "M"
+			},
+			"unit_progression": [
+				"k",
+				"M"
+			],
+			"auto_scale": true,
+			"reset_condition": {
+				"trigger": "any_energy_parameter_exceeds_max",
+				"scope": "all_energy_parameters",
+				"action": "reset_to_zero"
+			},
+			"description": "Energy units automatically scale from Kilo to Mega. When any delivered or received energy exceeds 999.99 M, all energy parameters reset to 0."
+		},
+		{
+			"mode": "Giga",
+			"symbol": "G",
+			"unit_range": {
+				"min": 0,
+				"max": 999.99,
+				"unit": "G"
+			},
+			"unit_progression": [
+				"k",
+				"M",
+				"G"
+			],
+			"auto_scale": true,
+			"reset_condition": {
+				"trigger": "any_energy_parameter_exceeds_max",
+				"scope": "all_energy_parameters",
+				"action": "reset_to_zero"
+			},
+			"description": "Energy units automatically scale from Kilo to Mega to Giga. When any delivered or received energy exceeds 999.99 G, all energy parameters reset to 0."
+		},
+		{
+			"mode": "Tera",
+			"symbol": "T",
+			"unit_range": {
+				"min": 0,
+				"max": 999.99,
+				"unit": "T"
+			},
+			"unit_progression": [
+				"k",
+				"M",
+				"G",
+				"T"
+			],
+			"auto_scale": true,
+			"reset_condition": {
+				"trigger": "any_energy_parameter_exceeds_max",
+				"scope": "all_energy_parameters",
+				"action": "reset_to_zero"
+			},
+			"description": "Energy units automatically scale from Kilo through Tera. When any delivered or received energy exceeds 999.99 T, all energy parameters reset to 0."
+		},
+		{
+			"mode": "Peta",
+			"symbol": "P",
+			"unit_range": {
+				"min": 0,
+				"max": 999.99,
+				"unit": "P"
+			},
+			"unit_progression": [
+				"k",
+				"M",
+				"G",
+				"T",
+				"P"
+			],
+			"auto_scale": true,
+			"reset_condition": {
+				"trigger": "any_energy_parameter_exceeds_max",
+				"scope": "all_energy_parameters",
+				"action": "reset_to_zero"
+			},
+			"description": "Energy units automatically scale from Kilo through Peta. When any delivered or received energy exceeds 999.99 P, all energy parameters reset to 0."
+		},
+		{
+			"mode": "Exa",
+			"symbol": "E",
+			"unit_range": {
+				"min": 0,
+				"max": 9.2233,
+				"unit": "E"
+			},
+			"unit_progression": [
+				"k",
+				"M",
+				"G",
+				"T",
+				"P",
+				"E"
+			],
+			"auto_scale": true,
+			"reset_condition": {
+				"trigger": "any_energy_parameter_exceeds_max",
+				"scope": "all_energy_parameters",
+				"action": "reset_to_zero"
+			},
+			"description": "Energy units automatically scale from Kilo through Exa. When any delivered or received energy exceeds 9.2233 E, all energy parameters reset to 0."
+		}
+	]
+}

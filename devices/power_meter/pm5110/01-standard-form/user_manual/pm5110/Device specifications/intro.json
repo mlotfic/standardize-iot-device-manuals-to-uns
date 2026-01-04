@@ -1,0 +1,254 @@
+{
+	"mechanical_characteristics": {
+		"ip_degree_of_protection": {
+			"display": "IP54",
+			"display_upgrade_option": "IP65 with METSEIP65OP96X96FF",
+			"meter_body": "IP30",
+			"standard": "IEC 60529"
+		},
+		"mounting_position": "Vertical",
+		"display": {
+			"type": "Monochrome graphics LCD",
+			"resolution_px": "128 x 128",
+			"backlight": "White LED",
+			"viewable_area_mm": "67 x 62.5",
+			"viewable_area_in": "2.64 x 2.46"
+		},
+		"weight_g": 380,
+		"dimensions_mm": {
+			"width": 96,
+			"height": 96,
+			"depth_from_flange": 72,
+			"protrusion_from_cabinet": 13
+		},
+		"panel_thickness_max_mm": 6
+	},
+	"electrical_characteristics": {
+		"measurement_accuracy": {
+			"measurement_type": {
+				"method": "True RMS",
+				"system": "3P, 3P+N",
+				"samples_per_cycle": 64,
+				"zero_blind": true
+			},
+			"standards": [
+				"IEC 61557-12:2021",
+				"BS/EN 61557-12"
+			],
+			"errors": {
+				"active_energy": {
+					"class": "0.5S",
+					"error": "±0.5%",
+					"standard": "IEC 62053-22:2020"
+				},
+				"reactive_energy": {
+					"class": "2",
+					"error": "±2%",
+					"standard": "IEC 62053-23:2020"
+				},
+				"apparent_energy": {
+					"class": "0.5",
+					"error": "±0.5%"
+				},
+				"active_power": {
+					"class": "0.5",
+					"error": "±0.5%"
+				},
+				"reactive_power": {
+					"class": "2",
+					"error": "±2%"
+				},
+				"apparent_power": {
+					"class": "0.5",
+					"error": "±0.5%"
+				},
+				"current": {
+					"class": "0.5",
+					"error": "±0.5%"
+				},
+				"voltage_l_n": {
+					"class": "0.5",
+					"error": "±0.5%"
+				},
+				"frequency": {
+					"class": "0.05",
+					"error": "±0.05%"
+				},
+				"power_factor": {
+					"class": "0.5",
+					"error": "±0.005 count"
+				}
+			}
+		},
+		"power_quality_accuracy": {
+			"voltage_harmonics": {
+				"class": "5",
+				"error": "±5%"
+			},
+			"voltage_thd": {
+				"class": "5",
+				"error": "±5%"
+			},
+			"current_harmonics": {
+				"class": "5",
+				"error": "±5%"
+			},
+			"current_thd": {
+				"class": "5",
+				"error": "±5%"
+			}
+		},
+		"voltage_inputs": {
+			"max_vt_pt_primary": "1.0 MV AC",
+			"accuracy_range": {
+				"ul": "20–347 V L-N / 35–600 V L-L",
+				"iec": "20–400 V L-N / 35–690 V L-L",
+				"absolute": "35–760 V L-L"
+			},
+			"impedance_ohm": 5000000,
+			"rated_impulse_voltage": "6 kV / 1.2 µs",
+			"frequency_hz": {
+				"measured": "45–65",
+				"nominal": "50/60"
+			},
+			"burden_va": "<0.2 at 240 V L-N"
+		},
+		"current_inputs": {
+			"ct_secondary_nominal_a": [
+				1,
+				5
+			],
+			"measured_current_a": "0.005–8.5",
+			"starting_current_a": 0.005,
+			"withstand": {
+				"continuous_a": 20,
+				"10_sec_per_hr_a": 50,
+				"1_sec_per_hr_a": 500
+			},
+			"impedance_mohm": "<0.3",
+			"frequency_hz": {
+				"measured": "45–65",
+				"nominal": "50/60"
+			},
+			"burden_va": "<0.026 at 8.5 A"
+		},
+		"ac_control_power": {
+			"nominal_voltage": {
+				"l_n": "277 V (100–277 V ±10%)",
+				"l_l": "415 V (100–415 V ±10%)"
+			},
+			"burden": "5 W / 11 VA max",
+			"installation_category": "CAT III 300 V",
+			"frequency_hz": "45–65",
+			"ride_through_time_ms": {
+				"120_v": 80,
+				"230_v": 100,
+				"415_v": 100
+			}
+		},
+		"dc_control_power": {
+			"nominal_voltage_v": "250 (125–250 ±20%)",
+			"burden_w": "<4",
+			"ride_through_time_ms": 50
+		},
+		"digital_output": {
+			"number": 1,
+			"max_load_voltage_vdc": 40,
+			"max_load_current_ma": 20,
+			"on_resistance_ohm": 50,
+			"pulse_frequency_hz": "<=25",
+			"meter_constant": "1–9,999,999 pulses per k_h",
+			"pulse_width": "50% duty, >20 ms",
+			"leakage_current_ua": 0.03,
+			"isolation": "5 kV RMS"
+		}
+	},
+	"environmental_characteristics": {
+		"operating_temperature_c": {
+			"meter": "-25 to 70",
+			"display": "-20 to 70"
+		},
+		"storage_temperature_c": "-40 to 85",
+		"humidity": {
+			"operating": "5–95% RH non-condensing",
+			"storage": "5–80% RH non-condensing",
+			"max_dew_point_c": 37
+		},
+		"pollution_degree": 2,
+		"altitude_m": 2000,
+		"location": "Indoor, stationary panel",
+		"product_life_years": ">15"
+	},
+	"leds": {
+		"heartbeat_led": "Green",
+		"alarm_energy_led": {
+			"color": "Amber",
+			"pulse_frequency_hz": "<=50",
+			"pulse_width": "50% duty, >=200 µs",
+			"meter_constant": "10,000 pulses/kWh default",
+			"wavelength_nm": "590–635"
+		}
+	},
+	"emc": {
+		"immunity_standards": [
+			"IEC 61000-4-2",
+			"IEC 61000-4-3",
+			"IEC 61000-4-4",
+			"IEC 61000-4-5",
+			"IEC 61000-4-6",
+			"IEC 61000-4-8",
+			"IEC 61000-4-11"
+		],
+		"emissions": [
+			"FCC Part 15 Class B",
+			"EN 55022 Class B"
+		]
+	},
+	"safety_and_standards": {
+		"safety_standard": "IEC 61010-1",
+		"protective_class": "Class II",
+		"compliance": [
+			"IEC 62052-31",
+			"IEC 62052-11",
+			"IEC 62053-22",
+			"IEC 62053-23",
+			"IEC 61557-12",
+			"BS/EN 50470-1",
+			"BS/EN 50470-3"
+		]
+	},
+	"mid_mir_compliance": {
+		"standards": [
+			"BS/EN 50470-1 Class C",
+			"BS/EN 50470-3 Class C"
+		],
+		"measuring_equipment": "Static watt-hour meter",
+		"environment": {
+			"mechanical": "M1",
+			"emc": "E2"
+		},
+		"measurements": "C(kWh)"
+	},
+	"communications": {
+		"rs485": {
+			"ports": 1,
+			"max_cable_length_m": 1219,
+			"max_devices": 32,
+			"baud_rates": [
+				9600,
+				19200,
+				38400
+			],
+			"protocols": [
+				"Modbus RTU",
+				"Modbus ASCII",
+				"JBUS"
+			],
+			"isolation": "2.5 kV RMS"
+		}
+	},
+	"real_time_clock": {
+		"clock_drift": "~0.4 s/day",
+		"battery_backup_years": 3
+	}
+}

@@ -1,0 +1,179 @@
+# pm5110.yaml - Schneider PM5110 Device Schema
+# Version: 1.0.0
+# Device: Schneider Electric PowerLogic PM5110
+# Firmware: Compatible with 2.x and later
+
+meta:
+  device_family: "PowerLogic PM5xxx"
+  model: "PM5110"
+  vendor: "Schneider Electric"
+  schema_version: "1.0.0"
+  inherits: ["types.yaml"]  # Import base types
+
+# Composite register definitions
+registers:
+  AlarmAttributes:
+    address: 0x1000  # Example Modbus address
+    width: 32
+    description: "Alarm configuration bitfield"
+    access: read_write
+    
+    fields:
+      type:
+        offset: 28
+        width: 4
+        type: enum
+        values:
+          0: {name: NONE, desc: "No alarm type defined"}
+          1: {name: STANDARD1S, desc: "Standard 1-second alarm for continuous monitoring"}
+          2: {name: CUSTOM1S, desc: "Custom 1-second alarm with user-defined parameters"}
+          3: {name: STANDARDHS, desc: "Standard high-speed alarm for rapid event detection"}
+          5: {name: DISTURBANCE, desc: "Power quality disturbance alarm"}
+          6: {name: TRANSIENT, desc: "Transient event alarm for short-duration anomalies"}
+          9: {name: DIGITAL, desc: "Digital input-based alarm"}
+          12: {name: LOGIC, desc: "Logic-based alarm combining multiple conditions"}
+      
+      subtype:
+        offset: 23
+        width: 4
+        type: enum
+        values:
+          0: NONE
+          1: {name: OVER_SIGNED, desc: "Value exceeds upper threshold (signed)"}
+          2: {name: UNDER_SIGNED, desc: "Value falls below lower threshold (signed)"}
+          13: {name: SWELL, desc: "Voltage swell (overvoltage)", unit_ref: voltage}
+          14: {name: SAG, desc: "Voltage sag (undervoltage)", unit_ref: voltage}
+          15: AND
+          16: NAND
+          17: OR
+          18: NOR
+      
+      parameter:
+        offset: 17
+        width: 4
+        type: enum
+        category: measurement
+        values:
+          0: NONE
+          1: {name: VOLTAGE, unit_ref: units.electrical.voltage}
+          2: {name: CURRENT, unit_ref: units.electrical.current}
+          3: {name: ACTIVE_POWER, unit_ref: units.electrical.power_active}
+          4: {name: REACTIVE_POWER, unit_ref: units.electrical.power_reactive}
+          6: {name: FREQUENCY, unit_ref: units.electrical.frequency}
+          7: POWER_FACTOR
+          14: HARMONIC
+          20: TEMPERATURE
+      
+      modifier:
+        offset: 11
+        width: 4
+        type: enum
+        values:
+          0: NONE
+          1-16: {pattern: harmonic_order, desc: "Harmonic order {value}"}
+          17: PHASE
+          18: NEUTRAL
+          20: LN  # Line-to-neutral
+          21: LL  # Line-to-line
+          22: THD  # Total harmonic distortion
+          29: RMS
+          35: INSTANTANEOUS
+      
+      phases:
+        offset: 7
+        width: 4
+        inherits: "enum_patterns.phases"  # Reuse from base types
+      
+      level:
+        offset: 5
+        width: 2
+        type: enum
+        values:
+          0-3: {pattern: "LEVEL{value}", desc: "Alarm threshold level {value}"}
+      
+      priority:
+        offset: 3
+        width: 2
+        inherits: "enum_patterns.priority"
+      
+      setpoints:
+        offset: 2
+        width: 1
+        type: enum
+        values:
+          0: {name: FIXED, desc: "Fixed setpoint values (not adjustable)"}
+          1: {name: VARIABLE, desc: "Variable setpoint values (user-adjustable)"}
+      
+      learning:
+        offset: 1
+        width: 1
+        inherits: "enum_patterns.binary_state"
+        mapping: {0: NOT_LEARNING, 1: LEARNING}
+        description: "Adaptive threshold learning mode"
+      
+      enable:
+        offset: 0
+        width: 1
+        inherits: "enum_patterns.binary_state"
+
+  EventCode:
+    address: 0x2000
+    width: 16
+    description: "Event classification and metadata"
+    access: read_only
+    
+    fields:
+      category:
+        offset: 12
+        width: 4
+        type: enum
+        values:
+          15: {name: ALARM_EVENT, desc: "Alarm event category"}
+      
+      eventType:
+        offset: 8
+        width: 4
+        type: enum
+        values:
+          0: NONE
+          1: UNARY
+          2: {name: PICKUP, desc: "Alarm condition detected"}
+          3: {name: DROPOUT, desc: "Alarm condition cleared"}
+          10: {name: P1_ACKNOWLEDGED, desc: "Priority 1 alarm acknowledged by user"}
+          12: {name: FILES_ASSOCIATED, desc: "Waveform capture files associated"}
+      
+      phases:
+        offset: 4
+        width: 4
+        inherits: "enum_patterns.phases"
+      
+      direction:
+        offset: 16  # Note: overlaps, device-specific encoding
+        width: 4
+        type: enum
+        description: "Disturbance direction detection"
+        values:
+          0: {name: DDD_NONE, confidence: null}
+          1: {name: DDD_UNKNOWN, confidence: null}
+          2: {name: DDD_UPSTREAM_LOW, confidence: low, direction: upstream}
+          3: {name: DDD_UPSTREAM_MEDIUM, confidence: medium, direction: upstream}
+          4: {name: DDD_UPSTREAM_HIGH, confidence: high, direction: upstream}
+          5: {name: DDD_DOWNSTREAM_LOW, confidence: low, direction: downstream}
+          6: {name: DDD_DOWNSTREAM_MEDIUM, confidence: medium, direction: downstream}
+          7: {name: DDD_DOWNSTREAM_HIGH, confidence: high, direction: downstream}
+
+# Validation rules
+validation:
+  AlarmAttributes:
+    - rule: "If type == LOGIC, subtype must be one of [AND, NAND, OR, NOR, XOR, NOT]"
+    - rule: "If parameter != NONE, appropriate unit must be referenced"
+    - rule: "If learning == LEARNING, setpoints must be VARIABLE"
+  
+  EventCode:
+    - rule: "direction field only valid when eventType in [PICKUP, DROPOUT]"
+
+# Change log for version tracking
+changelog:
+  - version: "1.0.0"
+    date: "2025-12-29"
+    changes: ["Initial schema definition from PM5110 manual"]

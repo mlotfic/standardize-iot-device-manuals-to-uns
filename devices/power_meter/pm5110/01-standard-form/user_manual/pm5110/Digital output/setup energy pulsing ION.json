@@ -1,0 +1,60 @@
+{
+	"mode": {
+		"description": "Select the output mode for energy pulsing.",
+		"value": "LED",
+		"allowed_values": {
+            "LED - Disabled": "LED is disabled",
+            "LED - Alarm": "Alarm sets the LED for alarm notification.",
+            "LED - Energy": "Energy sets the LED for energy pulsing.",
+            "Digital output - Eternal":"Energy: associates the digital output with energy pulsing.",
+            "Digital output - Energy":"External: disassociates the digital output from energy pulsing."
+        },
+        "enum": 1,
+		"data_type": "string",
+        "unit": null
+	},
+	"pulse_rate_per_kwh": {
+		"description": "When configured for energy pulsing, defines how many pulses are sent to the LED or digital output for every 1 kWh, 1 kVARh, or 1 kVAh of accumulated energy. Ignored when mode is Disabled or Alarm (LED) or External (Digital Output).",
+		"value": 1000,
+        "allowed_values":[1, 9999999],
+		"enum":1,
+		"data_type": "uint32",
+        "unit": "pulses/kWh",
+		"dependency": {
+			"parameter": [
+				"Digital output - Energy",
+				"LED - Energy"
+			],
+			"required_value": [
+				"Energy"
+			]
+		}
+	},
+	"Parameter": {
+		"description": "Select which accumulated energy channel to monitor and use for energy pulsing. Ignored when mode is Alarm or Disabled.",
+		"value": "Active Energy Delivered",
+		"allowed_values": {
+			"Active Energy Delivered":"Active Energy Delivered",
+			"Active Energy Received":"Active Energy Received",
+			"Active Energy Del+Rec":"Active Energy Delivered and Received",
+			"Reactive Energy Delivered":"Reactive Energy Delivered",
+			"Reactive Energy Received":"Reactive Energy Received",
+			"Reactive Energy Del+Rec":"Reactive Energy Delivered and Received",
+			"Apparent Energy Delivered":"Apparent Energy Delivered",
+			"Apparent Energy Received":"Apparent Energy Received",
+			"Apparent Energy Del+Rec":"Apparent Energy Delivered and Received"
+        },
+        "enum": 1,
+		"data_type": "string",
+        "unit": null,
+		"dependency": {
+			"parameter": [
+				"led_mode",
+				"digital_output_mode"
+			],
+			"required_value": [
+				"Energy"
+			]
+		}
+	}
+}

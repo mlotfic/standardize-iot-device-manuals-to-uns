@@ -1,0 +1,696 @@
+{
+	"metadata": {
+		"device_model": "Schneider PM5110",
+		"mapping_version": "2.0",
+		"last_updated": "2025-01-02",
+		"description": "Maps semantic UNS paths to device HMI screen paths for commissioning and troubleshooting reference"
+	},
+	"mappings": [
+		{
+			"uns": "measurement/voltage/average",
+			"hmi_path": "Measurement > Summary > Vavg",
+			"modbus_register": 40001,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "V",
+			"description": "Average of three phase voltages"
+		},
+		{
+			"uns": "measurement/current/average",
+			"hmi_path": "Measurement > Summary > Iavg",
+			"modbus_register": 40002,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "A",
+			"description": "Average of three phase currents"
+		},
+		{
+			"uns": "measurement/power/active/total",
+			"hmi_path": "Measurement > Summary > Ptot",
+			"modbus_register": 40003,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "kW",
+			"description": "Instantaneous total active power"
+		},
+		{
+			"uns": "kpi/energy/active/delivered",
+			"hmi_path": "Measurement > Summary > EDel",
+			"modbus_register": 40004,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float64",
+			"unit": "kWh",
+			"description": "Accumulated delivered active energy"
+		},
+		{
+			"uns": "measurement/current/l1",
+			"hmi_path": "Measurement > Current > I1",
+			"modbus_register": 40010,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "A"
+		},
+		{
+			"uns": "measurement/current/l2",
+			"hmi_path": "Measurement > Current > I2",
+			"modbus_register": 40011,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "A"
+		},
+		{
+			"uns": "measurement/current/l3",
+			"hmi_path": "Measurement > Current > I3",
+			"modbus_register": 40012,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "A"
+		},
+		{
+			"uns": "measurement/current/neutral",
+			"hmi_path": "Measurement > Current > In",
+			"modbus_register": 40013,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "A"
+		},
+		{
+			"uns": "measurement/voltage/line/l1_l2",
+			"hmi_path": "Measurement > Voltage > line > U12",
+			"modbus_register": 40020,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/voltage/line/l2_l3",
+			"hmi_path": "Measurement > Voltage > line > U23",
+			"modbus_register": 40021,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/voltage/line/l3_l1",
+			"hmi_path": "Measurement > Voltage > line > U31",
+			"modbus_register": 40022,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/voltage/phase/l1",
+			"hmi_path": "Measurement > Voltage > phase > V1",
+			"modbus_register": 40030,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/voltage/phase/l2",
+			"hmi_path": "Measurement > Voltage > phase > V2",
+			"modbus_register": 40031,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/voltage/phase/l3",
+			"hmi_path": "Measurement > Voltage > phase > V3",
+			"modbus_register": 40032,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/power/active/total",
+			"hmi_path": "Measurement > power > p > total",
+			"modbus_register": 40040,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "kW"
+		},
+		{
+			"uns": "measurement/power/reactive/total",
+			"hmi_path": "Measurement > power > q > total",
+			"modbus_register": 40041,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "kVAr"
+		},
+		{
+			"uns": "measurement/power/apparent/total",
+			"hmi_path": "Measurement > power > s > total",
+			"modbus_register": 40042,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "kVA"
+		},
+		{
+			"uns": "measurement/power/active/l1",
+			"hmi_path": "Measurement > power > p > line",
+			"modbus_register": 40043,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "kW"
+		},
+		{
+			"uns": "kpi/demand/active/last",
+			"hmi_path": "Measurement > power > p > demand > last",
+			"modbus_register": 40050,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float32",
+			"unit": "kW",
+			"description": "Previous 15-minute demand window"
+		},
+		{
+			"uns": "kpi/demand/active/present",
+			"hmi_path": "Measurement > power > p > demand > present",
+			"modbus_register": 40051,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "kW",
+			"description": "Current 15-minute demand window"
+		},
+		{
+			"uns": "kpi/demand/active/predicted",
+			"hmi_path": "Measurement > power > p > demand > predicted",
+			"modbus_register": 40052,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "kW",
+			"description": "Predicted peak demand"
+		},
+		{
+			"uns": "kpi/demand/active/peak_timestamp",
+			"hmi_path": "Measurement > power > p > demand > peak > datetime",
+			"modbus_register": 40053,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "timestamp",
+			"unit": "ISO8601"
+		},
+		{
+			"uns": "kpi/energy/active/delivered",
+			"hmi_path": "Measurement > kpi > energy > p > delivery",
+			"modbus_register": 40060,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float64",
+			"unit": "kWh"
+		},
+		{
+			"uns": "kpi/energy/active/received",
+			"hmi_path": "Measurement > kpi > energy > p > recieved",
+			"modbus_register": 40061,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float64",
+			"unit": "kWh"
+		},
+		{
+			"uns": "kpi/energy/active/total",
+			"hmi_path": "Measurement > kpi > energy > p > total",
+			"modbus_register": 40062,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float64",
+			"unit": "kWh"
+		},
+		{
+			"uns": "kpi/energy/active/net",
+			"hmi_path": "Measurement > kpi > energy > p > net",
+			"modbus_register": 40063,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float64",
+			"unit": "kWh"
+		},
+		{
+			"uns": "measurement/power_quality/power_factor/true/l1",
+			"hmi_path": "Measurement > power_quality > powerfactor > true > 1",
+			"modbus_register": 40100,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "dimensionless"
+		},
+		{
+			"uns": "measurement/power_quality/power_factor/true/total",
+			"hmi_path": "Measurement > power_quality > powerfactor > true > total",
+			"modbus_register": 40103,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "dimensionless"
+		},
+		{
+			"uns": "measurement/power_quality/power_factor/displacement/l1",
+			"hmi_path": "Measurement > power_quality > powerfactor > displacement > 1",
+			"modbus_register": 40104,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "dimensionless"
+		},
+		{
+			"uns": "measurement/frequency",
+			"hmi_path": "Measurement > power_quality > frequency",
+			"modbus_register": 40110,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "Hz"
+		},
+		{
+			"uns": "measurement/power_quality/thd/fundamental/current/l1",
+			"hmi_path": "Measurement > power_quality > THD > thd_fundamental > current > I1",
+			"modbus_register": 40120,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "%"
+		},
+		{
+			"uns": "measurement/power_quality/thd/fundamental/voltage/phase/l1",
+			"hmi_path": "Measurement > power_quality > THD > thd_fundamental > voltage > phase > V1",
+			"modbus_register": 40130,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "%"
+		},
+		{
+			"uns": "measurement/power_quality/thd/rms/current/l1",
+			"hmi_path": "Measurement > power_quality > THD > thd_rms > current > I1",
+			"modbus_register": 40140,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "%"
+		},
+		{
+			"uns": "measurement/power_quality/harmonics/tdd",
+			"hmi_path": "Measurement > power_quality > harmonics > TDD",
+			"modbus_register": 40150,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "%"
+		},
+		{
+			"uns": "measurement/power_quality/harmonics/current/h3_magnitude",
+			"hmi_path": "Measurement > power_quality > harmonics > current > 3 > magnitude",
+			"modbus_register": 40151,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "A"
+		},
+		{
+			"uns": "measurement/power_quality/harmonics/voltage/phase/h3_magnitude",
+			"hmi_path": "Measurement > power_quality > harmonics > voltage > phase > 3 > magnitude",
+			"modbus_register": 40160,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/power_quality/unbalance/current",
+			"hmi_path": "Measurement > power_quality > unbalance > current",
+			"modbus_register": 40170,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "%"
+		},
+		{
+			"uns": "measurement/power_quality/unbalance/voltage_line",
+			"hmi_path": "Measurement > power_quality > unbalance > voltage > line",
+			"modbus_register": 40171,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "%"
+		},
+		{
+			"uns": "measurement/power_quality/unbalance/voltage_phase",
+			"hmi_path": "Measurement > power_quality > unbalance > voltage > phase",
+			"modbus_register": 40172,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "float32",
+			"unit": "%"
+		},
+		{
+			"uns": "measurement/power_quality/current/min_max/min/l1",
+			"hmi_path": "Measurement > power_quality > min_max > current > min > Ix",
+			"modbus_register": 40200,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "A",
+			"description": "Minimum current since last reset"
+		},
+		{
+			"uns": "measurement/power_quality/current/min_max/max/l1",
+			"hmi_path": "Measurement > power_quality > min_max > current > max > Ix",
+			"modbus_register": 40201,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "A",
+			"description": "Maximum current since last reset"
+		},
+		{
+			"uns": "measurement/power_quality/voltage/line/min_max/min/l1_l2",
+			"hmi_path": "Measurement > power_quality > min_max > voltage > line > min > Uxx",
+			"modbus_register": 40210,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "V"
+		},
+		{
+			"uns": "measurement/power_quality/power_factor/true/min_max/min",
+			"hmi_path": "Measurement > power_quality > min_max > powerfactor > true > min",
+			"modbus_register": 40220,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "float32",
+			"unit": "dimensionless"
+		},
+		{
+			"uns": "alarm/state/overcurrent_phase",
+			"hmi_path": "alarm > count > Over Phase Current",
+			"modbus_register": 40300,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "boolean",
+			"display_name": "Over Phase Current"
+		},
+		{
+			"uns": "alarm/counts/overcurrent_phase",
+			"hmi_path": "alarm > count > Over Phase Current",
+			"modbus_register": 40301,
+			"access": "read_only",
+			"update_rate_ms": 5000,
+			"data_type": "uint32",
+			"description": "Historical count of overcurrent alarms"
+		},
+		{
+			"uns": "alarm/state/overvoltage_line",
+			"hmi_path": "alarm > count > Over Voltage L-L",
+			"modbus_register": 40310,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "boolean",
+			"display_name": "Over Voltage L-L"
+		},
+		{
+			"uns": "alarm/state/phase_loss",
+			"hmi_path": "alarm > count > Phase Loss",
+			"modbus_register": 40320,
+			"access": "read_only",
+			"update_rate_ms": 1000,
+			"data_type": "boolean",
+			"display_name": "Phase Loss"
+		},
+		{
+			"uns": "command/reset_energy_accumulators",
+			"hmi_path": "maintenance > reset > GlobalResets > Engeries",
+			"modbus_register": 50001,
+			"access": "write_only",
+			"data_type": "boolean",
+			"requires_password": true,
+			"description": "Write 1 to reset all energy accumulators"
+		},
+		{
+			"uns": "command/reset_demand_values",
+			"hmi_path": "maintenance > reset > GlobalResets > Demands",
+			"modbus_register": 50002,
+			"access": "write_only",
+			"data_type": "boolean",
+			"requires_password": true
+		},
+		{
+			"uns": "command/reset_min_max",
+			"hmi_path": "maintenance > reset > GlobalResets > MinMax",
+			"modbus_register": 50003,
+			"access": "write_only",
+			"data_type": "boolean",
+			"requires_password": true
+		},
+		{
+			"uns": "command/reset_alarm_counts",
+			"hmi_path": "maintenance > reset > GlobalResets > AlarmCountsLogs",
+			"modbus_register": 50004,
+			"access": "write_only",
+			"data_type": "boolean",
+			"requires_password": true
+		},
+		{
+			"uns": "command/reset_meter",
+			"hmi_path": "maintenance > reset > GlobalResets > MeterInitalization",
+			"modbus_register": 50005,
+			"access": "write_only",
+			"data_type": "boolean",
+			"requires_password": true,
+			"warning": "This will reset all meter settings to factory defaults"
+		},
+		{
+			"uns": "config/meter/power_system",
+			"hmi_path": "maintenance > setup > Meter > Basic > PowerSystem",
+			"modbus_register": 50100,
+			"access": "read_write",
+			"data_type": "enum",
+			"requires_password": true,
+			"valid_values": [
+				"3P4W",
+				"3P3W",
+				"1P2W"
+			],
+			"description": "Wiring configuration"
+		},
+		{
+			"uns": "config/meter/vt_primary",
+			"hmi_path": "maintenance > setup > Meter > Basic > VT Primary",
+			"modbus_register": 50102,
+			"access": "read_write",
+			"data_type": "uint32",
+			"requires_password": true,
+			"unit": "V",
+			"range": [
+				100,
+				999000
+			]
+		},
+		{
+			"uns": "config/meter/vt_secondary",
+			"hmi_path": "maintenance > setup > Meter > Basic > VT Secondary",
+			"modbus_register": 50103,
+			"access": "read_write",
+			"data_type": "uint32",
+			"requires_password": true,
+			"unit": "V",
+			"range": [
+				100,
+				1000
+			]
+		},
+		{
+			"uns": "config/meter/ct_primary",
+			"hmi_path": "maintenance > setup > Meter > Basic > CT Primary",
+			"modbus_register": 50105,
+			"access": "read_write",
+			"data_type": "uint32",
+			"requires_password": true,
+			"unit": "A",
+			"range": [
+				5,
+				99999
+			]
+		},
+		{
+			"uns": "config/meter/ct_secondary",
+			"hmi_path": "maintenance > setup > Meter > Basic > CT Secondary",
+			"modbus_register": 50106,
+			"access": "read_write",
+			"data_type": "uint32",
+			"requires_password": true,
+			"unit": "A",
+			"valid_values": [
+				1,
+				5
+			]
+		},
+		{
+			"uns": "config/meter/frequency_nominal",
+			"hmi_path": "maintenance > setup > Meter > Basic > Sys Frequency",
+			"modbus_register": 50107,
+			"access": "read_write",
+			"data_type": "uint8",
+			"requires_password": true,
+			"valid_values": [
+				50,
+				60
+			],
+			"unit": "Hz"
+		},
+		{
+			"uns": "config/comm/protocol",
+			"hmi_path": "maintenance > setup > Comm > Protocol",
+			"modbus_register": 50200,
+			"access": "read_write",
+			"data_type": "enum",
+			"requires_password": true,
+			"valid_values": [
+				"modbus_rtu",
+				"modbus_tcp"
+			]
+		},
+		{
+			"uns": "config/comm/address",
+			"hmi_path": "maintenance > setup > Comm > Address",
+			"modbus_register": 50201,
+			"access": "read_write",
+			"data_type": "uint8",
+			"requires_password": true,
+			"range": [
+				1,
+				247
+			]
+		},
+		{
+			"uns": "config/comm/baud_rate",
+			"hmi_path": "maintenance > setup > Comm > Baud Rate",
+			"modbus_register": 50202,
+			"access": "read_write",
+			"data_type": "uint32",
+			"requires_password": true,
+			"valid_values": [
+				9600,
+				19200,
+				38400,
+				57600,
+				115200
+			]
+		},
+		{
+			"uns": "config/alarm/overcurrent_phase_setpoint",
+			"hmi_path": "maintenance > setup > Alarm > 1Sec > OverCurrent > Pickup Setpoint",
+			"modbus_register": 50300,
+			"access": "read_write",
+			"data_type": "float32",
+			"requires_password": true,
+			"unit": "A",
+			"description": "Current threshold for overcurrent alarm"
+		},
+		{
+			"uns": "config/hmi/display_contrast",
+			"hmi_path": "maintenance > setup > hmi > Displ > Contrast",
+			"modbus_register": 50400,
+			"access": "read_write",
+			"data_type": "uint8",
+			"requires_password": false,
+			"range": [
+				0,
+				100
+			],
+			"unit": "%"
+		},
+		{
+			"uns": "config/hmi/backlight_timeout_min",
+			"hmi_path": "maintenance > setup > hmi > Displ > Bcklght Timeout (min)",
+			"modbus_register": 50401,
+			"access": "read_write",
+			"data_type": "uint16",
+			"requires_password": false,
+			"unit": "minutes"
+		},
+		{
+			"uns": "health/clock_time",
+			"hmi_path": "Clock > Meter Time",
+			"modbus_register": 50500,
+			"access": "read_only",
+			"data_type": "timestamp",
+			"unit": "ISO8601"
+		},
+		{
+			"uns": "config/timezone_offset_hours",
+			"hmi_path": "Clock > GMT Offset (h)",
+			"modbus_register": 50501,
+			"access": "read_write",
+			"data_type": "int8",
+			"requires_password": true,
+			"range": [
+				-12,
+				14
+			]
+		},
+		{
+			"uns": "diagnostic/meter_info",
+			"hmi_path": "maintenance > Diagnostic > Info",
+			"modbus_register": 50600,
+			"access": "read_only",
+			"data_type": "string",
+			"description": "Device model, serial, firmware version"
+		},
+		{
+			"uns": "diagnostic/calculated_power",
+			"hmi_path": "maintenance > Diagnostic > ClPwr",
+			"modbus_register": 50601,
+			"access": "read_only",
+			"data_type": "object",
+			"description": "Calculated power values for verification"
+		},
+		{
+			"uns": "diagnostic/phase_angles",
+			"hmi_path": "maintenance > Diagnostic > PhAng",
+			"modbus_register": 50602,
+			"access": "read_only",
+			"data_type": "object",
+			"description": "Phase angle measurements for wiring verification"
+		},
+		{
+			"uns": "kpi/timers/active_load_hours",
+			"hmi_path": "measurement > timer > active_load_time",
+			"modbus_register": 40400,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float32",
+			"unit": "hours"
+		},
+		{
+			"uns": "kpi/timers/operating_hours",
+			"hmi_path": "measurement > timer > operating_time",
+			"modbus_register": 40401,
+			"access": "read_only",
+			"update_rate_ms": 60000,
+			"data_type": "float32",
+			"unit": "hours"
+		}
+	]
+}

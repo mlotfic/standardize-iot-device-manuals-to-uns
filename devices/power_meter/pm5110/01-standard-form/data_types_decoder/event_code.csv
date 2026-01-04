@@ -1,0 +1,36 @@
+﻿group,name,total_width,offset,width,type,value,meaning,description,standard
+EventCode,category,16,12,4,enum,15,ALARM_EVENT,Alarm event category,Device specific EventCode
+EventCode,eventType,16,8,4,enum,0,NONE,No event type specified,Device specific EventCode
+EventCode,eventType,16,8,4,enum,1,UNARY,Unary event (single state change),Device specific EventCode
+EventCode,eventType,16,8,4,enum,2,PICKUP,Alarm condition detected (pickup),Device specific EventCode
+EventCode,eventType,16,8,4,enum,3,DROPOUT,Alarm condition cleared (dropout),Device specific EventCode
+EventCode,eventType,16,8,4,enum,4,COMPRESSED_PICKUP,Compressed pickup event data,Device specific EventCode
+EventCode,eventType,16,8,4,enum,5,COMPRESSED_DURATION,Compressed duration event data,Device specific EventCode
+EventCode,eventType,16,8,4,enum,6,COMPRESSED_VALUE,Compressed value event data,Device specific EventCode
+EventCode,eventType,16,8,4,enum,7,AGGREGATED_PICKUP,Aggregated pickup event data,Device specific EventCode
+EventCode,eventType,16,8,4,enum,8,AGGREGATED_DURATION,Aggregated duration event data,Device specific EventCode
+EventCode,eventType,16,8,4,enum,9,AGGREGATED_VALUE,Aggregated value event data,Device specific EventCode
+EventCode,eventType,16,8,4,enum,10,P1 ACKNOWLEDGED,Priority 1 alarm acknowledged by user,Device specific EventCode
+EventCode,eventType,16,8,4,enum,11,DIGITAL_OUTPUT_ASSOCIATED,Digital output associated with event,Device specific EventCode
+EventCode,eventType,16,8,4,enum,12,FILES_ASSOCIATED,Waveform capture files associated with event,Device specific EventCode
+EventCode,eventType,16,8,4,enum,13,WFC_ASSOCIATED,Waveform capture (WFC) associated with event,Device specific EventCode
+EventCode,phases,16,4,4,enum,0,NONE,No phase specified,Device specific EventCode
+EventCode,phases,16,4,4,enum,1,A,Phase A only,Device specific EventCode
+EventCode,phases,16,4,4,enum,2,B,Phase B only,Device specific EventCode
+EventCode,phases,16,4,4,enum,3,C,Phase C only,Device specific EventCode
+EventCode,phases,16,4,4,enum,4,AB,Phases A and B,Device specific EventCode
+EventCode,phases,16,4,4,enum,5,BC,Phases B and C,Device specific EventCode
+EventCode,phases,16,4,4,enum,6,CA,Phases C and A,Device specific EventCode
+EventCode,phases,16,4,4,enum,7,ABC,All three phases (A-B-C),Device specific EventCode
+EventCode,phases,16,4,4,enum,8,N,Neutral conductor,Device specific EventCode
+EventCode,phases,16,4,4,enum,9,G,Ground conductor,Device specific EventCode
+EventCode,phases,16,4,4,enum,10,NG,Neutral and ground conductors,Device specific EventCode
+EventCode,direction,16,16,4,enum,0,DDD_NONE,No disturbance direction detected,Device specific EventCode
+EventCode,direction,16,16,4,enum,1,DDD_UNKNOWN,Disturbance direction unknown,Device specific EventCode         
+EventCode,direction,16,16,4,enum,2,DDD_UPSTREAM_LOW,Upstream disturbance - low confidence,Device specific EventCode        
+EventCode,direction,16,16,4,enum,3,DDD_UPSTREAM_MEDIUM,Upstream disturbance - medium confidence,Device specific EventCode     
+EventCode,direction,16,16,4,enum,4,DDD_UPSTREAM_HIGH,Upstream disturbance - high confidence,Device specific EventCode       
+EventCode,direction,16,16,4,enum,5,DDD_DOWNSTREAM_LOW,Downstream disturbance - low confidence,Device specific EventCode      
+EventCode,direction,16,16,4,enum,6,DDD_DOWNSTREAM_MEDIUM,Downstream disturbance - medium confidence,Device specific EventCode   
+EventCode,direction,16,16,4,enum,7,DDD_DOWNSTREAM_HIGH,Downstream disturbance - high confidence,Device specific EventCode
+

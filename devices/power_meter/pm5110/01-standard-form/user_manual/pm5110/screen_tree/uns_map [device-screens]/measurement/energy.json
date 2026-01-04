@@ -1,0 +1,272 @@
+[
+    {
+        "uns": ".../measurement/energy/p/rms/p1",
+        "display_IEC_path": ".../E/Phase/P/P1",
+        "display_IEEE_path": ".../Energy/Phase/active/P1",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/rms/p2",
+        "display_IEC_path": ".../E/Phase/P/P2",
+        "display_IEEE_path": ".../Energy/Phase/active/P2",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/rms/p3",
+        "display_IEC_path": ".../E/Phase/P/P3",
+        "display_IEEE_path": ".../Energy/Phase/active/P3",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/rms/total",
+        "display_IEC_path": ".../E/Phase/P/Ptot",
+        "display_IEEE_path": ".../Energy/Phase/active/Ptot",
+        "screen_IEC_title": "Active Power",
+        "screen_IEEE_title": "Active Power",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/rms/q1",
+        "display_IEC_path": ".../E/Phase/Q/Q1",
+        "display_IEEE_path": ".../Energy/Phase/reactive/Q1",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/rms/q2",
+        "display_IEC_path": ".../E/Phase/Q/Q2",
+        "display_IEEE_path": ".../Energy/Phase/reactive/Q2",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/rms/q3",
+        "display_IEC_path": ".../E/Phase/Q/Q3",
+        "display_IEEE_path": ".../Energy/Phase/reactive/Q3",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/rms/total",
+        "display_IEC_path": ".../E/Phase/Q/Qtot",
+        "display_IEEE_path": ".../Energy/Phase/reactive/Qtot",
+        "screen_IEC_title": "Reactive Power",
+        "screen_IEEE_title": "Reactive Power",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/rms/s1",
+        "display_IEC_path": ".../E/Phase/S/S1",
+        "display_IEEE_path": ".../Energy/Phase/apparent/S1",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/rms/s2",
+        "display_IEC_path": ".../E/Phase/S/S2",
+        "display_IEEE_path": ".../Energy/Phase/apparent/S2",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/rms/s3",
+        "display_IEC_path": ".../E/Phase/S/S3",
+        "display_IEEE_path": ".../Energy/Phase/apparent/S3",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/rms/total",
+        "display_IEC_path": ".../E/Phase/S/Stot",
+        "display_IEEE_path": ".../Energy/Phase/apparent/Stot",
+        "screen_IEC_title": "Apparent Power",
+        "screen_IEEE_title": "Apparent Power",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/Dmd/last/total",
+        "display_IEC_path": ".../E/Dmd/Dmd/Ptot",
+        "display_IEEE_path": ".../Energy/Dmd/Dmd/Ptot",
+        "screen_IEC_title": "Pwr Dmd Summary",
+        "screen_IEEE_title": "Pwr Dmd Summary",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/Dmd/last/total",
+        "display_IEC_path": ".../E/Dmd/Dmd/Qtot",
+        "display_IEEE_path": ".../Energy/Dmd/Dmd/Qtot",
+        "screen_IEC_title": "Pwr Dmd Summary",
+        "screen_IEEE_title": "Pwr Dmd Summary",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/Dmd/last/total",
+        "display_IEC_path": ".../E/Dmd/Dmd/Stot",
+        "display_IEEE_path": ".../Energy/Dmd/Dmd/Stot",
+        "screen_IEC_title": "Pwr Dmd Summary",
+        "screen_IEEE_title": "Pwr Dmd Summary",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/Dmd/Pres/total",
+        "display_IEC_path": ".../E/Dmd/Pd/Pd/Pres",
+        "display_IEEE_path": ".../Energy/Dmd/Pd/Pd/Pres",
+        "screen_IEC_title": "P Dmd",
+        "screen_IEEE_title": "P Dmd",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/Dmd/last/total",
+        "display_IEC_path": ".../E/Dmd/Pd/Pd/Last",
+        "display_IEEE_path": ".../Energy/Dmd/Pd/Pd/Last",
+        "screen_IEC_title": "P Dmd",
+        "screen_IEEE_title": "P Dmd",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/Dmd/Pred/total",
+        "display_IEC_path": ".../E/Dmd/Pd/Pd/Pred",
+        "display_IEEE_path": ".../Energy/Dmd/Pd/Pd/Pred",
+        "screen_IEC_title": "P Dmd",
+        "screen_IEEE_title": "P Dmd",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/Dmd/Peak/total",
+        "display_IEC_path": ".../E/Dmd/Pd/Pd/Peak",
+        "display_IEEE_path": ".../Energy/Dmd/Pd/Pd/Peak",
+        "screen_IEC_title": "P Dmd",
+        "screen_IEEE_title": "P Dmd",
+        "unit": "W",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/p/Dmd/Peak/timestamp",
+        "display_IEC_path": ".../E/Dmd/Pd/PKDT",
+        "display_IEEE_path": ".../Energy/Dmd/Pd/PKDT",
+        "screen_IEC_title": "P Dmd Tot PkDT",
+        "screen_IEEE_title": "P Dmd Tot PkDT",
+        "unit": "",
+        "scale": ""
+    },
+    {
+        "uns": ".../measurement/energy/q/Dmd/Pres/total",
+        "display_IEC_path": ".../E/Dmd/Qd/Qd/Pres",
+        "display_IEEE_path": ".../Energy/Dmd/Qd/Qd/Pres",
+        "screen_IEC_title": "Q Dmd",
+        "screen_IEEE_title": "Q Dmd",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/Dmd/last/total",
+        "display_IEC_path": ".../E/Dmd/Qd/Qd/Last",
+        "display_IEEE_path": ".../Energy/Dmd/Qd/Qd/Last",
+        "screen_IEC_title": "Q Dmd",
+        "screen_IEEE_title": "Q Dmd",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/Dmd/Pred/total",
+        "display_IEC_path": ".../E/Dmd/Qd/Qd/Pred",
+        "display_IEEE_path": ".../Energy/Dmd/Qd/Qd/Pred",
+        "screen_IEC_title": "Q Dmd",
+        "screen_IEEE_title": "Q Dmd",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/Dmd/Peak/total",
+        "display_IEC_path": ".../E/Dmd/Qd/Qd/Peak",
+        "display_IEEE_path": ".../Energy/Dmd/Qd/Qd/Peak",
+        "screen_IEC_title": "Q Dmd",
+        "screen_IEEE_title": "Q Dmd",
+        "unit": "VAR",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/q/Dmd/Peak/timestamp",
+        "display_IEC_path": ".../E/Dmd/Qd/Qd/PKDT",
+        "display_IEEE_path": ".../Energy/Dmd/Qd/Qd/PKDT",
+        "screen_IEC_title": "Q Dmd Tot PkDT",
+        "screen_IEEE_title": "Q Dmd Tot PkDT",
+        "unit": "",
+        "scale": ""
+    },
+    {
+        "uns": ".../measurement/energy/s/Dmd/Pres/total",
+        "display_IEC_path": ".../E/Dmd/Sd/Sd/Pres",
+        "display_IEEE_path": ".../Energy/Dmd/Sd/Sd/Pres",
+        "screen_IEC_title": "S Dmd",
+        "screen_IEEE_title": "S Dmd",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/Dmd/last/total",
+        "display_IEC_path": ".../E/Dmd/Sd/Sd/Last",
+        "display_IEEE_path": ".../Energy/Dmd/Sd/Sd/Last",
+        "screen_IEC_title": "S Dmd",
+        "screen_IEEE_title": "S Dmd",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/Dmd/Pred/total",
+        "display_IEC_path": ".../E/Dmd/Sd/Sd/Pred",
+        "display_IEEE_path": ".../Energy/Dmd/Sd/Sd/Pred",
+        "screen_IEC_title": "S Dmd",
+        "screen_IEEE_title": "S Dmd",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/Dmd/Peak/total",
+        "display_IEC_path": ".../E/Dmd/Sd/Sd/Peak",
+        "display_IEEE_path": ".../Energy/Dmd/Sd/Sd/Peak",
+        "screen_IEC_title": "S Dmd",
+        "screen_IEEE_title": "S Dmd",
+        "unit": "VA",
+        "scale": "1"
+    },
+    {
+        "uns": ".../measurement/energy/s/Dmd/Peak/timestamp",
+        "display_IEC_path": ".../E/Dmd/Sd/Sd/PKDT",
+        "display_IEEE_path": ".../Energy/Dmd/Sd/Sd/PKDT",
+        "screen_IEC_title": "S Dmd Tot PkDT",
+        "screen_IEEE_title": "S Dmd Tot PkDT",
+        "unit": "",
+        "scale": ""
+    }
+]

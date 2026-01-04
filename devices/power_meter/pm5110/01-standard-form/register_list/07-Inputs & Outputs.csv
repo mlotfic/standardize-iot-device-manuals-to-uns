@@ -1,0 +1,57 @@
+﻿Category,Sub Cat 1,Sub Cat 2,Description,Register,Units,"Size
+(INT16)",Data Type,Access,Range,Default,User Notes
+Inputs & Outputs,Multi-tariff Setup,,Number of Multi-tariff Rates Active,7012,---,1,INT16U,RWC,1 – 8,1,
+Inputs & Outputs,Multi-tariff Setup,,Number of Digital Inputs Used to Control Multi-tariff,7013,---,1,INT16U,RWC,1 – 4,1,
+Inputs & Outputs,Demand Sync Setup,Digital Input Associations With Demand Systems,Demand System 1 (Power),7020,---,1,INT16U,RWC,0 – 68,0,
+Inputs & Outputs,Demand Sync Setup,Digital Input Associations With Demand Systems,Demand System 2 (Current),7021,---,1,INT16U,RWC,0 – 68,0,
+Inputs & Outputs,Demand Sync Setup,Digital Output Associations With Demand Systems,Demand System 1 (Power),7026,---,1,INT16U,RWC,0 – 68,0,
+Inputs & Outputs,Demand Sync Setup,Digital Output Associations With Demand Systems,Demand System 2 (Current),7027,---,1,INT16U,RWC,0 – 68,0,
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI1,Type,7273,---,1,INT16U,R,100 – 199,102,"First digit (1) indicates point is digital input
+Second digit indicates the digital input module type
+Second digit can be used to identify specific hardware options.
+   0 = Generic digital input
+Third digit indicates input type
+   1 = AC
+   2 = DC"
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI1,Control Mode,7274,---,1,INT16U,RWC,0 – 5,0,"0 = Normal (Alarm)
+1 = Demand Interval Sync Pulse
+2 = Multi-tariff Control
+3 = Input Metering
+4 = Conditional Energy Control
+5 = Incremental Energy Reset
+"
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI1,Label,7275,---,20,UTF8,RWC,---,"""Digital Input DI1""",
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI1,Debounce Time,7295,msec,1,INT16U,RWC,10 – 1000,10,Must be entered in increments of 10ms.
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI2,,7297,---,,---,---,---,---,
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI2,Type,7297,---,1,INT16U,R,100 – 199,102,
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI2,Control Mode,7298,---,1,INT16U,RWC,0 – 5,0,
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI2,Label,7299,---,20,UTF8,RWC,---,"""Digital Input DI2""",
+Inputs & Outputs,Digital Inputs Setup,Base Unit - Digital Input DI2,Debounce Time,7319,msec,1,INT16U,RWC,10 – 1000,10,Must be entered in increments of 10ms.
+Inputs & Outputs,Digital Inputs Status,On/Off Status,Digital Input Status – Base Unit,8905,---,2,BITMAP,R,0x00000000 – 0x0000000F,0x00000000,
+Inputs & Outputs,Digital Inputs Status,Base Unit - Digital Input DI1,Count,8915,---,2,INT32U,R,---,0,
+Inputs & Outputs,Digital Inputs Status,Base Unit - Digital Input DI1,On Time,8917,seconds,2,INT32U,R,---,0,
+Inputs & Outputs,Digital Inputs Status,Base Unit - Digital Input DI2,Count,8919,---,2,INT32U,R,---,0,
+Inputs & Outputs,Digital Inputs Status,Base Unit - Digital Input DI2,On Time,8921,seconds,2,INT32U,R,---,0,
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO1,Type,9187,---,1,INT16U,R,201 – 299,201,"First digit (2) indicates point is digital output 
+Second digit indicates module type    
+    0 = Generic Digital output
+Third digit indicates output type    
+    1 = solid state relay    
+    2 = electromechanical relay
+"
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO1,Label,9188,---,20,UTF8,RWC,---,"""Digital Output DO1""",
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO1,Enable/Disable,9208,---,1,INT16U,RWC,0 – 1,1,"0 = Disable, 1 = Enable"
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO1,Behavioral Mode,9209,---,1,INT16U,RWC,0 – 2,0,"0 = Normal (forced by a control mode of Energy)
+1 = Timed (forced by a control mode of Demand Sync)
+2 = Coil Hold"
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO1,On Time For Timed Mode,9210,seconds,1,INT16U,RWC,---,1,"The time for the output to remain energized when the output is energized in timed mode.
+"
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO2,Type,9211,---,1,INT16U,R,201 – 299,201,
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO2,Label,9212,---,20,UTF8,RWC,---,"""Digital Output DO2""",
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO2,Enable/Disable,9232,---,1,INT16U,RWC,0 – 1,1,"0 = Disable, 1 = Enable"
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO2,Behavioral Mode,9233,---,1,INT16U,RWC,0 – 2,0,"0 = Normal
+1 = Timed
+2 = Coil Hold
+"
+Inputs & Outputs,Digital Outputs Setup,Base Unit - Digital Output DO2,On Time For Timed Mode,9234,seconds,1,INT16U,RWC,---,1,"The time for the output to remain energized when the output is energized in timed mode.
+"

@@ -1,0 +1,27 @@
+[
+	{
+		"label": "Meter Powerup",
+		"description": "Meter powers on after losing control power.",
+		"alarm_type": "Unary",
+		"setup_paramters_ion":  ["enable", "priority", "select_digital_output"]
+	},
+	{
+		"label": "Meter Reset",
+		"description": "Meter resets for any reason.",
+		"alarm_type": "Unary",
+		"setup_paramters_ion": ["enable", "priority", "select_digital_output"]
+	},
+	{
+		"label": "Meter Diagnostic",
+		"description": "Meter’s self-diagnostic feature detects a problem.",
+		"alarm_type": "Unary",
+		"setup_paramters_ion": ["enable", "priority", "select_digital_output"]
+	},
+	{
+		"label": "Phase Reversal",
+		"description": "Meter detects a phase rotation different than expected.",
+		"alarm_type": "Unary",
+		"setup_paramters_ion": ["enable", "priority", "select_digital_output"]
+	}
+
+]

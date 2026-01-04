@@ -1,0 +1,32 @@
+Values	Description
+Method
+Timed Sliding Block
+
+Timed Block
+
+Timed Rolling Block
+
+Cmd Sync Block
+
+Cmd Sync Roll Block
+
+Clock Sync Block
+
+Clock Sync Roll Block
+
+Thermal
+
+Select the appropriate demand calculation method for your needs
+Interval
+0 - 60	Set the demand interval, in minutes.
+Subinterval
+0 - 60	
+Applies only to rolling block methods.
+
+Define how many subintervals the demand interval should be equally divided into.
+
+Clock Sync Time	 
+0 - 2359	
+Applies only to clock sync methods (these synchronize the demand interval to the meter’s internal clock).
+
+Define what time of day you want to synchronize the demand, from the start of the day. For example, set this setting to 0730 to synchronize demand at 7:30 AM.

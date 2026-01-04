@@ -1,0 +1,1050 @@
+
+Menu tree
+Use the menu tree to navigate to the parameter or setting you want to view or configure.
+Level 1,
+2 and 3 meter screens - IEEE title [IEC title
+]
+The image below summarizes the available meter screens (IEEE menus shown, with the corresponding IEC menus in parentheses).
+
+Data display screens
+The meter display screens allow you to view meter values and configure settings.
+The titles listed are for the HMI mode in IEEE, with the corresponding titles in IEC mode in square brackets [].
+
+Bulleted items indicate subscreens and their descriptions.
+
+Amps [I
+]
+Amps [I
+]
+
+Instantaneous current measurements for each phase and calculated neutral (In) or calculated ground current (Ig) based on the meter wiring type.
+
+Dmd
+
+Summary of peak current demand values at the last demand interval.
+
+Iavg
+
+Real-time demand (Pres), peak demand (Peak) and predicted demand (Pred) for the present interval. Average demand for the previous (Last) interval.
+
+Pk DT
+
+Date and timestamp for the peak demand readings.
+
+Volts [U-V
+]
+V L-L [U
+]
+
+Line-to-line voltage for each phase.
+
+V L-N [V
+]
+
+Line-to-neutral voltage for each phase.
+
+Power [PQS
+]
+Power [PQS
+]
+
+Summary of real-time power consumption values for total active power in kW (Total [Ptot
+]), total reactive power in kVAR (Total [Qtot
+]), and total apparent power in kVA (Total [Stot
+]).
+
+Phase
+
+Active [P
+], Reac [Q
+], Appr [S
+]
+
+Per phase (A [P1
+], B [P2
+], C [P3
+]) and total (Total [Ptot
+]) power values for active power in kW, reactive power in kVAR and apparent power in kVA.
+
+Dmd
+
+Summary of peak power demand values in the previous (Last) demand interval period for active power in kW, reactive power in kVAR and apparent power in kVA.
+
+Wd [Pd
+], VARd [Qd
+], VAd [Sd
+]
+
+Pk DT
+
+Total power demand values in the previous (Last) demand interval for active power demand (Wd [P
+]), reactive power demand (VARd [Q
+]) and apparent power demand (VAd [S
+]). Displays demand values for the present demand (Pres) interval, demand for the previous demand (Last) interval period, predicted demand (Pred) based on the current power consumption rate, and the recorded peak power demand (Peak) value.
+
+Date and timestamp for the peak power demand (Peak) value.
+
+QR
+
+Power demand parameters embedded in QR code format.
+
+Energy [E
+]
+Wh, VAh, VARh
+
+Delivered (Del), received (Rec), delivered plus received (D+R) and delivered minus received (D-R) accumulated values for active energy (Wh), apparent energy (VAh) and reactive energy (VARh).
+
+QR
+
+Energy parameters (Wh, VAh, VARh, and multi-tariff) embedded in QR code format.
+
+PF
+True
+
+Per phase and total true power factor values and sign.
+
+Disp
+
+Per phase and total displacement power factor values and sign.
+
+Hz [F
+]
+Frequency (Freq). This page also displays average voltage (Vavg), average current (Iavg) and total power factor (PF) values.
+
+THD
+THD
+
+Amps [I
+], V L-L [U
+], V L-N [V
+]
+
+THD (ratio of harmonic content to the fundamental) for current, line-to-line voltage and line-to-neutral voltage.
+
+thd
+
+Amps [I
+], V L-L [U
+], V L-N [V
+]
+
+thd (ratio of harmonic content to the rms value of total harmonic content) for current, line-to-line voltage and line-to-neutral voltage.
+
+QR
+
+Power quality parameters (THD and thd) embedded in QR code format.
+
+Harm
+V L-L [U
+]
+
+3-11,
+7-15
+
+Line-to-line voltage harmonics data: Numeric magnitude and angle for the fundamental harmonic, and graphical representation of harmonics for the 3rd to 11th and 7th to 15th odd harmonics for each line-to-line phase voltage.
+
+V L-N [V
+]
+
+3-11,
+7-15
+
+Line-to-neutral voltage harmonics data: Numeric magnitude and angle for the fundamental harmonic, and graphical representation of harmonics for the 3rd to 11th and 7th to 15th odd harmonics for each line-to-neutral phase voltage.
+
+Amps [I
+]
+
+3-11,
+7-15
+
+Current harmonics data: Numeric magnitude and angle for the fundamental harmonics, and graphical representation of harmonics for the 3rd to 11th and 7th to 15th odd harmonics for each phase current.
+
+TDD
+
+Total demand distortion each phase voltage.
+
+Unbal
+Percent unbalance readings for line-to-line voltage (V L-L [U
+]), line-to-neutral voltage (V L-N [V
+]) and current (Amps [I
+]).
+
+MnMx
+Amps [I
+]
+
+Summary of minimum and maximum values for phase current.
+
+Volts [U-V
+]
+
+V L-L [U
+], V L-N [V
+]
+
+Summary of minimum and maximum values for line-to-line voltage and line-to-neutral voltage.
+
+Power [PQS
+]
+
+Active [P
+], Reac [Q
+], Appr [S
+]
+
+Minimum and maximum values for active, reactive, and apparent power.
+
+PF
+
+True, Disp
+
+Minimum and maximum values for true and displacement PF and PF sign.
+
+Hz [F
+]
+
+Minimum and maximum values for frequency.
+
+THD
+
+THD, thd
+
+Amps [I
+], V L-L [U
+], V L-N [V
+]
+
+Minimum and maximum values for total harmonic distortion (THD or thd).
+
+THD or thd minimum and maximum values for phase or neutral current, line-to-line voltage and line-to-neutral voltage.
+
+Unbal
+
+Amps [I
+], V L-L [U
+], V L-N [V
+]
+
+Minimum and maximum values for current unbalance, line-to-line voltage unbalance and line-to-neutral voltage unbalance.
+
+QR
+
+Minimum and maximum values (phase current, line-to-line voltage, line-to-neutral voltage, power (PQS), PF, frequency, power quality and Unbal) embedded in QR code format.
+
+Alarm
+Active, Hist, Count, Unack
+
+Lists all active alarms (Active), past alarms (Hist), the total number of times each standard alarm was tripped (Count), and all unacknowledged alarms (Unack).
+
+QR
+
+Alarm parameters (active, past alarms, the total number of times each standard alarm was tripped, unacknowledged) embedded in QR code format.
+
+D Out
+D1
+
+Current status (OFF or Energy pulsing) of the selected digital output.
+
+Timer
+Load
+
+Real-time counter that keeps track of the total number of days, hours, minutes and seconds an active load is connected to the meter inputs.
+
+Oper
+
+Real-time counter for the total number of days, hours, minutes and seconds the meter has been powered.
+
+QR
+Meter info details, energy parameters, power demand parameters, basic parameter values (current, voltage and power), power quality parameters, minimum / maximum values (phase current, line-to-line voltage, line-to-neutral voltage, power (PQS), PF, frequency, power quality and Unbal) and alarm parameters embedded in QR code format.
+
+Expand Table 
+Maint
+Reset
+
+Screens to perform global or single resets.
+
+Setup
+
+Meter
+
+Basic
+
+Advan
+
+Dmd
+
+Meter configuration screens.
+
+Screens to define the power system and power system components/elements.
+
+Screens to set up the active load timer and define the peak demand current for inclusion in TDD calculations.
+
+Screens to set up power demand, current demand and input metering demand.
+
+Comm
+
+Screen to set up serial communication.
+
+Alarm
+
+1-Sec, Unary
+
+Screens to set up standard (1-Sec) and unary alarms.
+
+I/O
+
+LED
+
+D Out
+
+Screens to set up the alarm / energy pulsing LED and digital output.
+
+HMI
+
+Displ, Region, Pass
+
+Screens to configure display settings, edit regional settings, and set up meter display access passwords.
+
+Clock
+
+Screens to set up the meter date and time.
+
+Diag
+
+Diagnostic screens provide meter information, status and event data for troubleshooting.
+
+Info
+
+The Info screen displays the meter model, serial number, date of manufacture, firmware version (including OS - Operating System and RS - Reset System), language version, and OS CRC (Cyclic Redundancy Check). The OS CRC value is a number (Hexadecimal format) that identifies the uniqueness between different OS firmware versions.
+
+Meter
+
+Displays the meter status.
+
+Cl Pwr
+
+Non-MID/MIR meter models : The Cl Pwr screen displays how many times the meter lost control power, and the date and time of its last occurrence.
+
+MID/MIR meter models : The Cl Pwr screen displays how many times the meter lost control power (auxiliary power), and the last power up and power down events with the timestamp.
+
+PhAng
+
+The PhAng screen displays the angle between voltage and current for all three phases of the power system the meter is monitoring.
+
+QR
+
+Meter info details embedded in QR code format.
+
+Clock
+Meter date and time (local or GMT).
+
+Display settings available using the display
+Parameter
+
+Values
+
+Description
+
+Contrast
+
+1 - 9
+
+Increase or decrease the value to increase or decrease the display contrast.
+
+Bcklght Timeout (min)
+
+0 - 60
+
+Set how long backlight reduces its brightness after inactivity minutes. Default setting "0" disables the backlight timeout feature (i.e., backlight is always ON).
+
+Screen Timeout (min)
+
+0 - 60
+
+Set how long the screen turns off after inactivity minutes. Default setting "0" disables the screen timeout feature (i.e., display is always ON).
+
+QR Code
+
+Enable, Disable
+
+Set whether or not QR codes with embedded data are available on the display.
+
+{
+    "id": "Summary",
+    "uns": "{uns_root_path}/{device_id}",
+    "children": [
+        {
+            "name": "Amps (I)",
+            "id": "c1a2f001ab10",
+            "uns": "{uns_root_path}/.../Amps",
+            "children": [
+                {
+                    "name": "Amps (I)",
+                    "id": "c1a2f001ab11",
+                    "uns": "{uns_root_path}/.../Amps/Amps",
+                    "children": []
+                },
+                {
+                    "name": "Dmd",
+                    "id": "c1a2f001ab12",
+                    "uns": "{uns_root_path}/.../Amps/Dmd",
+                    "children": [
+                        {
+                            "name": "Iavg",
+                            "id": "c1a2f001ab13",
+                            "uns": "{uns_root_path}/.../Amps/Dmd/Iavg",
+                            "children": []
+                        },
+                        {
+                            "name": "Pk DT",
+                            "id": "c1a2f001ab14",
+                            "uns": "{uns_root_path}/.../Amps/Dmd/PkDT",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Volts (V)",
+            "id": "c1a2f002bc21",
+            "uns": "{uns_root_path}/.../Volts",
+            "children": [
+                {
+                    "name": "VLL",
+                    "id": "c1a2f002bc22",
+                    "uns": "{uns_root_path}/.../Volts/VLL",
+                    "children": []
+                },
+                {
+                    "name": "VLN",
+                    "id": "c1a2f002bc23",
+                    "uns": "{uns_root_path}/.../Volts/VLN",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Power (PQS)",
+            "id": "c1a2f003de30",
+            "uns": "{uns_root_path}/.../Power",
+            "children": [
+                {
+                    "name": "Real (P)",
+                    "id": "c1a2f003de31",
+                    "uns": "{uns_root_path}/.../Power/Real",
+                    "children": [
+                        {
+                            "name": "Active (P)",
+                            "id": "c1a2f003de32",
+                            "uns": "{uns_root_path}/.../Power/Real/Active",
+                            "children": []
+                        },
+                        {
+                            "name": "Wave (P)",
+                            "id": "c1a2f003de33",
+                            "uns": "{uns_root_path}/.../Power/Real/Wave",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "React (Q)",
+                    "id": "c1a2f003de34",
+                    "uns": "{uns_root_path}/.../Power/React",
+                    "children": [
+                        {
+                            "name": "Var (Q)",
+                            "id": "c1a2f003de35",
+                            "uns": "{uns_root_path}/.../Power/React/Var",
+                            "children": []
+                        },
+                        {
+                            "name": "Varh (Qh)",
+                            "id": "c1a2f003de36",
+                            "uns": "{uns_root_path}/.../Power/React/Varh",
+                            "children": []
+                        },
+                        {
+                            "name": "QF",
+                            "id": "c1a2f003de37",
+                            "uns": "{uns_root_path}/.../Power/React/QF",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "App (S)",
+                    "id": "c1a2f003de38",
+                    "uns": "{uns_root_path}/.../Power/App",
+                    "children": [
+                        {
+                            "name": "VA (S)",
+                            "id": "c1a2f003de39",
+                            "uns": "{uns_root_path}/.../Power/App/VA",
+                            "children": []
+                        },
+                        {
+                            "name": "VAh (S)",
+                            "id": "c1a2f003de3a",
+                            "uns": "{uns_root_path}/.../Power/App/VAh",
+                            "children": []
+                        },
+                        {
+                            "name": "S DT",
+                            "id": "c1a2f003de3b",
+                            "uns": "{uns_root_path}/.../Power/App/S_DT",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+.../{device_id
+}/
+   ├─ asset/
+   ├─ measurement/
+   ├─ alarm/
+   ├─ event/
+   ├─ status/
+   ├─ health/
+   ├─ kpi/
+   ├─ command/
+   ├─ control/
+   ├─ comm/
+   ├─ security/
+   ├─ config/
+   └─ meta/
+
+{
+    "display_title": "Summary",
+    "manual_title": "Summary",
+    "description": "Main screen",
+    "uns_childern_map": {
+        "asset": {
+            "uns": "{uns_root_path}/.../asset",
+            "children": [
+                ".../measurement/summary/Vavg",
+                ".../measurement/summary/Iavg",
+                ".../measurement/summary/Ptot",
+                ".../measurement/summary/EDel",
+                ".../measurement/Current/I1",
+                ".../measurement/Current/I2",
+                ".../measurement/Current/I3",
+                ".../measurement/Current/In",
+                ".../measurement/Voltage/line/U12",
+                ".../measurement/Voltage/line/U23",
+                ".../measurement/Voltage/line/U31",
+                ".../measurement/Voltage/phase/V1",
+                ".../measurement/Voltage/phase/V2",
+                ".../measurement/Voltage/phase/V3",
+                ".../measurement/power/p/total",
+                ".../measurement/power/q/total",
+                ".../measurement/power/s/total",
+                ".../measurement/power/p/line",
+                ".../measurement/power/q/line",
+                ".../measurement/power/s/line",
+                ".../measurement/power/p/demand/last",
+                ".../measurement/power/q/demand/last",
+                ".../measurement/power/s/demand/last",
+                ".../measurement/power/p/demand/present",
+                ".../measurement/power/p/demand/last",
+                ".../measurement/power/p/demand/predicted",
+                ".../measurement/power/p/demand/peak/datetime",
+                ".../measurement/kpi/energy/p/delivery",
+                ".../measurement/kpi/energy/p/recieved",
+                ".../measurement/kpi/energy/p/total",
+                ".../measurement/kpi/energy/p/net",
+                ".../measurement/kpi/energy/q/delivery",
+                ".../measurement/kpi/energy/q/recieved",
+                ".../measurement/kpi/energy/q/total",
+                ".../measurement/kpi/energy/q/net",
+                ".../measurement/kpi/energy/s/delivery",
+                ".../measurement/kpi/energy/s/recieved",
+                ".../measurement/kpi/energy/s/total",
+                ".../measurement/kpi/energy/s/net",
+                //".../measurement/energy/accum_wh/delivery",
+                //".../measurement/energy/accum_wh/recieved",
+                //".../measurement/energy/accum_wh/idelvered+recievd",
+                //".../measurement/energy/accum_wh/delivered-recievd",
+                //".../measurement/energy/accum_varh/delivery",
+                //".../measurement/energy/accum_varh/recieved",
+                //".../measurement/energy/accum_varh/delivered+recievd",
+                //".../measurement/energy/accum_varh/delivered-recievd",
+                //".../measurement/energy/accum_vah/delivery",
+                //".../measurement/energy/accum_vah/recieved",
+                //".../measurement/energy/accum_vah/delivered+recievd",
+                //".../measurement/energy/accum_vah/delivered-recievd",
+                ".../measurement/power_quality/powerfactor/true/1",
+                ".../measurement/power_quality/powerfactor/true/2",
+                ".../measurement/power_quality/powerfactor/true/3",
+                ".../measurement/power_quality/powerfactor/true/total",
+                ".../measurement/power_quality/powerfactor/displacement/1",
+                ".../measurement/power_quality/powerfactor/displacement/2",
+                ".../measurement/power_quality/powerfactor/displacement/3",
+                ".../measurement/power_quality/powerfactor/displacement/total",
+                ".../measurement/power_quality/frequency",
+                ".../measurement/power_quality/THD/thd_fundamental/current/I1",
+                ".../measurement/power_quality/THD/thd_fundamental/current/I2",
+                ".../measurement/power_quality/THD/thd_fundamental/current/I3",
+                ".../measurement/power_quality/THD/thd_fundamental/current/In",
+                ".../measurement/power_quality/THD/thd_fundamental/voltage/line/U12",
+                ".../measurement/power_quality/THD/thd_fundamental/voltage/line/U23",
+                ".../measurement/power_quality/THD/thd_fundamental/voltage/line/U31",
+                ".../measurement/power_quality/THD/thd_fundamental/voltage/phase/V1",
+                ".../measurement/power_quality/THD/thd_fundamental/voltage/phase/V2",
+                ".../measurement/power_quality/THD/thd_fundamental/voltage/phase/V3",
+                ".../measurement/power_quality/THD/thd_rms/current/I1",
+                ".../measurement/power_quality/THD/thd_rms/current/I2",
+                ".../measurement/power_quality/THD/thd_rms/current/I3",
+                ".../measurement/power_quality/THD/thd_rms/current/In",
+                ".../measurement/power_quality/THD/thd_rms/voltage/line/U1",
+                ".../measurement/power_quality/THD/thd_rms/voltage/line/U2",
+                ".../measurement/power_quality/THD/thd_rms/voltage/line/U3",
+                ".../measurement/power_quality/THD/thd_rms/voltage/phase/V1",
+                ".../measurement/power_quality/THD/thd_rms/voltage/phase/V2",
+                ".../measurement/power_quality/THD/thd_rms/voltage/phase/V3",
+                ".../measurement/power_quality/harmonics/TDD",
+                ".../measurement/power_quality/harmonics/current/3/magnitude",
+                ".../measurement/power_quality/harmonics/current/5/magnitude",
+                ".../measurement/power_quality/harmonics/current/7/magnitude",
+                ".../measurement/power_quality/harmonics/current/9/magnitude",
+                ".../measurement/power_quality/harmonics/current/11/magnitude",
+                ".../measurement/power_quality/harmonics/current/13/magnitude",
+                ".../measurement/power_quality/harmonics/current/15/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/line/3/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/line/5/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/line/7/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/line/9/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/line/11/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/line/13/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/line/15/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/phase/3/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/phase/5/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/phase/7/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/phase/9/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/phase/11/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/phase/13/magnitude",
+                ".../measurement/power_quality/harmonics/voltage/phase/15/magnitude",
+                ".../measurement/power_quality/unbalance/current",
+                ".../measurement/power_quality/unbalance/voltage/line",
+                ".../measurement/power_quality/unbalance/voltage/phase",
+                ".../measurement/power_quality/min_max/current/min/Ix",
+                ".../measurement/power_quality/min_max/current/max/Ix",
+                ".../measurement/power_quality/min_max/voltage/line/min/Uxx",
+                ".../measurement/power_quality/min_max/voltage/line/max/Uxx",
+                ".../measurement/power_quality/min_max/voltage/phase/min/Vx",
+                ".../measurement/power_quality/min_max/power/p/min",
+                ".../measurement/power_quality/min_max/power/p/max",
+                ".../measurement/power_quality/min_max/power/q/min",
+                ".../measurement/power_quality/min_max/power/q/max",
+                ".../measurement/power_quality/min_max/power/s/min",
+                ".../measurement/power_quality/min_max/power/s/max",
+                ".../measurement/power_quality/min_max/powerfactor/true/min",
+                ".../measurement/power_quality/min_max/powerfactor/true/max",
+                ".../measurement/power_quality/min_max/powerfactor/displacement/min",
+                ".../measurement/power_quality/min_max/powerfactor/displacement/max",
+                ".../measurement/power_quality/min_max/frequency/min",
+                ".../measurement/power_quality/min_max/frequency/max",
+                ".../measurement/power_quality/min_max/THD/thd_fundamental/current/min/Ix",
+                ".../measurement/power_quality/min_max/THD/thd_fundamental/current/max/Ix",
+                ".../measurement/power_quality/min_max/THD/thd_fundamental/voltage/line/min/Uxx",
+                ".../measurement/power_quality/min_max/THD/thd_fundamental/voltage/line/max/Uxx",
+                ".../measurement/power_quality/min_max/THD/thd_fundamental/voltage/phase/min/Vx",
+                ".../measurement/power_quality/min_max/THD/thd_fundamental/voltage/phase/max/Vx",
+                ".../measurement/power_quality/min_max/THD/thd_rms/current/min/Ix",
+                ".../measurement/power_quality/min_max/THD/thd_rms/current/max/Ix",
+                ".../measurement/power_quality/min_max/THD/thd_rms/voltage/line/min/Uxx",
+                ".../measurement/power_quality/min_max/THD/thd_rms/voltage/line/max/Uxx",
+                ".../measurement/power_quality/min_max/THD/thd_rms/voltage/phase/min/Vx",
+                ".../measurement/power_quality/min_max/THD/thd_rms/voltage/phase/max/Vx",
+                ".../measurement/power_quality/min_max/unbalance/current/min/Ix",
+                ".../measurement/power_quality/min_max/unbalance/current/max/Ix",
+                ".../measurement/power_quality/min_max/unbalance/voltage/line/min/Uxx",
+                ".../measurement/power_quality/min_max/unbalance/voltage/line/max/Uxx",
+                ".../measurement/power_quality/min_max/unbalance/voltage/phase/min/Vx",
+                ".../measurement/power_quality/min_max/unbalance/voltage/phase/max/Vx",
+                ".../alarm/active/order/name",
+                ".../alarm/active/order/timestamp",
+                ".../alarm/active/order/event",
+                ".../alarm/active/order/phase",
+                ".../alarm/active/order/value",
+                ".../alarm/history/order/name",
+                ".../alarm/history/order/timestamp",
+                ".../alarm/history/order/event",
+                ".../alarm/history/order/phase",
+                ".../alarm/history/order/value",
+                ".../alarm/unacknowledged/order/name",
+                ".../alarm/unacknowledged/order/timestamp",
+                ".../alarm/unacknowledged/order/event",
+                ".../alarm/unacknowledged/order/phase",
+                ".../alarm/unacknowledged/order/value",
+                ".../alarm/count/Over Phase Current", // display name
+                ".../alarm/count/Under Phase Current",
+                ".../alarm/count/Over Neutral Current",
+                ".../alarm/count/Over Ground Current",
+                ".../alarm/count/Over Voltage L-L",
+                ".../alarm/count/Under Voltage L-L",
+                ".../alarm/count/Over Voltage L-N",
+                ".../alarm/count/Under Voltage L-N",
+                ".../alarm/count/Over Active Power",
+                ".../alarm/count/Over Reactive Power",
+                ".../alarm/count/Over Apparent Power",
+                ".../alarm/count/Over Present Active Power Demand",
+                ".../alarm/count/Over Last Active Power Demand",
+                ".../alarm/count/Over Predicted Active Power Demand",
+                ".../alarm/count/Over Present Reactive Power Demand",
+                ".../alarm/count/Over Last Reactive Power Demand",
+                ".../alarm/count/Over Predicted Reactive Power Demand",
+                ".../alarm/count/Over Present Apparent Power Demand",
+                ".../alarm/count/Over Last Apparent Power Demand",
+                ".../alarm/count/Over Predicted Apparent Power Demand",
+                ".../alarm/count/Leading True PF",
+                ".../alarm/count/Lagging True PF",
+                ".../alarm/count/Leading Disp PF",
+                ".../alarm/count/Lagging Disp PF",
+                ".../alarm/count/Over Frequency",
+                ".../alarm/count/Under Frequency",
+                ".../alarm/count/Over Voltage Unbalance",
+                ".../alarm/count/Over Voltage THD",
+                ".../alarm/count/Phase Loss",
+                ".../alarm/count/Over Voltage L-N",
+                ".../alarm/count/Under Voltage L-N",
+                ".../alarm/count/Over Active Power",
+                ".../alarm/count/Over Reactive Power",
+                ".../alarm/count/Over Apparent Power",
+                ".../alarm/count/Over Present Active Power Demand",
+                ".../alarm/count/Over Last Active Power Demand",
+                ".../alarm/count/Over Predicted Active Power Demand",
+                ".../alarm/count/Over Present Reactive Power Demand",
+                ".../alarm/count/Over Last Reactive Power Demand",
+                ".../alarm/count/Over Predicted Reactive Power Demand",
+                ".../alarm/count/Over Present Apparent Power Demand",
+                ".../alarm/count/Over Last Apparent Power Demand",
+                ".../alarm/count/Over Predicted Apparent Power Demand",
+                ".../alarm/count/Leading True PF",
+                ".../alarm/count/Lagging True PF",
+                ".../alarm/count/Leading Disp PF",
+                ".../alarm/count/Lagging Disp PF",
+                ".../alarm/count/Over Frequency",
+                ".../alarm/count/Under Frequency",
+                ".../alarm/count/Over Voltage Unbalance",
+                ".../alarm/count/Over Voltage THD",
+                ".../alarm/count/Phase Loss"".../alarm/count/Over Last Apparent Power Demand",
+                ".../alarm/count/Over Predicted Apparent Power Demand",
+                ".../alarm/count/Leading True PF",
+                ".../alarm/count/Lagging True PF",
+                ".../alarm/count/Leading Disp PF",
+                ".../alarm/count/Lagging Disp PF",
+                ".../alarm/count/Over Frequency",
+                ".../alarm/count/Under Frequency",
+                ".../alarm/count/Over Voltage Unbalance",
+                ".../alarm/count/Over Voltage THD",
+                ".../alarm/count/Phase Loss",
+                ".../alarm/count/{alarm_id}",
+                ".../alarm/count/{alarm_id}/order",
+                ".../control/Digital Output",
+                ".../measurement/timer/active_load_time",
+                ".../measurement/timer/operating_time",
+                ".../maintenance/reset",
+                ".../maintenance/setup",
+                ".../maintenance/Diag",
+                ".../maintenance/reset/GlobalResets",
+                ".../maintenance/reset/SingleReset",
+                ".../maintenance/reset/GlobalResets/MeterInitalization",
+                ".../maintenance/reset/GlobalResets/Engeries",
+                ".../maintenance/reset/GlobalResets/Demands",
+                ".../maintenance/reset/GlobalResets/MinMax",
+                ".../maintenance/reset/GlobalResets/AlarmCountsLogs",
+                ".../maintenance/reset/SingleReset/Energy/Accumulated",
+                ".../maintenance/reset/SingleReset/Demand/Power",
+                ".../maintenance/reset/SingleReset/Demand/Current",
+                ".../maintenance/reset/SingleReset/ActiveLoadTimer",
+                ".../maintenance/reset/SingleReset/Alarms/EventQueue",
+                ".../maintenance/reset/SingleReset/Alarms/HistoryLog",
+                ".../maintenance/reset/SingleReset/Alarms/Counters",
+                ".../maintenance/setup/Meter/Basic/PowerSystem",
+                ".../maintenance/setup/Meter/Basic/VT Connect",
+                ".../maintenance/setup/Meter/Basic/VT Primary",
+                ".../maintenance/setup/Meter/Basic/VT Secondary",
+                ".../maintenance/setup/Meter/Basic/CT on Terminal",
+                ".../maintenance/setup/Meter/Basic/CT Primary",
+                ".../maintenance/setup/Meter/Basic/CT Secondary",
+                ".../maintenance/setup/Meter/Basic/Sys Frequency",
+                ".../maintenance/setup/Meter/Basic/Phase Rotation",
+                ".../maintenance/setup/Meter/Advan/Label",
+                ".../maintenance/setup/Meter/Advan/Load Timer Setpt",
+                ".../maintenance/setup/Meter/Advan/Pk I dmd for TDD",
+                ".../maintenance/setup/Meter/Dmd/Power Demand/Method",
+                ".../maintenance/setup/Meter/Dmd/Power Demand/Interval",
+                ".../maintenance/setup/Meter/Dmd/Current Demand/Method",
+                ".../maintenance/setup/Meter/Dmd/Current Demand/Interval",
+                ".../maintenance/setup/Comm/Protocol",
+                ".../maintenance/setup/Comm/Address",
+                ".../maintenance/setup/Comm/Baud Rate",
+                ".../maintenance/setup/Comm/Parity",
+                ".../maintenance/setup/Comm/Data Bits",
+                ".../maintenance/setup/Comm/Stop Bits",
+                ".../maintenance/setup/Comm/Flow Control",
+                ".../maintenance/setup/Alarm/1Sec/OverCurrent/Pickup Setpoint",
+                ".../maintenance/setup/Alarm/unary",
+                ".../maintenance/setup/IO/LED",
+                ".../maintenance/setup/IO/DOUT"".../maintenance/setup/hmi/Displ/Contrast",
+                ".../maintenance/setup/hmi/Displ/Bcklght Timeout (min)",
+                ".../maintenance/setup/hmi/Displ/Screen Timeout (min)",
+                ".../maintenance/setup/hmi/Displ/QR Code",
+                ".../maintenance/setup/hmi/Region/Language",
+                ".../maintenance/setup/hmi/Region/Date Format",
+                ".../maintenance/setup/hmi/Region/Time Format",
+                ".../maintenance/setup/hmi/Region/HMI Mode",
+                ".../maintenance/setup/hmi/Pass/Setup",
+                ".../maintenance/setup/hmi/Pass/Energy Resets",
+                ".../maintenance/setup/hmi/Pass/Demand Resets",
+                ".../maintenance/setup/hmi/Pass/Min_Max Resets",
+                ".../maintenance/setup/hmi/Pass/Diagnostics",
+                ".../maintenance/setup/clock",
+                ".../maintenance/Diagnostic/Info",
+                ".../maintenance/Diagnostic/Meter",
+                ".../maintenance/Diagnostic/ClPwr",
+                ".../maintenance/Diagnostic/PhAng",
+                ".../Clock/Date",
+                ".../Clock/Time",
+                ".../Clock/Meter Time",
+                ".../Clock/GMT Offset (h)",
+            ]
+        },
+        {
+            "uns": "{uns_root_path}/{device_id}",
+            "device_screen_path": "{uns_root_path}/.../device_screen",
+            "decription": [],
+            "datatype_class": "",
+            "allowed_values": {},
+            "scale": 1,
+            "units": "",
+            "block_id": "",
+            "block_size": "",
+            ""
+        }
+
+
+        "measurement": "{uns_root_path}/.../measurement",
+        "alarm": "{uns_root_path}/.../alarm",
+        "event": "{uns_root_path}/.../event",
+        "status": "{uns_root_path}/.../status",
+        "health": "{uns_root_path}/.../health",
+        "kpi": "{uns_root_path}/.../kpi",
+        "command": "{uns_root_path}/.../command",
+        "control": "{uns_root_path}/.../control",
+        "comm": "{uns_root_path}/.../comm",
+        "security": "{uns_root_path}/.../security",
+        "config": "{uns_root_path}/.../config",
+        "meta": "{uns_root_path}/.../meta"
+    },
+    "uns": "{uns_root_path}/{device_id}",
+    "uns_children": {
+        "current": "{uns_root_path}/.../measurement/power/Current",
+        "voltage": "{uns_root_path}/.../measurement/power/Voltage",
+        "power": "{uns_root_path}/.../measurement/power/Power",
+        "energy": "{uns_root_path}/.../measurement/energy/Energy",
+        "pf": "{uns_root_path}/.../measurement/power_quality/PowerFactor",
+        "frequency": "{uns_root_path}/.../measurement/power_quality/Frequency",
+        "thd": "{uns_root_path}/.../measurement/power_quality/THD",
+        "harmonics": "{uns_root_path}/.../measurement/power_quality/Harmonics",
+        "unbalance": "{uns_root_path}/.../measurement/power_quality/Unbalance",
+        "min_max": "{uns_root_path}/.../measurement/power_quality/MinMax",
+        "alarm": "{uns_root_path}/.../alarm",
+        "digital_outputs": "{uns_root_path}/.../control/digital_outputs",
+        "timer": "{uns_root_path}/.../control/timer",
+        "qr": "{uns_root_path}/.../QRCode",
+        "maintenance": "{uns_root_path}/.../Maintenance",
+        "clock": "{uns_root_path}/.../Clock"
+    },
+    "children": [
+        {
+            "manual_title": "Amps [I]",
+            "description": "Current Measurment",
+            "based_on": "the meter wiring type.",
+            "uns": "{uns_root_path}/.../Current",
+            "children": [
+                {
+                    "manual_title": "Amps (I)",
+                    "display_title": "Amps Per Phase",
+                    "description": "Instantaneous current measurements for each phase",
+                    "uns": "{uns_root_path}/.../Current/I",
+                    "children": []
+                },
+                {
+                    "manual_title": "Dmd",
+                    "display_title": "Dmd",
+                    "description": "Summary of peak current demand values",
+                    "uns": "{uns_root_path}/.../Current/Dmd",
+                    "children": [
+                        {
+                            "manual_title": "Iavg",
+                            "display_title": "Iavg Dmd",
+                            "description": "Average of peak current demand values",
+                            "uns": "{uns_root_path}/.../Amps/Dmd/Iavg",
+                            "uns_children": [
+                                {
+                                    "name": "Iavg",
+                                    "id": "c1a2f001ab13",
+                                    "uns": "{uns_root_path}/.../Amps/Dmd/Iavg",
+                                    "children": []
+                                }
+                            ],
+                            "children": []
+                        },
+                        {
+                            "manual_title": "Pk DT",
+                            "display_title": "Iavg Dmd Pk DT",
+                            "description": "Peak to peak demand values",
+                            "uns": "{uns_root_path}/.../Amps/Dmd/PkDT",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "Amps (I)": {},
+        "Dmd": {
+            "Iavg": {},
+            "Pk DT": {}
+        }
+    },
+    "Volts (V)": {
+        "VLL": {},
+        "VLN": {}
+    },
+    "Power (PQS)": {
+        "Real (P)": {
+            "Active (P)": {},
+            "Wave (P)": {}
+        },
+        "React (Q)": {
+            "Var (Q)": {},
+            "Varh (Qh)": {},
+            "QF": {}
+        },
+        "App (S)": {
+            "VA (S)": {},
+            "VAh (S)": {},
+            "S DT": {}
+        }
+    },
+    "Energy (E)": {
+        "Watt": {},
+        "VARh": {},
+        "VAh": {}
+    },
+    "PF": {
+        "Tot": {},
+        "Sign": {},
+        "Disp": {}
+    },
+    "Hz (F)": {
+        "Freq": {}
+    },
+    "THD": {
+        "THD I": {
+            "Amp (I)": {},
+            "VL-L (V)": {},
+            "VL-N (V)": {}
+        },
+        "THD V": {
+            "VL-L (V)": {},
+            "VL-N (V)": {}
+        }
+    },
+    "Harm": {
+        "I": {
+            "3-11": {},
+            "7-15": {}
+        },
+        "V(LL)": {
+            "3-11": {},
+            "7-15": {}
+        },
+        "V(LN)": {
+            "3-11": {},
+            "7-15": {}
+        }
+    },
+    "Unbal": {
+        "Unbal": {}
+    },
+    "Min/Max": {
+        "Amps (I)": {
+            "Min": {},
+            "Max": {}
+        },
+        "Volts (V)": {
+            "VLL-LN": {},
+            "Min": {},
+            "Max": {}
+        },
+        "Power (PQS)": {
+            "Real (P)": {},
+            "React (Q)": {},
+            "App (S)": {}
+        },
+        "PF": {
+            "Tot": {}
+        },
+        "Freq": {}
+    },
+    "Alarm": {
+        "Active": {},
+        "Status": {},
+        "Count": {}
+    },
+    "Dmd": {
+        "I": {},
+        "VA": {},
+        "W": {},
+        "Var": {}
+    },
+    "Timer": {
+        "Run": {},
+        "Alarm": {}
+    },
+    "OR": {
+        "Status": {
+            "Run": {},
+            "Alarm": {}
+        },
+        "Basic": {
+            "Basic #": {},
+            "Adv #": {}
+        },
+        "Dmd": {
+            "3-Phase": {},
+            "Unary": {},
+            "LED Out": {},
+            "Relays": {}
+        },
+        "Diag": {
+            "Reset": {},
+            "Alarms": {},
+            "History": {}
+        }
+    },
+    "Maint": {
+        "Diag": {
+            "History": {},
+            "Reset": {}
+        },
+        "Meter": {
+            "Firmware": {},
+            "Model": {},
+            "Serial": {}
+        }
+    },
+    "Clock": {
+        "Date": {},
+        "Time": {},
+        "Fmt": {},
+        "Region": {}
+    }
+}

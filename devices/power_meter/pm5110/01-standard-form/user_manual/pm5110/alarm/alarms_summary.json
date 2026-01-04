@@ -1,0 +1,15 @@
+{
+	"alarms_supported": {
+		"description": "Summary of alarm types supported by the meter.",
+		"types": {
+			"Unary": {
+				"description": "Alarms that have a single condition trigger (simple ON/OFF).",
+				"count": 4
+			},
+			"Standard": {
+				"description": "Alarms with full configuration, thresholds, delays, or latching behavior.",
+				"count": 29
+			}
+		}
+	}
+}

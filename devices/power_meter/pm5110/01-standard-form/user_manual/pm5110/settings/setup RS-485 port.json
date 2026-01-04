@@ -1,0 +1,43 @@
+{
+    "protocol": {
+        "description": "Sets the communication protocol for the RS-485 port.",
+        "value": "Modbus RTU",
+        "allowed_values": {
+            "Modbus RTU" : "Modbus RTU protocol"
+        },
+        "data_type": "string",
+        "enum": 1,
+        "unit": null
+    },
+    "address": {
+        "description": "Sets the Modbus address for the meter on the RS-485 network.",
+        "value": 1,
+        "allowed_values": [
+            1,
+            247
+        ],
+        "data_type": "uint8",
+        "enum": 0,
+        "unit": null
+    },
+    "baud_rate": {
+        "description": "Sets the baud rate for RS-485 communication.",
+        "value": 19200,
+        "allowed_values": [9600, 19200, 38400],
+        "data_type": "uint32",
+        "enum": 1,
+        "unit": "bps"
+    },
+    "parity": {
+        "description": "Sets the parity for RS-485 communication.",
+        "value": "Even",
+        "allowed_values": {
+            "None": "None means no parity bit is used",
+            "Even": "Even means the number of 1-bits is even",
+            "Odd": "Odd means the number of 1-bits is odd"
+        },
+        "data_type": "string",
+        "enum": 1,
+        "unit": null
+    }
+}
