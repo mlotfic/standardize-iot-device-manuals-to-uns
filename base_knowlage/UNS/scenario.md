@@ -162,7 +162,7 @@ I prefer `config/alarm/` because it keeps `control/` focused on **process manipu
 
 ---
 
-**Practical test**: When commissioning, engineers need to find "all the thresholds I can adjust." Would they look in `control/` or `config/`? 
+**Practical test**: When commissioning, engineers need to find "all the thresholds I can adjust." Would they look in `control/` or `config/`?
 
 If the answer is `config/`, you've made the right choice.
 
