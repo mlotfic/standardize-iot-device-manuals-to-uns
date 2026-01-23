@@ -19,28 +19,28 @@ Then it routes this meaningful data to the right places in your industrial data 
 ## 👥 Documentation for Different Roles
 
 ### 📊 For Business & Management
-**[Read: Business Overview](./docs/BUSINESS_OVERVIEW.md)**
+**[Read: Business Overview](./docs/business_overview.md)**
 - Why this matters for your operations
 - ROI and business value
 - Risk mitigation
 - Compliance benefits
 
 ### 💻 For Data Engineers & Developers
-**[Read: Technical Guide](./docs/TECHNICAL_GUIDE.md)**
+**[Read: Technical Guide](./docs/technical_guide.md)**
 - Architecture deep-dive
 - Pipeline implementation
 - Integration patterns
 - API documentation
 
 ### 🔧 For Field Engineers & Operators
-**[Read: User Guide](./docs/USER_GUIDE.md)**
+**[Read: User Guide](./docs/user_guide.md)**
 - How to fill templates
 - Step-by-step workflows
 - Troubleshooting
 - Real-world examples
 
 ### 📝 For Template Filling (Non-Programmers)
-**[Read: Template Filling Guide](./docs/TEMPLATE_GUIDE.md)**
+**[Read: Template Filling Guide](./docs/template_guide.md)**
 - Simple CSV editing instructions
 - Column-by-column explanations
 - Examples from real devices
@@ -52,14 +52,14 @@ Then it routes this meaningful data to the right places in your industrial data 
 
 ### For Managers (5-minute overview)
 ```bash
-1. Read BUSINESS_OVERVIEW.md (10 min)
+1. Read business_overview.md (10 min)
 2. Review example use cases
 3. Understand cost savings
 ```
 
 ### For Engineers (30-minute setup)
 ```bash
-1. Read TECHNICAL_GUIDE.md
+1. Read technical_guide.md
 2. Clone repository
 3. Install dependencies: pip install -r requirements.txt
 4. Run example: python examples/decode_datetime.py
@@ -67,7 +67,7 @@ Then it routes this meaningful data to the right places in your industrial data 
 
 ### For Template Fillers (1-hour training)
 ```bash
-1. Read TEMPLATE_GUIDE.md
+1. Read template_guide.md
 2. Open example_templates/ folder
 3. Follow step-by-step tutorial
 4. Fill your first device register map
@@ -81,10 +81,10 @@ Then it routes this meaningful data to the right places in your industrial data 
 industrial-decoder/
 ├── README.md                          # This file
 ├── docs/
-│   ├── BUSINESS_OVERVIEW.md          # For management
-│   ├── TECHNICAL_GUIDE.md            # For developers
-│   ├── USER_GUIDE.md                 # For field engineers
-│   ├── TEMPLATE_GUIDE.md             # For template fillers
+│   ├── business_overview.md          # For management
+│   ├── technical_guide.md            # For developers
+│   ├── user_guide.md                 # For field engineers
+│   ├── template_guide.md             # For template fillers
 │   ├── ARCHITECTURE.md               # System design deep-dive
 │   └── UNS_CONCEPTS.md               # Unified Namespace explained
 ├── templates/
@@ -184,10 +184,10 @@ industrial-decoder/
 ## 🆘 Support & Resources
 
 ### Documentation
-- [Business Case](./docs/BUSINESS_OVERVIEW.md) - Why invest in this
+- [Business Case](./docs/business_overview.md) - Why invest in this
 - [Architecture](./docs/ARCHITECTURE.md) - How it works
 - [API Reference](./docs/API_REFERENCE.md) - Developer docs
-- [Templates](./docs/TEMPLATE_GUIDE.md) - How to fill templates
+- [Templates](./docs/template_guide.md) - How to fill templates
 
 ### Community
 - GitHub Issues: Report bugs or request features
@@ -215,10 +215,10 @@ Organizations using this system report:
 
 | Role | Start Here |
 |------|------------|
-| **Executive/Manager** | [Business Overview](./docs/BUSINESS_OVERVIEW.md) |
-| **Data Engineer** | [Technical Guide](./docs/TECHNICAL_GUIDE.md) |
-| **Field Technician** | [User Guide](./docs/USER_GUIDE.md) |
-| **Template Editor** | [Template Guide](./docs/TEMPLATE_GUIDE.md) |
+| **Executive/Manager** | [Business Overview](./docs/business_overview.md) |
+| **Data Engineer** | [Technical Guide](./docs/technical_guide.md) |
+| **Field Technician** | [User Guide](./docs/user_guide.md) |
+| **Template Editor** | [Template Guide](./docs/template_guide.md) |
 | **System Architect** | [Architecture](./docs/ARCHITECTURE.md) |
 
 ---
