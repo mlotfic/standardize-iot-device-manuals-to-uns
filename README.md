@@ -100,13 +100,61 @@ Output: Structured JSON with Health Status
 
 ---
 
-### 📑 Template 1
+### Example: raw input: from manuals
+
+```text
+# "DateTime coding format using 4 words as per IEC 870-5-4
+
+Word 1
+   b0-b6: Year (0 - 127)
+   b7-b15: Reserved
+Word 2
+   b0-b4: Day (1-31)
+   b5-b7: Weekday (1-7, 0 if not used)
+   b8-b11: Month (1-12)
+   b12-b15: Reserved
+Word 3
+   b0-b5: Minutes (0-59)
+   b6: Reserved
+   b7: Time synchronization quality, 1 = non valid or non synchronization
+   b8-b12: Hour (0-23)
+   b13-b14: Reserved
+   b15: 0 = Standard time, 1 = Daylight Savings Time
+Word 4
+   b0-b15: Millisecond (0 - 59999)
+```
+
+
+---
+
+### 📑 Template 1 - `1_datatype_structure.csv`
 
 #### Column Definition
 
+##### Example 
 ```csv
+datatype,field_name,bit_start,bit_end,value_type,offset,scale,unit,description
+DATETIME,year,0,6,number,2000,1,year,Year value (0-127) add 2000
+DATETIME,reserved_1,7,15,reserved,0,1,,Reserved bits - do not use
+DATETIME,day,16,20,number,0,1,day,Day of month (1-31)
+DATETIME,weekday,21,23,enum,0,1,,Day of week (see enum table)
+DATETIME,month,24,27,number,0,1,month,Month (1=Jan to 12=Dec)
+DATETIME,reserved_2,28,31,reserved,0,1,,Reserved bits - do not use
+DATETIME,minute,32,37,number,0,1,minute,Minutes (0-59)
+DATETIME,reserved_3,38,38,reserved,0,1,,Single reserved bit
+DATETIME,time_sync_invalid,39,39,flag,0,1,,Time sync status flag
+DATETIME,hour,40,44,number,0,1,hour,Hour (0-23)
+DATETIME,reserved_4,45,46,reserved,0,1,,Reserved bits
+DATETIME,dst_active,47,47,flag,0,1,,Daylight saving time flag
+DATETIME,millisecond,48,63,number,0,1,ms,Milliseconds (0-59999)
 ```
 
+**How to fill:**
+- Look at manual's bit table
+- Copy bit numbers to `bit_start` and `bit_end`
+- Choose `value_type`: number, enum, flag, or reserved
+- Add `offset` if manual says "add 2000 to value"
+- Add `scale` if manual says "multiply by 0.1"
 
 ---
 
@@ -173,7 +221,91 @@ Output: Structured JSON with Health Status
 ```
 
 ---
+## ✅ Production Checklist
 
+### For Each Register Type:
+
+- [ ] **Structure template** filled from manual (bit positions, data types)
+- [ ] **Enum values** defined for all enum/flag fields
+- [ ] **Validation rules** set (min/max, health checks)
+- [ ] **Metadata** recorded (device model, firmware version, Modbus address)
+- [ ] **Dependencies** documented (if any fields relate to others)
+- [ ] **Test vectors** created (known good/bad examples)
+- [ ] **Engineer review** completed (someone verified against device)
+- [ ] **Version control** commit (track who/when/why changed)
+
+### Quality Gates:
+
+1. **Completeness**: All bit positions accounted for (no gaps except documented reserved)
+2. **Consistency**: Field names match across all templates
+3. **Validation**: Rules cover all edge cases from manual
+4. **Testability**: Test vectors exist for common and edge cases
+5. **Traceability**: Engineer notes reference manual page numbers
+
+---
+
+## 🚀 Workflow Integration Points
+
+### For Electrical Engineer:
+1. Open manual to register definition page
+2. Fill structure template (bit positions, types)
+3. Fill enum template (for any enum/flag fields)
+4. Fill validation template (min/max from manual specs)
+5. Add engineer notes (manual page refs, quirks found)
+6. Submit for review
+
+### For LLM Agent:
+1. Receive: PDF manual + blank templates
+2. Extract: Bit positions, ranges, enum values
+3. Pre-fill: All templates with high confidence
+4. Flag: Ambiguous entries for human review
+5. Output: Filled templates + confidence scores
+
+### For QA/Validation:
+1. Compare generated rules vs. templates (consistency check)
+2. Run test vectors through decoder
+3. Compare output vs. expected (from manual examples)
+4. Verify edge cases (min, max, invalid values)
+5. Sign off on config version
+
+### For Production Deployment:
+1. Templates → Rule generator → Rules CSV
+2. Rules CSV → Python decoder → Runtime
+3. Cache compiled rules (JSON) for performance
+4. Version-tag deployment (device_v3.2.1_config_v2.1)
+5. Monitor decoder health metrics
+
+---
+
+## 💡 Key Insights for Production
+
+### Keep It Simple:
+- **One row per field** in structure template (engineer fills once)
+- **One row per enum value** in enum template (clear mapping)
+- **One row per validation** in validation template (explicit rules)
+
+### Make It Traceable:
+- **Engineer notes** column (why decisions were made)
+- **Manual page refs** (where info came from)
+- **Validation by** (who verified this)
+- **Version tracking** (when it changed)
+
+### Enable Automation:
+- **Consistent naming** (field names match across templates)
+- **Standard formats** (CSV, clear delimiters)
+- **No ambiguity** (explicit types, ranges)
+- **Machine-parseable** (no free text in critical columns)
+
+### Support Evolution:
+- **Reserved bits** (document for future)
+- **Firmware versions** (templates per version)
+- **Backward compat** (old data still decodable)
+- **Migration paths** (v1 → v2 rules)
+
+---
+
+
+---
 
 ### 🤝 Contribute / Get Help
 
