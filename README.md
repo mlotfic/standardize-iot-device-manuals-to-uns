@@ -1,10 +1,10 @@
-# Standardize IoT Device Manuals to UNS
+# Device Manuals to UNS
 
 Template + Python utilities to convert chaotic industrial device manuals (PDF, XLS, screenshots) into machine-readable manifests, map Modbus/alarm/energy signals into a Unified Namespace (UNS), and generate Ignition-ready OPC tags. Designed with full Standards Compliance: ISO-9001 traceability, ISO-50001 energy-data protection, ISA-95 level discipline, and ISA-18.2 alarm rules enforcement.
 
 ---
 
-### 🚧 Problem
+## 🚧 Problem
 
 Industrial device data is trapped in:
 
@@ -18,9 +18,9 @@ Industrial device data is trapped in:
 
 ---
 
-### 🎯 What This Repo Delivers
+## 🎯 What This Repo Delivers
 
-A **template + Python utilities** that:
+### A **template + Python utilities** that:
 
 | Output               | Description                                                 |
 | -------------------- | ----------------------------------------------------------- |
@@ -34,15 +34,129 @@ A **template + Python utilities** that:
 
 ---
 
-### 📦 Why This Changes the Game
+## 📦 Why This Changes the Game
 
-Instead of retyping PM5110 or VarPlus VC registers every project →
-**build once → reuse forever**.
+- Instead of retyping PM5110 or VarPlus VC registers every project → 
+**build once → reuse forever** and can be used as a version manager for firmware updates
 
-This repo = standard library + automation →
+- This repo = standard library + automation →
 SCADA/UNS rollout drops from **months → days → hours**.
 
+- This repo = Standards Compliance (Built-In)
+
+  * [x] ISO-9001 → Traceability ensured
+  * [x] ISO-50001 → Energy data protected
+  * [x] ISA-95 → Level discipline maintained
+  * [x] ISA-18.2 → Alarm philosophy and lifecycle enforced
+  * [ ] 
 ---
+
+## 🔍 Pipeline Architecture Overview
+
+> Approach: Multi-Layer Data Processing Pipeline
+
+### Pipeline 1: Device Custom Data Types Decoder (Data Flow for device custom data types decoder)
+
+- Raw Manual Data (human input)
+- Template 1 - Structure Definition [1]
+- Template 2 - Validation Ranges [1]
+- Template 3 - Transformation [1]
+- Template 4 - Value Semantics
+- Rule Engine - Compiled Rules
+- Runtime Decoder
+- Output: JSON with health status
+
+Notes:
+* 1 (provided by toolkit and filled by human or LLM and reviewed) `one time per device.` can be versioned for firmware updates
+
+```text
+Layer 1: Raw Manual Data (Human Input)
+    ↓
+Layer 2: Template 1 - Structure Definition (Human/LLM + Review)
+    ↓
+Layer 3: Template 2 - Validation Ranges (Human/LLM + Review)
+    ↓
+Layer 4: Template 3 - transformation (Human/LLM + Review)
+    ↓
+Layer 5: Template 4 - Value Semantics (Human/LLM + Review)
+    ↓
+Layer 6: Rule Engine - Compiled Rules (Code Generated)
+    ↓
+Layer 7: Runtime Decoder - Live Data Processing
+    ↓
+Output: Structured JSON with Health Status
+```
+
+
+### Pipeline 2: Device Register Mapping to UNS
+
+- Raw Register Mapping (manual data)
+- Template 5 - Register Mapping to custom data types [1]
+- Template 6 - Checklist for UNS namespace mapping (with questions Q1-Q4) [1]
+- UNS path generation
+- Export to Ignition Gateway CSV (Modbus tags)
+- Export to Ignition Designer JSON
+- Export to Python edge device JSON (OPC-UA/MQTT)
+
+---
+
+### 📑 Template 1
+
+#### Column Definition
+
+```csv
+```
+
+
+---
+
+### 📑 Template 2
+
+#### Column Definition
+
+```csv
+```
+
+
+---
+
+### 📑 Template 4
+
+#### Column Definition
+
+```csv
+```
+
+---
+
+### 📑 Template 5
+
+#### Column Definition
+
+```csv
+```
+
+---
+
+### 📑 Template 6
+
+#### Column Definition
+
+```csv
+```
+
+---
+
+### 📑 Template 7
+
+#### Column Definition
+
+```csv
+```
+
+---
+
+
 
 ### 📑 Example Device Manifests
 
@@ -60,14 +174,6 @@ SCADA/UNS rollout drops from **months → days → hours**.
 
 ---
 
-### 🧠 Standards Compliance (Built-In)
-
-* [x] ISO-9001 → Traceability ensured
-* [x] ISO-50001 → Energy data protected
-* [x] ISA-95 → Level discipline maintained
-* [x] ISA-18.2 → Alarm philosophy and lifecycle enforced
-
----
 
 ### 🤝 Contribute / Get Help
 
