@@ -19,28 +19,28 @@ Then it routes this meaningful data to the right places in your industrial data 
 ## 👥 Documentation for Different Roles
 
 ### 📊 For Business & Management
-**[Read: Business Overview](docs/BUSINESS_OVERVIEW.md)**
+**[Read: Business Overview](./docs/BUSINESS_OVERVIEW.md)**
 - Why this matters for your operations
 - ROI and business value
 - Risk mitigation
 - Compliance benefits
 
 ### 💻 For Data Engineers & Developers
-**[Read: Technical Guide](docs/TECHNICAL_GUIDE.md)**
+**[Read: Technical Guide](./docs/TECHNICAL_GUIDE.md)**
 - Architecture deep-dive
 - Pipeline implementation
 - Integration patterns
 - API documentation
 
 ### 🔧 For Field Engineers & Operators
-**[Read: User Guide](docs/USER_GUIDE.md)**
+**[Read: User Guide](./docs/USER_GUIDE.md)**
 - How to fill templates
 - Step-by-step workflows
 - Troubleshooting
 - Real-world examples
 
 ### 📝 For Template Filling (Non-Programmers)
-**[Read: Template Filling Guide](docs/TEMPLATE_GUIDE.md)**
+**[Read: Template Filling Guide](./docs/TEMPLATE_GUIDE.md)**
 - Simple CSV editing instructions
 - Column-by-column explanations
 - Examples from real devices
@@ -184,10 +184,10 @@ industrial-decoder/
 ## 🆘 Support & Resources
 
 ### Documentation
-- [Business Case](docs/BUSINESS_OVERVIEW.md) - Why invest in this
-- [Architecture](docs/ARCHITECTURE.md) - How it works
-- [API Reference](docs/API_REFERENCE.md) - Developer docs
-- [Templates](docs/TEMPLATE_GUIDE.md) - How to fill templates
+- [Business Case](./docs/BUSINESS_OVERVIEW.md) - Why invest in this
+- [Architecture](./docs/ARCHITECTURE.md) - How it works
+- [API Reference](./docs/API_REFERENCE.md) - Developer docs
+- [Templates](./docs/TEMPLATE_GUIDE.md) - How to fill templates
 
 ### Community
 - GitHub Issues: Report bugs or request features
@@ -215,11 +215,11 @@ Organizations using this system report:
 
 | Role | Start Here |
 |------|------------|
-| **Executive/Manager** | [Business Overview](docs/BUSINESS_OVERVIEW.md) |
-| **Data Engineer** | [Technical Guide](docs/TECHNICAL_GUIDE.md) |
-| **Field Technician** | [User Guide](docs/USER_GUIDE.md) |
-| **Template Editor** | [Template Guide](docs/TEMPLATE_GUIDE.md) |
-| **System Architect** | [Architecture](docs/ARCHITECTURE.md) |
+| **Executive/Manager** | [Business Overview](./docs/BUSINESS_OVERVIEW.md) |
+| **Data Engineer** | [Technical Guide](./docs/TECHNICAL_GUIDE.md) |
+| **Field Technician** | [User Guide](./docs/USER_GUIDE.md) |
+| **Template Editor** | [Template Guide](./docs/TEMPLATE_GUIDE.md) |
+| **System Architect** | [Architecture](./docs/ARCHITECTURE.md) |
 
 ---
 
