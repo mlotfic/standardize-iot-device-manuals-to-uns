@@ -1,0 +1,113 @@
+# Template 3: Datatype Enum Values
+# Purpose: Define meaning of numeric codes for enum and flag fields
+# When to use: For any field with value_type=enum or flag in Template 1
+# One row per possible value
+
+datatype,field_name,value,label,severity,description,action
+
+# DATETIME Enumerations
+DATETIME,weekday,0,Not Used,info,Weekday not specified in data,none
+DATETIME,weekday,1,Monday,info,First day of week,none
+DATETIME,weekday,2,Tuesday,info,Second day of week,none
+DATETIME,weekday,3,Wednesday,info,Third day of week,none
+DATETIME,weekday,4,Thursday,info,Fourth day of week,none
+DATETIME,weekday,5,Friday,info,Fifth day of week,none
+DATETIME,weekday,6,Saturday,info,Sixth day of week,none
+DATETIME,weekday,7,Sunday,info,Seventh day of week,none
+DATETIME,time_sync_invalid,0,Time Valid,info,Clock is synchronized,none
+DATETIME,time_sync_invalid,1,Time Invalid,warning,Clock not synchronized - check time source,verify_time_sync
+DATETIME,dst_active,0,Standard Time,info,Standard time currently active,none
+DATETIME,dst_active,1,Daylight Saving,info,Daylight saving time active,none
+
+# AlarmAttributes Enumerations
+AlarmAttributes,type,0,STANDARD10,info,Standard alarm 10-second monitoring,none
+AlarmAttributes,type,1,STANDARD1S,info,Standard alarm 1-second monitoring,none
+AlarmAttributes,type,2,POWER_QUALITY,warning,Power quality event alarm,check_power_quality
+AlarmAttributes,type,3,SYSTEM,critical,System level alarm,check_system_status
+AlarmAttributes,type,4,COMMUNICATION,warning,Communication fault alarm,check_network
+AlarmAttributes,type,5,CUSTOM,info,User-defined custom alarm,review_custom_config
+
+AlarmAttributes,subtype,0,OVER_SIGNED,warning,Value exceeds upper limit,reduce_load
+AlarmAttributes,subtype,1,UNDER_SIGNED,warning,Value below lower limit,increase_load
+AlarmAttributes,subtype,2,OVER_UNSIGNED,warning,Unsigned value over limit,check_parameter
+AlarmAttributes,subtype,3,UNDER_UNSIGNED,warning,Unsigned value under limit,check_parameter
+AlarmAttributes,subtype,4,DEVIATION,info,Value deviation from setpoint,monitor_trend
+AlarmAttributes,subtype,5,RATE_OF_CHANGE,warning,Parameter changing too fast,investigate_cause
+
+AlarmAttributes,parameter,0,CURRENT,warning,Current measurement alarm,check_load
+AlarmAttributes,parameter,1,VOLTAGE,critical,Voltage measurement alarm,check_supply
+AlarmAttributes,parameter,2,POWER,warning,Power measurement alarm,verify_load
+AlarmAttributes,parameter,3,ENERGY,info,Energy consumption alarm,review_usage
+AlarmAttributes,parameter,4,FREQUENCY,critical,Frequency alarm,check_grid
+AlarmAttributes,parameter,5,POWER_FACTOR,warning,Power factor alarm,check_reactive_load
+AlarmAttributes,parameter,6,TEMPERATURE,critical,Temperature alarm,check_cooling
+AlarmAttributes,parameter,7,THD,warning,Total harmonic distortion alarm,check_harmonics
+
+AlarmAttributes,modifier,0,NONE,info,No modifier applied,none
+AlarmAttributes,modifier,1,HARMONIC,warning,Harmonic component alarm,analyze_harmonics
+AlarmAttributes,modifier,2,FUNDAMENTAL,info,Fundamental frequency component,none
+AlarmAttributes,modifier,3,RMS,info,RMS value measurement,none
+AlarmAttributes,modifier,4,AVERAGE,info,Average value over time,none
+
+AlarmAttributes,phases,0,NONE,info,No phase selection,none
+AlarmAttributes,phases,1,PHASE_A,warning,Phase A alarm,check_phase_a
+AlarmAttributes,phases,2,PHASE_B,warning,Phase B alarm,check_phase_b
+AlarmAttributes,phases,3,PHASE_AB,warning,Phase A and B alarm,check_phases_ab
+AlarmAttributes,phases,4,PHASE_C,warning,Phase C alarm,check_phase_c
+AlarmAttributes,phases,5,PHASE_AC,warning,Phase A and C alarm,check_phases_ac
+AlarmAttributes,phases,6,PHASE_BC,warning,Phase B and C alarm,check_phases_bc
+AlarmAttributes,phases,7,PHASE_ABC,critical,All three phases alarm,check_all_phases
+AlarmAttributes,phases,8,NEUTRAL,critical,Neutral conductor alarm,check_neutral
+AlarmAttributes,phases,9,GROUND,critical,Ground fault detected,check_ground_immediately
+
+AlarmAttributes,priority,0,LOW,info,Low priority - informational,monitor
+AlarmAttributes,priority,1,MEDIUM,warning,Medium priority - attention needed,investigate
+AlarmAttributes,priority,2,HIGH,critical,High priority - urgent action required,respond_immediately
+AlarmAttributes,priority,3,CRITICAL,critical,Critical - safety issue,emergency_response
+
+AlarmAttributes,enable,0,DISABLED,info,Alarm monitoring disabled,none
+AlarmAttributes,enable,1,ENABLED,info,Alarm monitoring active,none
+
+# StatusWord Enumerations
+StatusWord,running,0,STOPPED,info,Equipment is stopped,none
+StatusWord,running,1,RUNNING,info,Equipment is running normally,none
+StatusWord,fault,0,NO_FAULT,info,No fault condition present,none
+StatusWord,fault,1,FAULT,critical,Fault condition active - check diagnostics,investigate_fault
+StatusWord,mode,0,Manual,info,Manual operation mode,none
+StatusWord,mode,1,Automatic,info,Automatic operation mode,none
+StatusWord,mode,2,Maintenance,warning,Maintenance mode active,verify_maintenance
+StatusWord,mode,3,Reserved,info,Reserved mode - should not occur,report_if_seen
+
+# PowerMeasurement Enumerations
+PowerMeasurement,direction,0,Forward,info,Power flowing forward to load,none
+PowerMeasurement,direction,1,Reverse,warning,Power flowing reverse - check for generation,verify_connection
+PowerMeasurement,quality,0,GOOD,info,Measurement quality good,none
+PowerMeasurement,quality,1,QUESTIONABLE,warning,Measurement quality uncertain - verify,check_sensor
+PowerMeasurement,quality,2,BAD,critical,Measurement quality bad - do not use,replace_sensor
+PowerMeasurement,quality,3,OVERFLOW,critical,Measurement overflow - out of range,check_scaling
+PowerMeasurement,quality,4,UNDERFLOW,warning,Measurement underflow,verify_connection
+PowerMeasurement,quality,5,SUBSTITUTED,warning,Using substituted value,check_primary_sensor
+PowerMeasurement,quality,6,TEST,info,Test mode active,normal_during_testing
+PowerMeasurement,quality,7,INVALID,critical,Invalid data - communication error,check_communication
+
+# Temperature/Voltage/Current Quality (shared enum)
+Temperature,sensor_ok,0,FAULT,critical,Sensor fault detected,replace_sensor
+Temperature,sensor_ok,1,OK,info,Sensor operating normally,none
+Voltage,quality,0,GOOD,info,Voltage measurement valid,none
+Voltage,quality,1,QUESTIONABLE,warning,Voltage measurement uncertain,verify
+Voltage,quality,2,BAD,critical,Voltage measurement invalid,do_not_use
+Current,quality,0,GOOD,info,Current measurement valid,none
+Current,quality,1,QUESTIONABLE,warning,Current measurement uncertain,verify
+Current,quality,2,BAD,critical,Current measurement invalid,do_not_use
+
+# Severity Guide:
+# - info: Normal operation, no action needed
+# - warning: Attention required, non-critical
+# - critical: Immediate action required, safety concern
+
+# Action Guide:
+# - none: No operator action required
+# - monitor: Keep watching this value
+# - check_*: Verify specific component or parameter
+# - investigate_*: Determine root cause
+# - emergency_response: Follow emergency procedures

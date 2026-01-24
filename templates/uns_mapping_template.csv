@@ -1,0 +1,119 @@
+# Template 5: UNS (Unified Namespace) Mapping
+# Purpose: Route decoded data to appropriate namespace paths
+# When to use: When integrating with UNS architecture (MQTT, Sparkplug B, etc.)
+# Optional: Skip if only using local SCADA
+
+register_name,register_address,Q1_about_or_from,Q2_fixed_or_changes,Q3_observed_or_commanded,Q4_process_or_device,recommended_namespace,final_uns_path,publish_on_change,retention_policy,notes
+
+# Decision Tree Questions:
+# Q1: Is this ABOUT, FROM, or TO the device?
+#     ABOUT = Metadata about the device itself (serial number, mfg date)
+#     FROM = Data produced by the device (measurements, alarms)
+#     TO = Commands/setpoints sent to device
+#
+# Q2: How often does it change?
+#     FIXED = Never changes (serial number)
+#     RARELY = Occasional updates (firmware version)
+#     CONTINUOUS = Constantly updating (temperature, voltage)
+#     EVENT = Triggered by conditions (alarms, state changes)
+#
+# Q3: Observed or Commanded?
+#     OBSERVED = Read-only, we observe it
+#     COMMANDED = Writable, we can control it
+#     BOTH = Read-write parameter
+#
+# Q4: What kind of data?
+#     PROCESS = Production process measurements
+#     DEVICE = Internal device health/status
+#     EXCEPTION = Abnormal conditions (alarms, faults)
+#     AUDIT = Compliance/traceability data
+#     IDENTITY = Device identification
+#     SETPOINT = Control setpoint value
+#     ACTION = Control action/command
+
+# Manufacturing & Identity Data (ABOUT device, FIXED)
+manufacturing_date,132,ABOUT,FIXED,OBSERVED,AUDIT,asset,asset/{site}/{area}/{device_id}/metadata/manufacturing_date,no,permanent,Factory setting - never changes
+serial_number_high,100,ABOUT,FIXED,OBSERVED,IDENTITY,asset,asset/{site}/{area}/{device_id}/identity/serial_number_high,no,permanent,Part of unique device ID
+serial_number_low,102,ABOUT,FIXED,OBSERVED,IDENTITY,asset,asset/{site}/{area}/{device_id}/identity/serial_number_low,no,permanent,Combine with high for full SN
+model_code,104,ABOUT,FIXED,OBSERVED,IDENTITY,asset,asset/{site}/{area}/{device_id}/identity/model_code,no,permanent,Device model identifier
+firmware_version,105,ABOUT,RARELY,OBSERVED,IDENTITY,asset,asset/{site}/{area}/{device_id}/identity/firmware_version,yes,permanent,May change during updates
+hardware_revision,106,ABOUT,FIXED,OBSERVED,IDENTITY,asset,asset/{site}/{area}/{device_id}/identity/hardware_revision,no,permanent,PCB revision level
+
+# Calibration & Maintenance (ABOUT device, RARELY changes)
+last_calibration_date,200,ABOUT,RARELY,OBSERVED,AUDIT,asset,asset/{site}/{area}/{device_id}/maintenance/last_calibration,yes,permanent,Compliance tracking
+last_service_date,300,ABOUT,RARELY,BOTH,AUDIT,asset,asset/{site}/{area}/{device_id}/maintenance/last_service,yes,permanent,Manually updated
+
+# Live Electrical Measurements (FROM device, CONTINUOUS)
+voltage_l1_n,500,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/voltage/l1_n,no,7_days,Phase A to Neutral RMS
+voltage_l2_n,502,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/voltage/l2_n,no,7_days,Phase B to Neutral RMS
+voltage_l3_n,504,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/voltage/l3_n,no,7_days,Phase C to Neutral RMS
+voltage_l1_l2,506,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/voltage/l1_l2,no,7_days,Line-to-line voltage
+voltage_l2_l3,508,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/voltage/l2_l3,no,7_days,Line-to-line voltage
+voltage_l3_l1,510,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/voltage/l3_l1,no,7_days,Line-to-line voltage
+current_l1,600,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/current/l1,no,7_days,Phase A current
+current_l2,602,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/current/l2,no,7_days,Phase B current
+current_l3,604,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/current/l3,no,7_days,Phase C current
+current_neutral,606,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/current/neutral,no,7_days,Neutral conductor current
+frequency,800,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/electrical/frequency,no,7_days,System frequency Hz
+
+# Power Measurements (FROM device, CONTINUOUS)
+active_power_l1,700,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/power/active/l1,no,30_days,Phase A real power
+active_power_l2,702,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/power/active/l2,no,30_days,Phase B real power
+active_power_l3,704,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/power/active/l3,no,30_days,Phase C real power
+active_power_total,706,FROM,CONTINUOUS,OBSERVED,PROCESS,measurement,measurement/{site}/{area}/{device_id}/power/active/total,no,30_days,Total 3-phase power
+
+# Device Status (FROM device, EVENT-driven)
+device_status,1100,FROM,EVENT,OBSERVED,DEVICE,status,status/{site}/{area}/{device_id}/device_status,yes,30_days,Overall device health
+error_status,1101,FROM,EVENT,OBSERVED,EXCEPTION,status,status/{site}/{area}/{device_id}/error_status,yes,permanent,Active error conditions
+
+# System Parameters (FROM device, RARELY changes)
+system_time,1000,FROM,RARELY,BOTH,DEVICE,asset,asset/{site}/{area}/{device_id}/system/clock,yes,permanent,Device clock setting
+
+# Alarms (FROM device, EVENT-driven)
+alarm_config_1,8000,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/high_voltage/l1,yes,90_days,High voltage phase A alarm
+alarm_config_2,8002,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/high_voltage/l2,yes,90_days,High voltage phase B alarm
+alarm_config_3,8004,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/high_voltage/l3,yes,90_days,High voltage phase C alarm
+alarm_config_4,8006,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/low_voltage/l1,yes,90_days,Low voltage phase A alarm
+alarm_config_5,8008,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/low_voltage/l2,yes,90_days,Low voltage phase B alarm
+alarm_config_6,8010,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/low_voltage/l3,yes,90_days,Low voltage phase C alarm
+alarm_config_7,8012,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/overcurrent/l1,yes,90_days,High current phase A alarm
+alarm_config_8,8014,FROM,EVENT,OBSERVED,EXCEPTION,alarm,alarm/{site}/{area}/{device_id}/overcurrent/l2,yes,90_days,High current phase B alarm
+
+# Control Commands (TO device)
+reset_command,2000,TO,EVENT,COMMANDED,ACTION,command,command/{site}/{area}/{device_id}/control/reset,yes,90_days,Device reset command
+calibration_mode,2001,TO,RARELY,COMMANDED,SETPOINT,command,command/{site}/{area}/{device_id}/control/calibration_mode,yes,permanent,Enter cal mode
+
+# Path Variables:
+# {site} = Physical site name (e.g., "FactoryA", "Building_B")
+# {area} = Area within site (e.g., "Line1", "MCC_Room")
+# {device_id} = Unique device identifier (e.g., "PM8000_001")
+#
+# These are replaced at runtime with actual values from device configuration
+
+# Namespace Prefixes:
+# asset/ = Device metadata, identity, configuration
+# measurement/ = Process measurements, telemetry
+# status/ = Device health, operational status
+# alarm/ = Exception conditions, alerts
+# event/ = State changes, occurrences
+# command/ = Control commands, setpoints
+
+# Publishing Strategy:
+# publish_on_change:
+#   yes = Only publish when value changes (saves bandwidth)
+#   no = Publish on every scan (for continuously varying data)
+#
+# retention_policy:
+#   permanent = Keep forever (compliance, identity)
+#   90_days = Keep for 3 months (alarms, events)
+#   30_days = Keep for 1 month (status, diagnostics)
+#   7_days = Keep for 1 week (measurements)
+#   1_day = Keep for 24 hours (high-frequency data)
+
+# UNS Best Practices:
+# 1. Use consistent naming across all devices
+# 2. Group related data together (all voltages under .../voltage/)
+# 3. Separate metadata (asset/) from telemetry (measurement/)
+# 4. Use publish_on_change=yes for slow-changing data
+# 5. Set appropriate retention based on compliance needs
+# 6. Include hierarchy: site > area > device for organization

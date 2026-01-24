@@ -1,0 +1,85 @@
+# Template 4: Device Register Map
+# Purpose: Map each device register to its datatype definition
+# When to use: For EVERY register on EVERY device
+# One row per register
+
+device_model,register_address,register_name,datatype,word_count,access,category,description,manual_page,notes
+
+# PM8000 Power Meter - Manufacturing & Identity Information
+PM8000,132,manufacturing_date,DATETIME,4,R,Manufacturing,Date device was manufactured,p.45,IEC 870-5-4 format
+PM8000,200,last_calibration_date,DATETIME,4,R,Calibration,Timestamp of last calibration,p.52,Updated by calibration tech
+PM8000,300,last_service_date,DATETIME,4,RW,Maintenance,Last maintenance service date,p.58,Manually updated
+PM8000,100,serial_number_high,UINT32,2,R,Identity,Serial number upper 32 bits,p.42,Read-only factory setting
+PM8000,102,serial_number_low,UINT32,2,R,Identity,Serial number lower 32 bits,p.42,Combine with 100 for full SN
+PM8000,104,model_code,UINT16,1,R,Identity,Model identification code,p.43,See model code table
+PM8000,105,firmware_version,UINT16,1,R,Identity,Firmware version number,p.43,Format: major.minor
+PM8000,106,hardware_revision,UINT16,1,R,Identity,Hardware revision code,p.43,PCB revision level
+
+# PM8000 - Live Electrical Measurements
+PM8000,500,voltage_l1_n,Voltage,2,R,Measurements,Phase A to Neutral voltage,p.75,RMS value
+PM8000,502,voltage_l2_n,Voltage,2,R,Measurements,Phase B to Neutral voltage,p.75,RMS value
+PM8000,504,voltage_l3_n,Voltage,2,R,Measurements,Phase C to Neutral voltage,p.75,RMS value
+PM8000,506,voltage_l1_l2,Voltage,2,R,Measurements,Phase A to Phase B voltage,p.76,Line-line RMS
+PM8000,508,voltage_l2_l3,Voltage,2,R,Measurements,Phase B to Phase C voltage,p.76,Line-line RMS
+PM8000,510,voltage_l3_l1,Voltage,2,R,Measurements,Phase C to Phase A voltage,p.76,Line-line RMS
+PM8000,600,current_l1,Current,2,R,Measurements,Phase A current,p.80,RMS value in Amps
+PM8000,602,current_l2,Current,2,R,Measurements,Phase B current,p.80,RMS value in Amps
+PM8000,604,current_l3,Current,2,R,Measurements,Phase C current,p.80,RMS value in Amps
+PM8000,606,current_neutral,Current,2,R,Measurements,Neutral current,p.81,Calculated or measured
+PM8000,700,active_power_l1,PowerMeasurement,2,R,Power,Phase A active power,p.85,Watts
+PM8000,702,active_power_l2,PowerMeasurement,2,R,Power,Phase B active power,p.85,Watts
+PM8000,704,active_power_l3,PowerMeasurement,2,R,Power,Phase C active power,p.85,Watts
+PM8000,706,active_power_total,PowerMeasurement,2,R,Power,Total 3-phase active power,p.86,Sum of all phases
+PM8000,800,frequency,UINT16,1,R,Measurements,System frequency,p.90,Scale: 0.01 Hz
+
+# PM8000 - System Control & Status
+PM8000,1000,system_time,DATETIME,4,RW,System,Current system date/time,p.100,Set via Modbus or NTP
+PM8000,1100,device_status,StatusWord,1,R,Status,Overall device status word,p.105,See status bit definitions
+PM8000,1101,error_status,StatusWord,1,R,Status,Error condition flags,p.106,Non-zero indicates error
+PM8000,2000,reset_command,UINT16,1,W,Control,Device reset command,p.110,Write 0xABCD to reset
+PM8000,2001,calibration_mode,StatusWord,1,RW,Control,Enter calibration mode,p.112,Requires password
+
+# PM8000 - Alarm Configuration (32 alarms total)
+PM8000,8000,alarm_config_1,AlarmAttributes,2,RW,Alarms,Alarm 1 configuration,p.150,High voltage L1
+PM8000,8002,alarm_config_2,AlarmAttributes,2,RW,Alarms,Alarm 2 configuration,p.150,High voltage L2
+PM8000,8004,alarm_config_3,AlarmAttributes,2,RW,Alarms,Alarm 3 configuration,p.150,High voltage L3
+PM8000,8006,alarm_config_4,AlarmAttributes,2,RW,Alarms,Alarm 4 configuration,p.151,Low voltage L1
+PM8000,8008,alarm_config_5,AlarmAttributes,2,RW,Alarms,Alarm 5 configuration,p.151,Low voltage L2
+PM8000,8010,alarm_config_6,AlarmAttributes,2,RW,Alarms,Alarm 6 configuration,p.151,Low voltage L3
+PM8000,8012,alarm_config_7,AlarmAttributes,2,RW,Alarms,Alarm 7 configuration,p.152,High current L1
+PM8000,8014,alarm_config_8,AlarmAttributes,2,RW,Alarms,Alarm 8 configuration,p.152,High current L2
+
+# ABB M2M Meter - Same datatypes, different addresses
+ABB_M2M,50,manufacturing_date,DATETIME,4,R,Manufacturing,Manufacturing timestamp,p.30,IEC 870-5-4 standard
+ABB_M2M,150,system_time,DATETIME,4,RW,System,Device clock setting,p.45,
+ABB_M2M,400,voltage_l1,Voltage,2,R,Measurements,L1 voltage measurement,p.60,
+ABB_M2M,402,voltage_l2,Voltage,2,R,Measurements,L2 voltage measurement,p.60,
+ABB_M2M,404,voltage_l3,Voltage,2,R,Measurements,L3 voltage measurement,p.60,
+ABB_M2M,500,current_l1,Current,2,R,Measurements,L1 current measurement,p.65,
+ABB_M2M,502,current_l2,Current,2,R,Measurements,L2 current measurement,p.65,
+ABB_M2M,504,current_l3,Current,2,R,Measurements,L3 current measurement,p.65,
+
+# Siemens PAC - Different byte order from PM8000!
+Siemens_PAC,200,manufacturing_date,DATETIME,4,R,Manufacturing,Manufacturing date,p.80,Note: Little-endian bytes
+Siemens_PAC,1000,ambient_temp,Temperature,2,R,Environmental,Cabinet temperature,p.120,
+Siemens_PAC,2000,alarm_1,AlarmAttributes,2,RW,Alarms,Configurable alarm 1,p.200,
+
+# Column Descriptions:
+# device_model: Exact model number from device label/manual
+# register_address: Modbus starting address (decimal)
+# register_name: Unique identifier, use underscores not spaces
+# datatype: Must match name from Template 1 exactly (case-sensitive!)
+# word_count: Number of 16-bit Modbus registers (1=16bit, 2=32bit, 4=64bit)
+# access: R=read-only, W=write-only, RW=read-write
+# category: Logical grouping for organization
+# description: Human-readable purpose
+# manual_page: Where in manual this is documented
+# notes: Any special considerations, quirks, warnings
+
+# Best Practices:
+# 1. Use consistent naming: phase_a or l1, not both
+# 2. Group related registers together (all voltages, all currents)
+# 3. Note byte order differences between manufacturers
+# 4. Document address gaps (missing registers)
+# 5. Reference manual page numbers for future lookup
+# 6. Add notes about special configurations or firmware dependencies

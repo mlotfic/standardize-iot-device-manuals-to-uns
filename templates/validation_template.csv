@@ -1,0 +1,52 @@
+# Template 2: Datatype Validation Rules
+# Purpose: Define min/max ranges and validation rules for each field
+# When to use: After defining structure in Template 1
+# One row per field that needs validation (numbers and enums)
+
+datatype,field_name,min_value,max_value,required,health_level,warning_threshold,notes
+DATETIME,year,0,127,yes,critical,,Year must be 0-127 (2000-2127)
+DATETIME,day,1,31,yes,critical,,Valid day of month
+DATETIME,weekday,0,7,no,optional,,0 is valid (not used)
+DATETIME,month,1,12,yes,critical,,Must be valid month 1-12
+DATETIME,minute,0,59,yes,mandatory,,Standard minute range
+DATETIME,hour,0,23,yes,mandatory,,24-hour format 0-23
+DATETIME,millisecond,0,59999,yes,mandatory,,Includes seconds component
+DATETIME,time_sync_invalid,0,1,yes,warning,,Flag validation
+DATETIME,dst_active,0,1,no,optional,,DST flag is optional
+AlarmAttributes,type,0,15,yes,critical,,Must be valid alarm type
+AlarmAttributes,subtype,0,15,yes,critical,,Must be valid subtype
+AlarmAttributes,parameter,0,15,yes,critical,,Must be valid parameter
+AlarmAttributes,modifier,0,15,no,optional,,Modifier is optional
+AlarmAttributes,phases,0,15,yes,mandatory,,Phase selection required
+AlarmAttributes,priority,0,3,yes,critical,,Priority must be set
+AlarmAttributes,enable,0,1,yes,mandatory,,Must explicitly enable/disable
+Temperature,value,-40,125,yes,warning,100,Industrial temp sensor range
+Temperature,sensor_ok,0,1,yes,critical,,Sensor health flag
+Voltage,value,0,300,yes,warning,250,Phase voltage range
+Voltage,quality,0,7,yes,critical,,Quality code validation
+Current,value,0,100,yes,warning,80,Current measurement range
+Current,quality,0,7,yes,critical,,Quality code validation
+PowerMeasurement,active_power,-5000,5000,yes,warning,4500,Bidirectional power range
+PowerMeasurement,power_factor,0,100,yes,warning,95,Power factor percentage
+PowerMeasurement,direction,0,1,yes,mandatory,,Power direction flag
+PowerMeasurement,quality,0,7,yes,critical,,Quality indicator
+StatusWord,running,0,1,yes,mandatory,,Running state flag
+StatusWord,fault,0,1,yes,critical,,Fault state flag
+StatusWord,mode,0,3,yes,mandatory,,Operating mode selection
+
+# Validation Level Guide:
+# - critical: System fails if invalid, immediate action required
+# - mandatory: Should always be valid, log error if not
+# - warning: Important but system continues, operator notification
+# - optional: Nice to have, no error if invalid
+
+# Health Level Usage:
+# critical → Health = BAD if invalid (red status)
+# mandatory → Health = BAD if invalid (red status)
+# warning → Health = QUESTIONABLE if invalid (yellow status)
+# optional → Health stays GOOD even if invalid (green status)
+
+# Warning Threshold:
+# Set to trigger yellow status before reaching max
+# Example: voltage max=300, warning=250 means yellow at 250-300
+# Leave blank if no warning threshold needed
