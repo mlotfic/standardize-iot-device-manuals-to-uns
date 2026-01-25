@@ -1,0 +1,314 @@
+# Template 1: Datatype Structure Definition
+# Purpose: Define the bit-level structure of reusable datatypes
+# When to fill: Once per datatype (reuse across many registers)
+# One row per field within each datatype
+
+# ============================================================================
+# INSTRUCTIONS FOR FILLING THIS TEMPLATE
+# ============================================================================
+# 
+# Column Definitions:
+# -------------------
+# datatype      - Name of the datatype (e.g., DATETIME, AlarmAttributes)
+#                 Use UPPERCASE with underscores
+#                 This name will be referenced in Template 4
+#
+# field_name    - Name of this field within the datatype
+#                 Use lowercase with underscores (e.g., year, month, day)
+#                 Must be unique within the datatype
+#
+# bit_start     - First bit position (0-indexed from right/LSB)
+#                 For 16-bit: 0-15
+#                 For 32-bit: 0-31
+#                 For 64-bit: 0-63
+#
+# bit_end       - Last bit position (inclusive)
+#                 Must be >= bit_start
+#                 Width = bit_end - bit_start + 1
+#
+# value_type    - Type of value this field represents:
+#                 number   = Numeric value (temperature, voltage, etc.)
+#                 enum     = Enumerated codes (see Template 3)
+#                 flag     = Boolean on/off (0 or 1)
+#                 reserved = Unused bits (always mark these!)
+#
+# offset        - Value added after bit extraction
+#                 Example: Year with offset 2000 converts 25 → 2025
+#                 Use 0 if no offset needed
+#
+# scale         - Multiplier applied to extracted value
+#                 Example: Temperature with scale 0.1 converts 235 → 23.5
+#                 Use 1 if no scaling needed
+#
+# unit          - Unit of measurement (V, A, kW, °C, etc.)
+#                 Leave blank for dimensionless or reserved fields
+#
+# description   - Human-readable description
+#                 Copy from device manual
+#                 Include valid ranges if known
+#
+# ============================================================================
+
+datatype,field_name,bit_start,bit_end,value_type,offset,scale,unit,description
+
+# ============================================================================
+# DATETIME - IEC 870-5-4 Standard (64-bit, 4 words)
+# ============================================================================
+# Used by: Schneider PM8000, ABB M2M, GE Multilin, and many others
+# Standard: IEC 870-5-4 (International standard for time encoding)
+# Size: 64 bits (4 x 16-bit Modbus words)
+# Byte order: Typically big-endian (configure per device in metadata)
+# 
+# Structure: [Word 1: Year + Reserved][Word 2: Day/Weekday/Month + Reserved]
+#            [Word 3: Minute + TimeSync/Hour + DST][Word 4: Milliseconds]
+#
+# Example reading: 0x0019 0x0B04 0x0E1E 0x007B
+# Decoded: 2025-01-11 14:30:00.123 (Saturday)
+# ============================================================================
+
+DATETIME,year,0,6,number,2000,1,year,Year (0-127) representing 2000-2127
+DATETIME,reserved_1,7,15,reserved,0,1,,Reserved bits - do not use
+DATETIME,day,16,20,number,0,1,day,Day of month (1-31)
+DATETIME,weekday,21,23,enum,0,1,,Day of week (1=Mon to 7=Sun or 0=not used)
+DATETIME,month,24,27,number,0,1,month,Month (1=January to 12=December)
+DATETIME,reserved_2,28,31,reserved,0,1,,Reserved bits
+DATETIME,minute,32,37,number,0,1,min,Minutes (0-59)
+DATETIME,reserved_3,38,38,reserved,0,1,,Single reserved bit
+DATETIME,time_sync_invalid,39,39,flag,0,1,,Time synchronization flag (0=valid 1=invalid)
+DATETIME,hour,40,44,number,0,1,hr,Hour in 24-hour format (0-23)
+DATETIME,reserved_4,45,46,reserved,0,1,,Reserved bits
+DATETIME,dst_active,47,47,flag,0,1,,Daylight saving time flag (0=standard 1=DST)
+DATETIME,millisecond,48,63,number,0,1,ms,Milliseconds including seconds (0-59999)
+
+# ============================================================================
+# AlarmAttributes - Power Meter Alarm Configuration (32-bit, 2 words)
+# ============================================================================
+# Used by: Schneider PM8000, ION series meters
+# Purpose: Configure alarm monitoring parameters
+# Size: 32 bits (2 x 16-bit Modbus words)
+# ISA-18.2 Compliant: Priority levels follow alarm management standard
+#
+# Structure: [Word 1: Type/Subtype/Parameter/Reserved/Modifier]
+#            [Word 2: Phases/Priority/Reserved/Enable]
+#
+# Example: High voltage alarm on Phase A with high priority
+# Reading: 0x1120 0x0103
+# Decoded: STANDARD1S alarm, OVER_SIGNED subtype, VOLTAGE parameter,
+#          PHASE_A affected, HIGH priority, ENABLED
+# ============================================================================
+
+AlarmAttributes,type,28,31,enum,0,1,,Alarm monitoring type (standard/power quality/system)
+AlarmAttributes,reserved_1,24,27,reserved,0,1,,Reserved for future use
+AlarmAttributes,subtype,20,23,enum,0,1,,Alarm condition subtype (over/under/deviation/rate)
+AlarmAttributes,parameter,16,19,enum,0,1,,Parameter being monitored (voltage/current/power/etc)
+AlarmAttributes,reserved_2,12,15,reserved,0,1,,Reserved bits
+AlarmAttributes,modifier,8,11,enum,0,1,,Measurement modifier (harmonic/fundamental/RMS)
+AlarmAttributes,phases,4,7,enum,0,1,,Phase selection (A/B/C/AB/BC/AC/ABC/Neutral/Ground)
+AlarmAttributes,priority,2,3,enum,0,1,,ISA-18.2 alarm priority (0=Low 1=Med 2=High 3=Critical)
+AlarmAttributes,reserved_3,1,1,reserved,0,1,,Single reserved bit
+AlarmAttributes,enable,0,0,flag,0,1,,Alarm enable flag (0=disabled 1=enabled)
+
+# ============================================================================
+# Temperature - Industrial Temperature Sensor (32-bit, 2 words)
+# ============================================================================
+# Used by: Generic industrial temperature transmitters
+# Purpose: Temperature measurement with sensor health
+# Size: 32 bits (2 x 16-bit Modbus words)
+# Range: -40.0°C to +125.0°C (industrial range)
+# Resolution: 0.1°C
+#
+# Structure: [Word 1: Temperature value (signed)]
+#            [Word 2: Sensor status flags]
+# ============================================================================
+
+Temperature,value,0,15,number,0,0.1,°C,Temperature value (signed -400 to 1250 representing -40.0 to 125.0)
+Temperature,sensor_ok,16,16,flag,0,1,,Sensor health flag (0=fault 1=ok)
+Temperature,reserved_1,17,31,reserved,0,1,,Reserved bits
+
+# ============================================================================
+# Voltage - AC Voltage Measurement (32-bit, 2 words)
+# ============================================================================
+# Used by: Power meters, voltage monitors
+# Purpose: AC voltage RMS measurement
+# Size: 32 bits (2 x 16-bit Modbus words)
+# Range: 0-300V (typical phase-neutral) or 0-600V (phase-phase)
+# Resolution: 0.1V
+#
+# Structure: [Word 1: Voltage value]
+#            [Word 2: Quality code + Reserved]
+# ============================================================================
+
+Voltage,value,0,15,number,0,0.1,V,Voltage RMS value (0-3000 representing 0.0-300.0V)
+Voltage,quality,16,18,enum,0,1,,Data quality code (0=GOOD 1=QUESTIONABLE 2=BAD)
+Voltage,reserved_1,19,31,reserved,0,1,,Reserved bits
+
+# ============================================================================
+# Current - AC Current Measurement (32-bit, 2 words)
+# ============================================================================
+# Used by: Power meters, current transformers
+# Purpose: AC current RMS measurement
+# Size: 32 bits (2 x 16-bit Modbus words)
+# Range: 0-100A (typical, can be scaled with CT ratio)
+# Resolution: 0.01A
+#
+# Structure: [Word 1: Current value]
+#            [Word 2: Quality code + Reserved]
+# ============================================================================
+
+Current,value,0,15,number,0,0.01,A,Current RMS value (0-10000 representing 0.00-100.00A)
+Current,quality,16,18,enum,0,1,,Data quality code (0=GOOD 1=QUESTIONABLE 2=BAD)
+Current,reserved_1,19,31,reserved,0,1,,Reserved bits
+
+# ============================================================================
+# PowerMeasurement - Active Power with Direction (32-bit, 2 words)
+# ============================================================================
+# Used by: Bi-directional power meters, solar inverters
+# Purpose: Measure active power with flow direction
+# Size: 32 bits (2 x 16-bit Modbus words)
+# Range: -5000 to +5000 kW (negative = reverse/generation)
+# Resolution: 0.1 kW
+#
+# Structure: [Word 1: Power value (signed)]
+#            [Word 2: Power factor + Direction + Quality]
+# ============================================================================
+
+PowerMeasurement,active_power,0,15,number,0,0.1,kW,Active power (signed -50000 to 50000 representing -5000.0 to 5000.0kW)
+PowerMeasurement,power_factor,16,23,number,0,0.01,,Power factor (0-100 representing 0.00-1.00)
+PowerMeasurement,direction,24,24,flag,0,1,,Power direction (0=forward to load 1=reverse from generation)
+PowerMeasurement,quality,25,27,enum,0,1,,Data quality code (see enum table)
+PowerMeasurement,reserved_1,28,31,reserved,0,1,,Reserved bits
+
+# ============================================================================
+# StatusWord - Device Status Flags (16-bit, 1 word)
+# ============================================================================
+# Used by: PLCs, smart devices, general equipment
+# Purpose: Binary status indicators
+# Size: 16 bits (1 x 16-bit Modbus word)
+#
+# Structure: Single word with multiple flag bits
+# ============================================================================
+
+StatusWord,running,0,0,flag,0,1,,Equipment running status (0=stopped 1=running)
+StatusWord,fault,1,1,flag,0,1,,Fault condition present (0=no fault 1=fault active)
+StatusWord,mode,2,3,enum,0,1,,Operating mode (0=Manual 1=Auto 2=Maintenance 3=Reserved)
+StatusWord,reserved_1,4,15,reserved,0,1,,Reserved bits for future expansion
+
+# ============================================================================
+# Frequency - System Frequency (16-bit, 1 word)
+# ============================================================================
+# Used by: Power quality meters, grid monitoring
+# Purpose: Measure electrical system frequency
+# Size: 16 bits (1 x 16-bit Modbus word)
+# Range: 45.00-65.00 Hz (typical power systems)
+# Resolution: 0.01 Hz
+#
+# Structure: Single word scaled value
+# ============================================================================
+
+Frequency,value,0,15,number,0,0.01,Hz,System frequency (4500-6500 representing 45.00-65.00 Hz)
+
+# ============================================================================
+# UINT16 - Generic Unsigned 16-bit Integer (16-bit, 1 word)
+# ============================================================================
+# Used by: General counters, simple measurements
+# Purpose: Simple unsigned integer value
+# Size: 16 bits (1 x 16-bit Modbus word)
+# Range: 0-65535
+# ============================================================================
+
+UINT16,value,0,15,number,0,1,,Unsigned integer value (0-65535)
+
+# ============================================================================
+# UINT32 - Generic Unsigned 32-bit Integer (32-bit, 2 words)
+# ============================================================================
+# Used by: Counters, serial numbers, large values
+# Purpose: 32-bit unsigned integer
+# Size: 32 bits (2 x 16-bit Modbus words)
+# Range: 0-4,294,967,295
+# ============================================================================
+
+UINT32,value,0,31,number,0,1,,Unsigned 32-bit integer value (0 to 4294967295)
+
+# ============================================================================
+# INT16 - Generic Signed 16-bit Integer (16-bit, 1 word)
+# ============================================================================
+# Used by: Measurements that can be negative
+# Purpose: Signed integer value
+# Size: 16 bits (1 x 16-bit Modbus word)
+# Range: -32768 to +32767
+# ============================================================================
+
+INT16,value,0,15,number,0,1,,Signed integer value (-32768 to 32767)
+
+# ============================================================================
+# INT32 - Generic Signed 32-bit Integer (32-bit, 2 words)
+# ============================================================================
+# Used by: Large signed values, coordinates
+# Purpose: 32-bit signed integer
+# Size: 32 bits (2 x 16-bit Modbus words)
+# Range: -2,147,483,648 to +2,147,483,647
+# ============================================================================
+
+INT32,value,0,31,number,0,1,,Signed 32-bit integer value (-2147483648 to 2147483647)
+
+# ============================================================================
+# FLOAT32 - IEEE 754 Single Precision Float (32-bit, 2 words)
+# ============================================================================
+# Used by: High-precision measurements, scientific instruments
+# Purpose: Floating point number (IEEE 754)
+# Size: 32 bits (2 x 16-bit Modbus words)
+# Range: ±3.4E±38 (7 significant digits)
+# ============================================================================
+
+FLOAT32,value,0,31,number,0,1,,IEEE 754 single-precision floating point value
+
+# ============================================================================
+# NOTES FOR CREATING NEW DATATYPES
+# ============================================================================
+#
+# Best Practices:
+# ---------------
+# 1. Account for all bits (0 to total_width-1)
+# 2. Explicitly mark reserved bits (helps with validation)
+# 3. Use consistent naming (lowercase_with_underscores for fields)
+# 4. Document bit positions exactly as shown in device manual
+# 5. Include units for all physical measurements
+# 6. Add detailed description from manual
+#
+# Common Mistakes to Avoid:
+# -------------------------
+# ✗ Overlapping bits (bit 10 used twice)
+# ✗ Gaps in bit coverage (bits 8-15 not defined)
+# ✗ Wrong bit order (manual shows big-endian, you assume little-endian)
+# ✗ Missing reserved bits (future firmware might use them)
+# ✗ Incorrect offset/scale (manual says divide by 10, you multiply)
+#
+# Validation Checklist:
+# --------------------
+# ☐ All bits from 0 to (width-1) are assigned
+# ☐ No overlapping bit ranges
+# ☐ Reserved bits explicitly marked
+# ☐ Offset and scale match device manual
+# ☐ Units specified for all measurements
+# ☐ Description copied from manual (with page reference)
+# ☐ Enum fields have corresponding entries in Template 3
+#
+# Example: Adding a New Datatype
+# -------------------------------
+# Device manual shows "PRESSURE_SENSOR (32-bit)":
+#   Bits 0-15:  Pressure value (0-1000 PSI, scaled by 0.01)
+#   Bits 16-19: Sensor type (enum)
+#   Bits 20-31: Reserved
+#
+# Your template entries:
+# PRESSURE_SENSOR,value,0,15,number,0,0.01,PSI,Pressure measurement 0-100000 = 0.00-1000.00 PSI
+# PRESSURE_SENSOR,sensor_type,16,19,enum,0,1,,Sensor type code (see manual p.45)
+# PRESSURE_SENSOR,reserved_1,20,31,reserved,0,1,,Reserved for future use
+#
+# ============================================================================
+# END OF TEMPLATE 1
+# ============================================================================
+# Next Step: Fill Template 2 (Validation Rules) for these datatypes
+# Then: Fill Template 3 (Enum Values) for enum fields
+# Finally: Use these datatypes in Template 4 (Register Map)
+# ============================================================================

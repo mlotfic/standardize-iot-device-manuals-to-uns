@@ -47,27 +47,27 @@ Benefits:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Configuration Layer                       │
+│                    Configuration Layer                      │
 ├─────────────────────────────────────────────────────────────┤
-│  Templates (CSV)  │  Validation Rules  │  UNS Mappings     │
+│  Templates (CSV)  │  Validation Rules  │  UNS Mappings      │
 └─────────────────────────────────────────────────────────────┘
                            ↓
 ┌─────────────────────────────────────────────────────────────┐
-│                    Processing Layer                          │
+│                    Processing Layer                         │
 ├─────────────────────────────────────────────────────────────┤
-│  Template Loader  │  Decoder Engine  │  UNS Router         │
+│  Template Loader  │  Decoder Engine  │  UNS Router          │
 └─────────────────────────────────────────────────────────────┘
                            ↓
 ┌─────────────────────────────────────────────────────────────┐
-│                    Integration Layer                         │
+│                    Integration Layer                        │
 ├─────────────────────────────────────────────────────────────┤
-│  Protocol Adapters  │  Publishers  │  Export Generators    │
+│  Protocol Adapters  │  Publishers  │  Export Generators     │
 └─────────────────────────────────────────────────────────────┘
                            ↓
 ┌─────────────────────────────────────────────────────────────┐
-│                    Target Systems                            │
+│                    Target Systems                           │
 ├─────────────────────────────────────────────────────────────┤
-│  SCADA  │  Historian  │  MQTT  │  OPC-UA  │  Analytics     │
+│  SCADA  │  Historian  │  MQTT  │  OPC-UA  │  Analytics      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
